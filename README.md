@@ -1,7 +1,7 @@
 # devops-netology
 #second line
 
-
+#Terraform.gitignore
 
 #Файлы состояния инфраструктуры
 #*.tfstate
