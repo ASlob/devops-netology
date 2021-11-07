@@ -18,3 +18,4 @@
 #Файлы конфигурации интерфейса командной строки
 #*.terraformrc
 #*terraform.rc
+new line
