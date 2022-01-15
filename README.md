@@ -1,86 +1,124 @@
 1.
-CD - встроеная команда для изменения рабочего каталога, она не является утилитой , т.к. в файловой системе отсутствуют файлы связанные с этой командой.  
+chdir("/tmp") = 0 - системный вызов, изменяющий нашу текущую рабочую директорию на указанную
 
 2.
-Альтернативой pipe являеется опция -с (счётик) утилиты grep. С помощью этой опции можно подсчитать колличество вхождений строки, т.е. сколько раз определённая строка была найдена в каждом файле.
+openat(AT_FDCWD, "/usr/share/misc/magic.mgc", O_RDONLY) = 3
 
 3.
-Команда pstree -p отображает все запущенные родительские процессы вместе с их дочерними процессами и соответствующими PID. В виртуальной машине Ubuntu 20.04 процесс systemd является родительским
+В одной сессии терминала запускаем процесс  
+ping 192.168.1.1 >> test.txt  
 
-4.
-Способ 1  
-Нужно запустить два окна терминала и в обоих выполнить vagrant ssh  
-Ввод в терминале /dev/pts/0  
-	ls \text 2>/dev/pts/1  
-Вывод в терминале /dev/pts/1  
-	ls: cannot access 'text': No such file or directory  
+В другой сессии терминала переходим под root находим нужный процесс  
+vagrant@vagrant:~$ sudo -i  
+root@vagrant:~# ps -a  
+    PID TTY          TIME CMD  
+   6657 pts/0    00:00:00 ping  
+   6704 pts/1    00:00:00 sudo  
+   6706 pts/1    00:00:00 bash  
+   6718 pts/1    00:00:00 ps  
+root@vagrant:~# lsof -p 6657  
+COMMAND  PID    USER   FD   TYPE DEVICE SIZE/OFF   NODE NAME  
+ping    6657 vagrant  cwd    DIR  253,0     4096 131074 /home/vagrant  
+ping    6657 vagrant  rtd    DIR  253,0     4096      2 /  
+ping    6657 vagrant  txt    REG  253,0    72776 524524 /usr/bin/ping  
+ping    6657 vagrant  mem    REG  253,0  5699248 535133 /usr/lib/locale/locale-archive  
+ping    6657 vagrant  mem    REG  253,0   137584 527268 /usr/lib/x86_64-linux-gnu/libgpg-error.so.0.28.0  
+ping    6657 vagrant  mem    REG  253,0  2029224 527432 /usr/lib/x86_64-linux-gnu/libc-2.31.so  
+ping    6657 vagrant  mem    REG  253,0   101320 527451 /usr/lib/x86_64-linux-gnu/libresolv-2.31.so  
+ping    6657 vagrant  mem    REG  253,0  1168056 527252 /usr/lib/x86_64-linux-gnu/libgcrypt.so.20.2.5  
+ping    6657 vagrant  mem    REG  253,0    31120 527208 /usr/lib/x86_64-linux-gnu/libcap.so.2.32  
+ping    6657 vagrant  mem    REG  253,0   191472 527389 /usr/lib/x86_64-linux-gnu/ld-2.31.so  
+ping    6657 vagrant    0u   CHR  136,0      0t0      3 /dev/pts/0  
+ping    6657 vagrant    1w   REG  253,0    16461 131088 /home/vagrant/test.txt  
+ping    6657 vagrant    2u   CHR  136,0      0t0      3 /dev/pts/0  
+ping    6657 vagrant    3u  icmp             0t0  68848 00000000:0001->00000000:0000  
+ping    6657 vagrant    4u  sock    0,9      0t0  68849 protocol: PINGv6  
+root@vagrant:~# exit  
+logout  
+vagrant@vagrant:~$ rm test.txt  
+vagrant@vagrant:~$ sudo lsof -p 6657  
+COMMAND  PID    USER   FD   TYPE DEVICE SIZE/OFF   NODE NAME  
+ping    6657 vagrant  cwd    DIR  253,0     4096 131074 /home/vagrant  
+ping    6657 vagrant  rtd    DIR  253,0     4096      2 /  
+ping    6657 vagrant  txt    REG  253,0    72776 524524 /usr/bin/ping  
+ping    6657 vagrant  mem    REG  253,0  5699248 535133 /usr/lib/locale/locale-archive  
+ping    6657 vagrant  mem    REG  253,0   137584 527268 /usr/lib/x86_64-linux-gnu/libgpg-error.so.0.28.0  
+ping    6657 vagrant  mem    REG  253,0  2029224 527432 /usr/lib/x86_64-linux-gnu/libc-2.31.so  
+ping    6657 vagrant  mem    REG  253,0   101320 527451 /usr/lib/x86_64-linux-gnu/libresolv-2.31.so  
+ping    6657 vagrant  mem    REG  253,0  1168056 527252 /usr/lib/x86_64-linux-gnu/libgcrypt.so.20.2.5  
+ping    6657 vagrant  mem    REG  253,0    31120 527208 /usr/lib/x86_64-linux-gnu/libcap.so.2.32  
+ping    6657 vagrant  mem    REG  253,0   191472 527389 /usr/lib/x86_64-linux-gnu/ld-2.31.so  
+ping    6657 vagrant    0u   CHR  136,0      0t0      3 /dev/pts/0  
+ping    6657 vagrant    1w   REG  253,0    26373 131088 /home/vagrant/test.txt (deleted)  
+ping    6657 vagrant    2u   CHR  136,0      0t0      3 /dev/pts/0  
+ping    6657 vagrant    3u  icmp             0t0  68848 00000000:0001->00000000:0000  
+ping    6657 vagrant    4u  sock    0,9      0t0  68849 protocol: PINGv6  
+vagrant@vagrant:~$ sudo -i  
+root@vagrant:~# echo '' >/proc/6657/fd/1  
+root@vagrant:~# lsof -p 6657  
+COMMAND  PID    USER   FD   TYPE DEVICE SIZE/OFF   NODE NAME  
+ping    6657 vagrant  cwd    DIR  253,0     4096 131074 /home/vagrant  
+ping    6657 vagrant  rtd    DIR  253,0     4096      2 /  
+ping    6657 vagrant  txt    REG  253,0    72776 524524 /usr/bin/ping  
+ping    6657 vagrant  mem    REG  253,0  5699248 535133 /usr/lib/locale/locale-archive  
+ping    6657 vagrant  mem    REG  253,0   137584 527268 /usr/lib/x86_64-linux-gnu/libgpg-error.so.0.28.0  
+ping    6657 vagrant  mem    REG  253,0  2029224 527432 /usr/lib/x86_64-linux-gnu/libc-2.31.so  
+ping    6657 vagrant  mem    REG  253,0   101320 527451 /usr/lib/x86_64-linux-gnu/libresolv-2.31.so  
+ping    6657 vagrant  mem    REG  253,0  1168056 527252 /usr/lib/x86_64-linux-gnu/libgcrypt.so.20.2.5  
+ping    6657 vagrant  mem    REG  253,0    31120 527208 /usr/lib/x86_64-linux-gnu/libcap.so.2.32  
+ping    6657 vagrant  mem    REG  253,0   191472 527389 /usr/lib/x86_64-linux-gnu/ld-2.31.so  
+ping    6657 vagrant    0u   CHR  136,0      0t0      3 /dev/pts/0  
+ping    6657 vagrant    1w   REG  253,0      178 131088 /home/vagrant/test.txt (deleted)  
+ping    6657 vagrant    2u   CHR  136,0      0t0      3 /dev/pts/0  
+ping    6657 vagrant    3u  icmp             0t0  68848 00000000:0001->00000000:0000  
+ping    6657 vagrant    4u  sock    0,9      0t0  68849 protocol: PINGv6  
 
-Способ 2  
-В терминале выполнить vagrant ssh, далее выполнить tmux (sudo apt install tmux). Комбинациями клавиш Ctrl+B и Shift+" создать ещё один процесс.  
-Далее  
-Ввод в терминале /dev/pts/1  
-	ls \text 2>/dev/pts/2  
-Вывод в терминале /dev/pts/2  
-	ls: cannot access 'text': No such file or directory  
+4.  
+Вся системная память и другие ресурсы, выделенные зомби-процессу, деаллокируются при его завершении с помощью системного вызова exit(). Но его запись в таблице остается доступной. Если родительский процесс не запущен, наличие зомби-процесса означает ошибку в операционной системе. Это может не вызывать серьезных проблем, если зомби-процессов немного. Но при больших нагрузках присутствие зомби-процессов может привести к нехватке записей в таблице процессов.  
 
-5.
-vagrant@vagrant:~$ cat>text_in  
-new line  
-vagrant@vagrant:~$ ls  
-text_in  
-vagrant@vagrant:~$ cat < text_in > text_out  
-vagrant@vagrant:~$ ls  
-text_in  text_out  
-vagrant@vagrant:~$ cat text_out  
-new line  
+5.  
+PID    COMM               FD ERR PATH  
+796    vminfo              6   0 /var/run/utmp  
+562    dbus-daemon        -1   2 /usr/local/share/dbus-1/system-services  
+562    dbus-daemon        18   0 /usr/share/dbus-1/system-services  
+562    dbus-daemon        -1   2 /lib/dbus-1/system-services  
+562    dbus-daemon        18   0 /var/lib/snapd/dbus-1/system-services/  
 
-6.
-Ответ: получится. Для этого нужно одновременно запустить Windows Terminal (это будет pty0) и консоль в VirtualBox Менеджер (это будет tty1). Комнда будет выглядеть следующим образом: 1) Из tty1 в pts/0: echo hello > /dev/pts/0; 2) Из pts/0 в tty1: echo hello > /dev/tty1
+6.  
+Linux vagrant 5.4.0-80-generic #90-Ubuntu SMP Fri Jul 9 22:49:44 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux  
+
+Цитата из man:  
+
+/proc/version  
+
+This string identifies the kernel version that is currently running. It includes the contents of /proc/sys/kernel/ostype, /proc/sys/kernel/osrelease and /proc/sys/kernel/version.  
+For example:  
+
+    Linux version 1.0.9 (quinlan@phaze) #1 Sat May 14 01:51:54 EDT 1994  
 
 7.
-Команда bash 5>&1 создаёт сиволическую ссылку с дескриптером 5 и направляет стандартным потоком (>) в фоновом режиме (&) в stdout (1)
-Команда echo netology > /proc/$$/fd/5 отправляет netology в данный дескриптер, если отправить в дескриптер, например, 2, то терминал выдаст ошибку, т.к. ранее мы не создавали подобный дескриптер. Заданный дескриптер (5) будет существовать только в рамках текущей сессии, в других сессиях его видно не будет.
+Операторы управления:  
+Точка с запятой (;) - все команды с наборами аргументов будут выполнены последовательно, причем командная оболочка будет ожидать завершения исполнения каждой из команд перед исполнением следующей команды.  
+Двойной амперсанд (&&) - Командная оболочка будет интерпретировать последовательность символов && как логический оператор "И". При использовании оператора && вторая команда будет исполняться только в том случае, если исполнение первой команды успешно завершится (будет возвращен нулевой код завершения).  
+
+set -e завершает работу при сбое команды. Следовательно && не имеет смысла использоваться, т.к. при возникновении ошибки - последовательность команд будет прервана.  
 
 8.
-vagrant@vagrant:~$ cat text_in  
-new line  
-second line  
-vagrant@vagrant:~$ ls -l text_in 3>&2 2>&1 1>&3 |grep -c "third line"  
--rw-rw-r-- 1 vagrant vagrant 21 Dec 26 07:52 text_in  
-0  
+-e прерывает выполнение исполнения при ошибке любой команды кроме последней в последовательности.  
+-u неустановленные/не заданные параметры и переменные считаются как ошибки, с выводом в stderr текста ошибки и выполнит завершение неинтерактивного вызова.  
+-x вывод трейса простых команд.  
+-o устаналивает или снимает опцию по её длинному имени. Например set -o noglob. Если никакой опции не задано, то выводится список всех опций и их статус.  
+pipefail - устанавливает, что код выхода из конвейера отличается от нормального («последняя команда в конвейере») поведения: ИСТИНА, если ни одна из команд не завершилась ошибкой, ЛОЖЬ, если что-то не удалось (код самой правой команды, которая завершилась ошибкой).  
 
-9.
-Команда cat /proc/$$/environ показывает переменные оболочки, аналогичный вывод можно получить командами printenv и export
+Для сценария , повышает деталезацию вывода ошибок и логирования на каждом этапе. Также завершит сценарий при наличии ошибок, кроме последней завершающей команды.  
 
-10.
-/proc/<PID>/cmdline - содержит параметры командной строки, переданные на этапе запуска процесса  
-/proc/<PID>/exe - является символьной ссылкой на исполненный бинарный файл  
+9.  
+vagrant@vagrant:~$ ps -o stat  
+STAT  
+Ss  
+R+  
 
-11.
-vagrant@vagrant:~$ cat /proc/cpuinfo | grep sse  
-flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx lm constant_tsc rep_good nopl cpuid tsc_known_freq pni ssse3 x2apic hypervisor lahf_lm pti  
-flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx lm constant_tsc rep_good nopl cpuid tsc_known_freq pni ssse3 x2apic hypervisor lahf_lm pti  
-  
-Ответ: SSE 2.0  
+S прерывистый сон (ожидание завершения события)  
+s является лидером сессии  
 
-12.
-vagrant@vagrant:~$ ssh localhost 'tty'  
-vagrant@localhost's password:  
-not a tty  
-  
-Для удаленного сеанса по умолчанию не выделяется TTY. Для выделения TTY для удаленного выполнения необходимо использовать ключ -t.
-  
-vagrant@vagrant:~$ ssh -t localhost 'tty'  
-vagrant@localhost's password:  
-/dev/pts/1  
-Connection to localhost closed.  
-
-13.
-vagrant@vagrant:~$ ps -a  
-    PID TTY          TIME CMD  
-    936 pts/0    00:00:00 top  
-    937 pts/1    00:00:00 ps  
-vagrant@vagrant:~$ sudo reptyr -T 936  
-
-14.
-Команда tee нужна для записи вывода любой команды в один или несколько файлов. Команда echo является встроеной командой оболочки и параметр sudo на неё не распространяется в отлиии от tee, которая является внешней командой. Чтобы выполнить sudo echo нужно войти в оболочку под su.
+считать S, Ss или Ssl равнозначными нельзя, дополнительные символы это характеристики процесса  
