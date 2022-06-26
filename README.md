@@ -16,7 +16,7 @@ root@vagrant:~# ps -a
    6704 pts/1    00:00:00 sudo  
    6706 pts/1    00:00:00 bash  
    6718 pts/1    00:00:00 ps  
-root@vagrant:~# lsof -p 6657  
+'''root@vagrant:~# lsof -p 6657'''  
 COMMAND  PID    USER   FD   TYPE DEVICE SIZE/OFF   NODE NAME  
 ping    6657 vagrant  cwd    DIR  253,0     4096 131074 /home/vagrant  
 ping    6657 vagrant  rtd    DIR  253,0     4096      2 /  
