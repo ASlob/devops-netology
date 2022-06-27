@@ -58,16 +58,7 @@ user@linserv:~$
 ```
 
 ### 6.  
-Linux vagrant 5.4.0-80-generic #90-Ubuntu SMP Fri Jul 9 22:49:44 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux  
-
-Цитата из man:  
-
-/proc/version  
-
-This string identifies the kernel version that is currently running. It includes the contents of /proc/sys/kernel/ostype, /proc/sys/kernel/osrelease and /proc/sys/kernel/version.  
-For example:  
-
-    Linux version 1.0.9 (quinlan@phaze) #1 Sat May 14 01:51:54 EDT 1994  
+Данные из PTY в эмулятор TTY возможно перенаправить командой echo 'hello' >/dev/tty1, при этом в PTY вывода мы не увидим, а в TTY появится вывод hello.
 
 
 ### 7.
