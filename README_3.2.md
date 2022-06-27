@@ -36,13 +36,26 @@ user@linserv:~$ ls: cannot access 'test.file': No such file or directory
 ```
 
 ### 5.  
-PID    COMM               FD ERR PATH  
-796    vminfo              6   0 /var/run/utmp  
-562    dbus-daemon        -1   2 /usr/local/share/dbus-1/system-services  
-562    dbus-daemon        18   0 /usr/share/dbus-1/system-services  
-562    dbus-daemon        -1   2 /lib/dbus-1/system-services  
-562    dbus-daemon        18   0 /var/lib/snapd/dbus-1/system-services/  
-
+```
+user@linserv:~$ cat test_dir/test_file
+qwerty
+55555
+qwerty
+66666
+55555
+55555
+user@linserv:~$ cat test_dir/test_file.out
+cat: test_dir/test_file.out: No such file or directory
+user@linserv:~$ cat < test_dir/test_file > test_dir/test_file.out
+user@linserv:~$ cat test_dir/test_file.out
+qwerty
+55555
+qwerty
+66666
+55555
+55555
+user@linserv:~$
+```
 
 ### 6.  
 Linux vagrant 5.4.0-80-generic #90-Ubuntu SMP Fri Jul 9 22:49:44 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux  
