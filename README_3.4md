@@ -1,1 +1,65 @@
+### 1.
+**cd** является командой для изменения рабочего каталога, является встроенной и не имеет собственного исполняемого файла. Команда выполняется только в текущей сессии, не влияя на другие. 
 
+### 2.
+```
+user@linserv:~$ grep 55555 test_dir/test_file | wc -l
+3
+user@linserv:~$ grep 55555 test_dir/test_file
+55555
+55555
+55555
+user@linserv:~$ grep -c 55555 test_dir/test_file
+3
+```
+### 3.
+```
+user@linserv:~$ pstree -p
+systemd(1)─┬─accounts-daemon(604)─┬─{accounts-daemon}(626)
+           │                      └─{accounts-daemon}(716)
+```
+Ответ: systemd
+
+### 4.  
+```
+user@linserv:~$ who
+user     pts/0        2022-06-27 08:58 (192.168.0.2)
+user     pts/1        2022-06-27 10:47 (192.168.0.46)
+```
+Ввод pts/0
+```
+user@linserv:~$ ls test.file 2>/dev/pts/1
+```
+Вывод pts/1
+```
+user@linserv:~$ ls: cannot access 'test.file': No such file or directory
+```
+
+### 5.  
+```
+user@linserv:~$ cat test_dir/test_file
+qwerty
+55555
+qwerty
+66666
+55555
+55555
+user@linserv:~$ cat test_dir/test_file.out
+cat: test_dir/test_file.out: No such file or directory
+user@linserv:~$ cat < test_dir/test_file > test_dir/test_file.out
+user@linserv:~$ cat test_dir/test_file.out
+qwerty
+55555
+qwerty
+66666
+55555
+55555
+user@linserv:~$
+```
+
+### 6.  
+Данные из PTY перенаправляются в эмулятор TTY командой ```echo 'netology' > /dev/tty1```, при этом в PTY вывода мы не увидим, а в TTY появится вывод netology.
+
+
+### 7.
+Команда ```bash 5>&1``` создаст дескриптор 5 и перенатправит его в stdout. Если выполнить команду ```echo netology > /proc/$$/fd/5```, то вывод ```netology``` перенаправится в пятый дескриптор ```/fd/5``` процесса ```bash```, а тот перенаправит его в стандартный поток вывода и мы получим вывод ```netology``` на терминале. А если выполнить команду ```echo netology > /proc/$$/fd/4```, то в терминале мы увидим ```bash: /proc/1121/fd/4: No such file or directory```, так как дескриптор 4 ещё не создан.
