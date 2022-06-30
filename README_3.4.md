@@ -47,7 +47,7 @@ user@linserv:~/sudo systemctl status node_exporter
      CGroup: /system.slice/node_exporter.service
              └─2122 /usr/local/bin/node_exporter
 ```
-
+![Image alt](https://github.com/ASlob/devops-netology/tree/main/images/screen.png)
 
 
 
