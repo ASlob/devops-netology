@@ -38,8 +38,6 @@ user@linserv:~/node_exporter-1.3.1.linux-amd64$ sudo systemctl enable node_expor
 Created symlink /etc/systemd/system/multi-user.target.wants/node_exporter.service → /etc/systemd/system/node_exporter.service.
 user@linserv:~/sudo reboot
 user@linserv:~/sudo systemctl status node_exporter
-```
-```
 ● node_exporter.service - Node Exporter Service
      Loaded: loaded (/etc/systemd/system/node_exporter.service; enabled; vendor preset: enabled)
      Active: active (running) since Thu 2022-06-30 16:25:36 UTC; 3h 9min ago
