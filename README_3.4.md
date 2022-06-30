@@ -1,5 +1,60 @@
 ### 1.
-**cd** является командой для изменения рабочего каталога, является встроенной и не имеет собственного исполняемого файла. Команда выполняется только в текущей сессии, не влияя на другие. 
+Установка node_exporter, настройка прав
+
+```
+user@linserv:~$ wget https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz
+user@linserv:~$ tar zxvf node_exporter-1.3.1.linux-amd64.tar.gz
+user@linserv:~$ cd node_exporter-1.3.1.linux-amd64/
+user@linserv:~/node_exporter-1.3.1.linux-amd64$ ls
+LICENSE  node_exporter  NOTICE
+user@linserv:~/node_exporter-1.3.1.linux-amd64$ sudo cp node_exporter /usr/local/bin/
+[sudo] password for user:
+user@linserv:~/node_exporter-1.3.1.linux-amd64$ sudo useradd --no-create-home --shell /bin/false nodeusr
+user@linserv:~/node_exporter-1.3.1.linux-amd64$ sudo chown -R nodeusr:nodeusr /usr/local/bin/node_exporter
+user@linserv:~/node_exporter-1.3.1.linux-amd64$ sudo nano /etc/systemd/system/node_exporter.service
+```
+
+Создаём юнит
+```
+[Unit]
+Description=Node Exporter Service
+After=network.target
+
+[Service]
+User=nodeusr
+Group=nodeusr
+Type=simple
+ExecStart=/usr/local/bin/node_exporter
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Настройка автозагрузки. Проверка.
+```
+user@linserv:~/node_exporter-1.3.1.linux-amd64$ sudo systemctl enable node_exporter
+Created symlink /etc/systemd/system/multi-user.target.wants/node_exporter.service → /etc/systemd/system/node_exporter.service.
+user@linserv:~/sudo reboot
+user@linserv:~/sudo systemctl status node_exporter
+```
+```
+● node_exporter.service - Node Exporter Service
+     Loaded: loaded (/etc/systemd/system/node_exporter.service; enabled; vendor preset: enabled)
+     Active: active (running) since Thu 2022-06-30 16:25:36 UTC; 3h 9min ago
+   Main PID: 2122 (node_exporter)
+      Tasks: 5 (limit: 1071)
+     Memory: 4.6M
+     CGroup: /system.slice/node_exporter.service
+             └─2122 /usr/local/bin/node_exporter
+```
+
+
+
+
+
+
 
 ### 2.
 ```
