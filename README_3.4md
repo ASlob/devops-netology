@@ -1,6 +1,41 @@
 ### 1.
-**cd** является командой для изменения рабочего каталога, является встроенной и не имеет собственного исполняемого файла. Команда выполняется только в текущей сессии, не влияя на другие. 
+Установка node_exporter
+```
+user@linserv:~$ wget https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz
+user@linserv:~$ tar zxvf node_exporter-1.3.1.linux-amd64.tar.gz
+user@linserv:~$ cd node_exporter-1.3.1.linux-amd64/
+user@linserv:~/node_exporter-1.3.1.linux-amd64$ ls
+LICENSE  node_exporter  NOTICE
+user@linserv:~/node_exporter-1.3.1.linux-amd64$ sudo cp node_exporter /usr/local/bin/
+[sudo] password for user:
+user@linserv:~/node_exporter-1.3.1.linux-amd64$ sudo useradd --no-create-home --shell /bin/false nodeusr
+user@linserv:~/node_exporter-1.3.1.linux-amd64$ sudo chown -R nodeusr:nodeusr /usr/local/bin/node_exporter
+user@linserv:~/node_exporter-1.3.1.linux-amd64$ sudo nano /etc/systemd/system/node_exporter.service
+```
+Создаём юнит
+```
+[Unit]
+Description=Node Exporter Service
+After=network.target
 
+[Service]
+User=nodeusr
+Group=nodeusr
+Type=simple
+ExecStart=/usr/local/bin/node_exporter
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+```
+
+```
+user@linserv:~/node_exporter-1.3.1.linux-amd64$ sudo systemctl daemon-reload
+user@linserv:~/node_exporter-1.3.1.linux-amd64$ sudo systemctl enable node_exporter
+Created symlink /etc/systemd/system/multi-user.target.wants/node_exporter.service → /etc/systemd/system/node_exporter.service.
+user@linserv:~/node_exporter-1.3.1.linux-amd64$ sudo systemctl start node_exporter 
+```
 ### 2.
 ```
 user@linserv:~$ grep 55555 test_dir/test_file | wc -l
