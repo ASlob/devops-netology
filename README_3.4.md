@@ -48,33 +48,29 @@ user@linserv:~/sudo systemctl status node_exporter
              └─2122 /usr/local/bin/node_exporter
 ```
 
-Результат в браузере
-![Screen](https://github.com/ASlob/devops-netology/tree/main/images/screen.png)
-
-
-
-
+Результат в браузере: ![Screenshot](https://github.com/ASlob/devops-netology/tree/main/images/screen.png)
 
 
 ### 2.
 ```
-user@linserv:~$ grep 55555 test_dir/test_file | wc -l
-3
-user@linserv:~$ grep 55555 test_dir/test_file
-55555
-55555
-55555
-user@linserv:~$ grep -c 55555 test_dir/test_file
-3
+--collector.cpu
+--collector.diskstats
+--collector.meminfo
+--collector.netstat
 ```
 ### 3.
 ```
-user@linserv:~$ pstree -p
-systemd(1)─┬─accounts-daemon(604)─┬─{accounts-daemon}(626)
-           │                      └─{accounts-daemon}(716)
+vagrant@vagrant:~$ sudo lsof -i :19999
+COMMAND PID    USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+netdata 664 netdata    4u  IPv4  24589      0t0  TCP *:19999 (LISTEN)
+netdata 664 netdata   22u  IPv4  28988      0t0  TCP vagrant:19999->_gateway:49462 (ESTABLISHED)
+netdata 664 netdata   26u  IPv4  29973      0t0  TCP vagrant:19999->_gateway:49463 (ESTABLISHED)
+netdata 664 netdata   32u  IPv4  29974      0t0  TCP vagrant:19999->_gateway:49464 (ESTABLISHED)
+netdata 664 netdata   34u  IPv4  29975      0t0  TCP vagrant:19999->_gateway:49465 (ESTABLISHED)
+netdata 664 netdata   52u  IPv4  29977      0t0  TCP vagrant:19999->_gateway:49470 (ESTABLISHED)
+netdata 664 netdata   53u  IPv4  29978      0t0  TCP vagrant:19999->_gateway:49471 (ESTABLISHED)
 ```
-Ответ: systemd
-
+Результат в браузере: ![Screenshot](https://github.com/ASlob/devops-netology/tree/main/images/screen2.png)
 ### 4.  
 ```
 user@linserv:~$ who
