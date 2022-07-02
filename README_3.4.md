@@ -73,43 +73,33 @@ netdata 664 netdata   53u  IPv4  29978      0t0  TCP vagrant:19999->_gateway:494
 Результат в браузере: ![Screenshot](https://github.com/ASlob/devops-netology/tree/main/images/screen2.png)
 ### 4.  
 ```
-user@linserv:~$ who
-user     pts/0        2022-06-27 08:58 (192.168.0.2)
-user     pts/1        2022-06-27 10:47 (192.168.0.46)
+vagrant@vagrant:~$ sudo dmesg | grep "Hypervisor detected"
+[    0.000000] Hypervisor detected: KVM
 ```
-Ввод pts/0
-```
-user@linserv:~$ ls test.file 2>/dev/pts/1
-```
-Вывод pts/1
-```
-user@linserv:~$ ls: cannot access 'test.file': No such file or directory
-```
+Если система физическая, выходных данных не будет.
 
 ### 5.  
 ```
-user@linserv:~$ cat test_dir/test_file
-qwerty
-55555
-qwerty
-66666
-55555
-55555
-user@linserv:~$ cat test_dir/test_file.out
-cat: test_dir/test_file.out: No such file or directory
-user@linserv:~$ cat < test_dir/test_file > test_dir/test_file.out
-user@linserv:~$ cat test_dir/test_file.out
-qwerty
-55555
-qwerty
-66666
-55555
-55555
-user@linserv:~$
+vagrant@vagrant:~$ sysctl fs.nr_open
+fs.nr_open = 1048576
 ```
+Значение по умолчанию - 1024*1024 (1048576)
+
+```
+vagrant@vagrant:~$ ulimit -Hn
+1048576
+vagrant@vagrant:~$ ulimit -Sn
+1024
+```
+'S' обозначает мягкие ограничения, изменяется приложениями динамически, в т.ч. и за пределы ограничения, но не более чем 'H'
+'H' обозначает жесткие ограничения, задается корневым пользователем 
+'n' обозначает мсимальное количество открытых файловых дескрипторов
+
+Значения приводятся с шагом 1024 байта, за исключением -t, который выражается в секундах, -p, который находится с шагом 512 байт, и -u, который представляет собой немасштабированное число процессов.
+
 
 ### 6.  
-Данные из PTY перенаправляются в эмулятор TTY командой ```echo 'netology' > /dev/tty1```, при этом в PTY вывода мы не увидим, а в TTY появится вывод netology.
+
 
 
 ### 7.
