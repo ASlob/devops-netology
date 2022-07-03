@@ -10,8 +10,7 @@ Status Code: 301 Moved Permanently
 Remote Address: 151.101.1.69:80
 Referrer Policy: strict-origin-when-cross-origin
 ```
-
-
+Самый долгий запрос обрабатывался 397 мс. - ![Screenshot](https://github.com/ASlob/devops-netology/tree/main/images/screen4.png)
 ### 3.
 ```
 vagrant@vagrant:~$ sudo lsof -i :19999
