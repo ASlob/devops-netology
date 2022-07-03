@@ -16,7 +16,7 @@ Referrer Policy: strict-origin-when-cross-origin
 
 
 ### 4.  
-Мой IP:  109.165.47.19, провайдер Ростелеком ![Screenshot](https://github.com/ASlob/devops-netology/tree/main/images/screen6.png)
+Мой IP:  109.165.47.19, провайдер Ростелеком ![Screenshot](https://github.com/ASlob/devops-netology/tree/main/images/screen6.png)   
 AS12389 ![Screenshot](https://github.com/ASlob/devops-netology/tree/main/images/screen6.png)
 
 
