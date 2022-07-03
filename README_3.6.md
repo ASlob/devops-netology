@@ -12,90 +12,103 @@ Referrer Policy: strict-origin-when-cross-origin
 ```
 Самый долгий запрос обрабатывался 397 мс. - ![Screenshot](https://github.com/ASlob/devops-netology/tree/main/images/screen4.png)
 ### 3.
-```
-vagrant@vagrant:~$ sudo lsof -i :19999
-COMMAND PID    USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
-netdata 664 netdata    4u  IPv4  24589      0t0  TCP *:19999 (LISTEN)
-netdata 664 netdata   22u  IPv4  28988      0t0  TCP vagrant:19999->_gateway:49462 (ESTABLISHED)
-netdata 664 netdata   26u  IPv4  29973      0t0  TCP vagrant:19999->_gateway:49463 (ESTABLISHED)
-netdata 664 netdata   32u  IPv4  29974      0t0  TCP vagrant:19999->_gateway:49464 (ESTABLISHED)
-netdata 664 netdata   34u  IPv4  29975      0t0  TCP vagrant:19999->_gateway:49465 (ESTABLISHED)
-netdata 664 netdata   52u  IPv4  29977      0t0  TCP vagrant:19999->_gateway:49470 (ESTABLISHED)
-netdata 664 netdata   53u  IPv4  29978      0t0  TCP vagrant:19999->_gateway:49471 (ESTABLISHED)
-```
-Результат в браузере: ![Screenshot](https://github.com/ASlob/devops-netology/tree/main/images/screen2.png)
+Результат в браузере: ![Screenshot](https://github.com/ASlob/devops-netology/tree/main/images/screen5.png)
 
 
 ### 4.  
-```
-vagrant@vagrant:~$ sudo dmesg | grep "Hypervisor detected"
-[    0.000000] Hypervisor detected: KVM
-```
-Если система физическая, выходных данных не будет.
+Мой IP:  109.165.47.19, провайдер Ростелеком ![Screenshot](https://github.com/ASlob/devops-netology/tree/main/images/screen6.png)
+AS12389 ![Screenshot](https://github.com/ASlob/devops-netology/tree/main/images/screen6.png)
 
 
 ### 5.  
 ```
-vagrant@vagrant:~$ sysctl fs.nr_open
-fs.nr_open = 1048576
+vagrant@vagrant:~$ traceroute -IAn 8.8.8.8
+traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 60 byte packets
+ 1  10.0.2.2 [*]  0.260 ms  0.260 ms  0.252 ms
+ 2  192.168.1.1 [*]  1.036 ms  0.742 ms  0.562 ms
+ 3  178.34.128.50 [AS12389]  5.904 ms  5.998 ms  5.707 ms
+ 4  178.34.129.237 [AS12389]  5.794 ms  10.738 ms  10.446 ms
+ 5  185.140.148.153 [AS12389]  39.453 ms  39.162 ms  39.332 ms
+ 6  72.14.197.6 [AS15169]  30.921 ms  33.199 ms  32.377 ms
+ 7  108.170.250.129 [AS15169]  42.122 ms  41.832 ms  41.544 ms
+ 8  108.170.250.130 [AS15169]  40.962 ms  40.355 ms  40.833 ms
+ 9  142.251.238.84 [AS15169]  53.692 ms  53.871 ms  53.577 ms
+10  142.251.238.68 [AS15169]  44.794 ms  44.500 ms  49.536 ms
+11  216.239.58.67 [AS15169]  54.779 ms  54.476 ms  54.861 ms
+12  * * *
+13  * * *
+14  * * *
+15  * * *
+16  * * *
+17  * * *
+18  * * *
+19  * * *
+20  * * *
+21  8.8.8.8 [AS15169]  41.827 ms  42.075 ms  41.786 ms
 ```
-Значение по умолчанию - 1024*1024 (1048576)
-
-```
-vagrant@vagrant:~$ ulimit -Hn
-1048576
-vagrant@vagrant:~$ ulimit -Sn
-1024
-```
-'S' обозначает мягкие ограничения, изменяется приложениями динамически, в т.ч. и за пределы ограничения, но не более чем 'H'   
-'H' обозначает жесткие ограничения, задается корневым пользователем   
-'n' обозначает мсимальное количество открытых файловых дескрипторов   
-
-Значения приводятся с шагом 1024 байта, за исключением -t, который выражается в секундах, -p, который находится с шагом 512 байт, и -u, который представляет собой немасштабированное число процессов.
 
 
 ### 6.  
-```
-vagrant@vagrant:~$ sudo -i
-root@vagrant:~# unshare --fork --pid --mount-proc sleep 1h
-bg
-^Z
-[1]+  Stopped                 unshare -f --pid --mount-proc sleep 1h
-root@vagrant:~# ps aux | grep sleep
-root       17815  0.0  0.0   8080   596 pts/0    T    21:23   0:00 unshare -f --pid --mount-proc sleep 1h
-root       17816  0.0  0.0   8076   580 pts/0    S    21:23   0:00 sleep 1h
-root       17822  0.0  0.0   8900   724 pts/0    S+   21:23   0:00 grep --color=auto sleep
-root@vagrant:~# nsenter -t 17816 -p -m
-root@vagrant:/# ps
-    PID TTY          TIME CMD
-      1 pts/0    00:00:00 sleep
-      2 pts/0    00:00:00 bash
-     11 pts/0    00:00:00 ps
-```
+Самое большое время задержки на участке ```AS15169  216.239.58.67```, среднее время задержки (Avg) = 56,4 ms ![Screenshot](https://github.com/ASlob/devops-netology/tree/main/images/screen7.png)   
+Также происходит значительная потеря пакетов на участке ```AS12389  185.140.148.153```
 
 
 ### 7.
-:(){ :|:& };: - команда является логической бомбой. Она оперирует определением функции с именем ‘:‘, которая вызывает сама себя дважды: один раз на переднем плане и один раз в фоне. Она продолжает своё выполнение снова и снова, пока система не зависнет.
-
-Примерно, на третьей секунде виртуальная машина остановила работу, выдав критическую ошибку (![Screenshot](https://github.com/ASlob/devops-netology/tree/main/images/screen3.png)) и никакой механизм автоматической стабилизации не помог.   
-После перезагрузки компьютера при запуске vagrant компьютер повис и только после второй перезагрузки всё получилось, и механизм всё-таки сработал  
-
 ```
-vagrant@vagrant:~$ :(){ :|:& };:
-...
-...
-...
--bash: fork: Resource temporarily unavailable
-^C
-[1]+  Done                    : | :
-vagrant@vagrant:~$ dmesg
-...
-...
-...
-[  659.252236] cgroup: fork rejected by pids controller in /user.slice/user-1000.slice/session-1.scope
+vagrant@vagrant:~$ dig +short NS dns.google
+ns3.zdns.google.
+ns1.zdns.google.
+ns2.zdns.google.
+ns4.zdns.google.
+vagrant@vagrant:~$ dig +short A dns.google
+8.8.4.4
+8.8.8.8
 ```
-Cработал механизм сgroups, ограничив ресурсы внутри конкретной контрольной группы процессов.   
-Чтобы временно изменить ограничение (в рамках данной сессии): ```ulimit -u <значение>```   
-Чтобы ввести постоянное ограничение: ```/etc/security/limits.conf```
 
 
+### 8.
+```
+vagrant@vagrant:~$ dig -x 8.8.8.8
+
+; <<>> DiG 9.16.1-Ubuntu <<>> -x 8.8.8.8
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 53747
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;8.8.8.8.in-addr.arpa.          IN      PTR
+
+;; ANSWER SECTION:
+8.8.8.8.in-addr.arpa.   4935    IN      PTR     dns.google.
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Sun Jul 03 19:23:09 MSK 2022
+;; MSG SIZE  rcvd: 73
+```
+```
+vagrant@vagrant:~$ dig -x 8.8.4.4
+
+; <<>> DiG 9.16.1-Ubuntu <<>> -x 8.8.4.4
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 52453
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;4.4.8.8.in-addr.arpa.          IN      PTR
+
+;; ANSWER SECTION:
+4.4.8.8.in-addr.arpa.   18102   IN      PTR     dns.google.
+
+;; Query time: 48 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Sun Jul 03 19:25:06 MSK 2022
+;; MSG SIZE  rcvd: 73
+```
+Ответ: dns.google.
