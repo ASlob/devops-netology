@@ -65,11 +65,11 @@ sda                    8:0    0   64G  0 disk
   └─vgvagrant-swap_1 253:1    0  980M  0 lvm   [SWAP]
 sdb                    8:16   0  2.5G  0 disk
 ├─sdb1                 8:17   0    2G  0 part
-│ └─md0                9:0    0    2G  0 raid1
+│ └─md1                9:0    0    2G  0 raid1
 └─sdb2                 8:18   0  511M  0 part
 sdc                    8:32   0  2.5G  0 disk
 ├─sdc1                 8:33   0    2G  0 part
-│ └─md0                9:0    0    2G  0 raid1
+│ └─md1                9:0    0    2G  0 raid1
 └─sdc2                 8:34   0  511M  0 part
 ```
 ```
@@ -93,71 +93,65 @@ sda                    8:0    0   64G  0 disk
   └─vgvagrant-swap_1 253:1    0  980M  0 lvm   [SWAP]
 sdb                    8:16   0  2.5G  0 disk
 ├─sdb1                 8:17   0    2G  0 part
-│ └─md0                9:0    0    2G  0 raid1
+│ └─md1                9:1    0    2G  0 raid1
 └─sdb2                 8:18   0  511M  0 part
-  └─md1                9:1    0 1018M  0 raid0
+  └─md0                9:0    0 1018M  0 raid0
 sdc                    8:32   0  2.5G  0 disk
 ├─sdc1                 8:33   0    2G  0 part
-│ └─md0                9:0    0    2G  0 raid1
+│ └─md1                9:1    0    2G  0 raid1
 └─sdc2                 8:34   0  511M  0 part
-  └─md1                9:1    0 1018M  0 raid0
-```
-```
-vagrant@vagrant:~$ cat /proc/mdstat
-Personalities : [linear] [multipath] [raid0] [raid1] [raid6] [raid5] [raid4] [raid10]
-md1 : active raid0 sdc2[1] sdb2[0]
-      1042432 blocks super 1.2 512k chunks
-
-md0 : active raid1 sdc1[1] sdb1[0]
-      2094080 blocks super 1.2 [2/2] [UU]
-
-unused devices: <none>
+  └─md0                9:0    0 1018M  0 raid0
 ```
 
 
 ### 8.
 ```
-vagrant@vagrant:~$ dig -x 8.8.8.8
-
-; <<>> DiG 9.16.1-Ubuntu <<>> -x 8.8.8.8
-;; global options: +cmd
-;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 53747
-;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
-
-;; OPT PSEUDOSECTION:
-; EDNS: version: 0, flags:; udp: 65494
-;; QUESTION SECTION:
-;8.8.8.8.in-addr.arpa.          IN      PTR
-
-;; ANSWER SECTION:
-8.8.8.8.in-addr.arpa.   4935    IN      PTR     dns.google.
-
-;; Query time: 0 msec
-;; SERVER: 127.0.0.53#53(127.0.0.53)
-;; WHEN: Sun Jul 03 19:23:09 MSK 2022
-;; MSG SIZE  rcvd: 73
+vagrant@vagrant:~$ sudo pvcreate /dev/md0 /dev/md1
+  Physical volume "/dev/md0" successfully created.
+  Physical volume "/dev/md1" successfully created.
 ```
 ```
-vagrant@vagrant:~$ dig -x 8.8.4.4
-
-; <<>> DiG 9.16.1-Ubuntu <<>> -x 8.8.4.4
-;; global options: +cmd
-;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 52453
-;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
-
-;; OPT PSEUDOSECTION:
-; EDNS: version: 0, flags:; udp: 65494
-;; QUESTION SECTION:
-;4.4.8.8.in-addr.arpa.          IN      PTR
-
-;; ANSWER SECTION:
-4.4.8.8.in-addr.arpa.   18102   IN      PTR     dns.google.
-
-;; Query time: 48 msec
-;; SERVER: 127.0.0.53#53(127.0.0.53)
-;; WHEN: Sun Jul 03 19:25:06 MSK 2022
-;; MSG SIZE  rcvd: 73
+vagrant@vagrant:~$ sudo pvscan
+  PV /dev/sda5   VG vgvagrant       lvm2 [<63.50 GiB / 0    free]
+  PV /dev/md0                       lvm2 [1018.00 MiB]
+  PV /dev/md1                       lvm2 [<2.00 GiB]
+  Total: 3 [<66.49 GiB] / in use: 1 [<63.50 GiB] / in no VG: 2 [2.99 GiB]
 ```
-Ответ: dns.google.
+
+
+### 9.
+
+
+
+
+### 10.
+
+
+### 11.
+
+
+### 12.
+
+
+### 13.
+
+
+### 14.
+
+
+### 15.
+
+
+### 16.
+
+
+### 17.
+
+
+### 18.
+
+
+### 19.
+
+
+### 20.
