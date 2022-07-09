@@ -106,10 +106,10 @@ iface eth0.1400 inet static
 ### 4.  
 BONDING - объединение сетевых интерфейсов для повышения отказоустойчивости и увеличения пропускной способности.  
 Опции для балансировки нагрузки:  
-```balance-rr```
-```balance-xor```
-```balance-tlb```
-```balance-alb```
+```balance-rr```  
+```balance-xor```  
+```balance-tlb```  
+```balance-alb```  
 Настройки подинтерфейсов BOND'ов необходимо добавить в файл /etc/network/interfaces.  
 Пример конфигурации:
 ```
