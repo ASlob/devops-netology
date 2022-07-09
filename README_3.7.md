@@ -151,7 +151,7 @@ HostMax:   10.10.10.254         00001010.00001010.00001010. 11111110
 Broadcast: 10.10.10.255         00001010.00001010.00001010. 11111111
 Hosts/Net: 254                   Class A, Private Internet
 ```
-Сеть с маской /24 можно разбить на 32 подсети с маской /29
+Сеть с маской /24 можно разбить на 32 подсети с маской /29  
 Примеры:
 ```
 vagrant@vagrant:~$ ipcalc 10.10.10.50/29
@@ -205,13 +205,13 @@ Hosts/Net: 62                    Class A
 
 
 ### 7.
-**Linux**
-ARP таблица: ```arp -n```
-Очистить ARP кэш: ```ip neigh flush all```
-Удалить одну ARP кэш запись: ```arp -d <IP>```
+**Linux**  
+ARP таблица: ```arp -n```  
+Очистить ARP кэш: ```ip neigh flush all```  
+Удалить одну ARP кэш запись: ```arp -d <IP>```  
 
-**Windows**
-ARP таблица: ```arp -a```
-Очистить ARP кэш: ```netsh interface ip delete arpcache```
-Удалить одну ARP кэш запись: ```arp -d <IP>```
+**Windows**  
+ARP таблица: ```arp -a```  
+Очистить ARP кэш: ```netsh interface ip delete arpcache```  
+Удалить одну ARP кэш запись: ```arp -d <IP>```  
 
