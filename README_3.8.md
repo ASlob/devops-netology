@@ -29,141 +29,51 @@ Paths: (24 available, best #22, table default)
 
 
 ### 2.
-Протокол LLDP. Команда ```lldpctl``` в составе пакета ```lldpd```
+```
+vagrant@vagrant:~$ sudo modprobe -v dummy numdummies=1
+insmod /lib/modules/5.4.0-80-generic/kernel/drivers/net/dummy.ko numdummies=0 numdummies=1
+```
+```
+vagrant@vagrant:~$ ifconfig -a | grep dummy
+dummy0: flags=130<BROADCAST,NOARP>  mtu 1500
+```
+```
+vagrant@vagrant:~$ sudo ip addr add 192.168.1.50/24 dev dummy0
+vagrant@vagrant:~$ sudo ip addr add 192.168.1.100/24 dev dummy0
+```
+```
+vagrant@vagrant:~$ ip a | grep dummy
+3: dummy0: <BROADCAST,NOARP> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    inet 192.168.1.50/24 scope global dummy0
+    inet 192.168.1.100/24 scope global secondary dummy0
+```
 
 
 ### 3.
-Настройки подинтерфейсов VLAN'ов необходимо добавить в файл /etc/network/interfaces.  
-Пример конфигурации:
 ```
-auto vlan1400
-iface vlan1400 inet static
-        address 192.168.1.1
-        netmask 255.255.255.0
-        vlan_raw_device eth0
+vagrant@vagrant:~$ sudo netstat -ntlp | grep LISTEN
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      1/init
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      612/systemd-resolve
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1404/sshd: /usr/sbi
+tcp6       0      0 :::111                  :::*                    LISTEN      1/init
+tcp6       0      0 :::22                   :::*                    LISTEN      1404/sshd: /usr/sbi
 ```
-Или, если хочется использовать названия интерфейсов вида eth0.1400:
-```
-auto eth0.1400
-iface eth0.1400 inet static
-        address 192.168.1.1
-        netmask 255.255.255.0
-        vlan_raw_device eth0
-```
-Параметр ```vlan_raw_device``` указывает, на каком сетевом интерфейсе должен создаваться новый интерфейс vlan1400.  
-Номер ```1400``` в данном случае указывает на то, какой VLAN ID должен использоваться.  
-Настройка VLAN выполняется с помощью программы ```vconfig```  
-Использование VLAN требует установленного пакета ```vlan```
+53 порт использует systemd-resolve (DNS)
+22 порт использует sshd
+
 
 ### 4.  
-BONDING - объединение сетевых интерфейсов для повышения отказоустойчивости и увеличения пропускной способности.  
-Опции для балансировки нагрузки:  
-```balance-rr```  
-```balance-xor```  
-```balance-tlb```  
-```balance-alb```  
-Настройки подинтерфейсов BOND'ов необходимо добавить в файл /etc/network/interfaces.  
-Пример конфигурации:
 ```
-auto bond0
-iface bond0 inet static
-        address 192.168.0.2
-        netmask 255.255.255.0
-        network 192.168.0.0
-        broadcast 192.168.0.255
-        gateway 192.168.0.1
-        up /sbin/ifenslave bond0 eth0 eth1
-        down /sbin/ifenslave -d bond0 eth0 eth1
+vagrant@vagrant:~$ sudo ss -lupn
+State       Recv-Q      Send-Q            Local Address:Port           Peer Address:Port      Process
+UNCONN      0           0                 127.0.0.53%lo:53                  0.0.0.0:*          users:(("systemd-resolve",pid=612,fd=12))
+UNCONN      0           0                10.0.2.15%eth0:68                  0.0.0.0:*          users:(("systemd-network",pid=410,fd=19))
+UNCONN      0           0                       0.0.0.0:111                 0.0.0.0:*          users:(("rpcbind",pid=611,fd=5),("systemd",pid=1,fd=96))
+UNCONN      0           0                          [::]:111                    [::]:*          users:(("rpcbind",pid=611,fd=7),("systemd",pid=1,fd=98))
 ```
+53 порт использует systemd-resolve (DNS)
+68 порт использует systemd-network (DHCP)
+
 
 ### 5.  
-Сеть с маской /29; Всего адресов 8, узловых 6
-```
-vagrant@vagrant:~$ ipcalc 10.10.10.0/29
-Address:   10.10.10.0           00001010.00001010.00001010.00000 000
-Netmask:   255.255.255.248 = 29 11111111.11111111.11111111.11111 000
-Wildcard:  0.0.0.7              00000000.00000000.00000000.00000 111
-=>
-Network:   10.10.10.0/29        00001010.00001010.00001010.00000 000
-HostMin:   10.10.10.1           00001010.00001010.00001010.00000 001
-HostMax:   10.10.10.6           00001010.00001010.00001010.00000 110
-Broadcast: 10.10.10.7           00001010.00001010.00001010.00000 111
-Hosts/Net: 6                     Class A, Private Internet
-```
-Сеть с маской /24; Всего адресов 256, узловых 254
-```
-vagrant@vagrant:~$ ipcalc 10.10.10.0/24
-Address:   10.10.10.0           00001010.00001010.00001010. 00000000
-Netmask:   255.255.255.0 = 24   11111111.11111111.11111111. 00000000
-Wildcard:  0.0.0.255            00000000.00000000.00000000. 11111111
-=>
-Network:   10.10.10.0/24        00001010.00001010.00001010. 00000000
-HostMin:   10.10.10.1           00001010.00001010.00001010. 00000001
-HostMax:   10.10.10.254         00001010.00001010.00001010. 11111110
-Broadcast: 10.10.10.255         00001010.00001010.00001010. 11111111
-Hosts/Net: 254                   Class A, Private Internet
-```
-Сеть с маской /24 можно разбить на 32 подсети с маской /29  
-Примеры:
-```
-vagrant@vagrant:~$ ipcalc 10.10.10.50/29
-Address:   10.10.10.50          00001010.00001010.00001010.00110 010
-Netmask:   255.255.255.248 = 29 11111111.11111111.11111111.11111 000
-Wildcard:  0.0.0.7              00000000.00000000.00000000.00000 111
-=>
-Network:   10.10.10.48/29       00001010.00001010.00001010.00110 000
-HostMin:   10.10.10.49          00001010.00001010.00001010.00110 001
-HostMax:   10.10.10.54          00001010.00001010.00001010.00110 110
-Broadcast: 10.10.10.55          00001010.00001010.00001010.00110 111
-Hosts/Net: 6                     Class A, Private Internet
-```
-```
-vagrant@vagrant:~$ ipcalc 10.10.10.100/29
-Address:   10.10.10.100         00001010.00001010.00001010.01100 100
-Netmask:   255.255.255.248 = 29 11111111.11111111.11111111.11111 000
-Wildcard:  0.0.0.7              00000000.00000000.00000000.00000 111
-=>
-Network:   10.10.10.96/29       00001010.00001010.00001010.01100 000
-HostMin:   10.10.10.97          00001010.00001010.00001010.01100 001
-HostMax:   10.10.10.102         00001010.00001010.00001010.01100 110
-Broadcast: 10.10.10.103         00001010.00001010.00001010.01100 111
-Hosts/Net: 6                     Class A, Private Internet
-```
-
-### 6.  
-Частные IP адреса берём из сети 100.64.0.0/10  
-Маска диапазонов будет /26  
-```
-vagrant@vagrant:~$ ipcalc -b 100.64.0.0/10 -s 50
-Address:   100.64.0.0
-Netmask:   255.192.0.0 = 10
-Wildcard:  0.63.255.255
-=>
-Network:   100.64.0.0/10
-HostMin:   100.64.0.1
-HostMax:   100.127.255.254
-Broadcast: 100.127.255.255
-Hosts/Net: 4194302               Class A
-
-1. Requested size: 50 hosts
-Netmask:   255.255.255.192 = 26
-Network:   100.64.0.0/26
-HostMin:   100.64.0.1
-HostMax:   100.64.0.62
-Broadcast: 100.64.0.63
-Hosts/Net: 62                    Class A
-...
-```
-
-
-### 7.
-**Linux**  
-ARP таблица: ```arp -n```  
-Очистить ARP кэш: ```ip neigh flush all```  
-Удалить одну ARP кэш запись: ```arp -d <IP>```  
-
-**Windows**  
-ARP таблица: ```arp -a```  
-Очистить ARP кэш: ```netsh interface ip delete arpcache```  
-Удалить одну ARP кэш запись: ```arp -d <IP>```  
 
