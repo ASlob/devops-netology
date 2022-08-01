@@ -76,5 +76,95 @@ UNCONN      0           0                          [::]:111                    [
 
 
 ### 5.  
+```
+vagrant@VM1:~$ sudo systemctl status sshd.service
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sun 2022-07-31 05:47:36 UTC; 5h 45min ago
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+   Main PID: 803 (sshd)
+      Tasks: 1 (limit: 1071)
+     Memory: 6.8M
+     CGroup: /system.slice/ssh.service
+             └─803 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+....
+```
+```
+vagrant@VM1:~$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/vagrant/.ssh/id_rsa): key
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in key
+Your public key has been saved in key.pub
+....
+```
+```
+vagrant@VM1:~$ ssh-copy-id -i ~/key.pub vagrant@192.168.1.27
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/vagrant/key.pub"
+The authenticity of host '192.168.1.27 (192.168.1.27)' can't be established.
+ECDSA key fingerprint is SHA256:wSHl+h4vAtTT7mbkj2lbGyxWXWTUf6VUliwpncjwLPM.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+vagrant@192.168.1.27's password:
 
-![Screenshot](https://github.com/ASlob/devops-netology/tree/main/images/MyNet.png)
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'vagrant@192.168.1.27'"
+and check to make sure that only the key(s) you wanted were added.
+```
+```
+vagrant@VM1:~$ ssh vagrant@192.168.1.27
+vagrant@192.168.1.27's password:
+Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-80-generic x86_64)
+....
+vagrant@VM2:~$
+```
+```
+vagrant@VM2:~$ logout
+Connection to 192.168.1.27 closed.
+```
+```
+vagrant@VM1:~$ ssh -i ~/key vagrant@192.168.1.27
+Enter passphrase for key '/home/vagrant/key':
+Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-80-generic x86_64)
+...
+vagrant@VM2:~$
+```
+
+
+### 6.
+```
+vagrant@VM1:~$ mv key newkey
+vagrant@VM1:~$ mv key.pub newkey.pub
+```
+```
+vagrant@VM1:~$ nano ~/.ssh/config
+```
+```
+Host VM2
+    Hostname 192.168.1.27
+    IdentityFile ~/newkey
+```
+```
+vagrant@VM1:~$ ssh VM2
+Enter passphrase for key '/home/vagrant/newkey':
+Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-80-generic x86_64)
+...
+vagrant@VM2:~$
+```
+
+
+### 7.
+```
+vagrant@VM1:~$ sudo tcpdump -i eth1 -c 100 -w dump.pcap
+tcpdump: listening on eth1, link-type EN10MB (Ethernet), capture size 262144 bytes
+100 packets captured
+104 packets received by filter
+0 packets dropped by kernel
+vagrant@VM1:~$ ls
+dump.pcap  newkey  newkey.pub
+```
+![Screenshot](https://github.com/ASlob/devops-netology/tree/main/images/screen11.png)
