@@ -58,8 +58,8 @@ tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      
 tcp6       0      0 :::111                  :::*                    LISTEN      1/init
 tcp6       0      0 :::22                   :::*                    LISTEN      1404/sshd: /usr/sbi
 ```
-53 порт использует systemd-resolve (DNS)
-22 порт использует sshd
+53 порт использует systemd-resolve (DNS)  
+22 порт использует sshd  
 
 
 ### 4.  
@@ -71,8 +71,8 @@ UNCONN      0           0                10.0.2.15%eth0:68                  0.0.
 UNCONN      0           0                       0.0.0.0:111                 0.0.0.0:*          users:(("rpcbind",pid=611,fd=5),("systemd",pid=1,fd=96))
 UNCONN      0           0                          [::]:111                    [::]:*          users:(("rpcbind",pid=611,fd=7),("systemd",pid=1,fd=98))
 ```
-53 порт использует systemd-resolve (DNS)
-68 порт использует systemd-network (DHCP)
+53 порт использует systemd-resolve (DNS)  
+68 порт использует systemd-network (DHCP)  
 
 
 ### 5.  
