@@ -44,7 +44,6 @@ do
 	else exit
         fi
 done
-
 ```
 
 ## Обязательная задача 3
@@ -52,7 +51,19 @@ done
 
 ### Ваш скрипт:
 ```bash
-???
+array_ip=("192.168.0.1 173.194.222.113 87.250.250.242")
+port=80
+a=5
+while (($a > 0))
+do
+  for i in ${array_ip[@]}
+    do
+      date >> ip.log
+      nc -zv $i $port &>> ip.log
+    done
+    let "a=a-1"
+done
+cat -n ip.log
 ```
 
 ## Обязательная задача 4
@@ -60,7 +71,21 @@ done
 
 ### Ваш скрипт:
 ```bash
-???
+array_ip=("192.168.0.1 173.194.222.113 87.250.250.242")
+port=80
+while ((1==1))
+do
+for i in ${array_ip[@]}
+  do
+    nc -zv $i $port
+    if (($? != 0))
+    then
+      echo $i > error
+      exit 1
+    fi
+  done
+done
+cat -n error
 ```
 
 ## Дополнительное задание (со звездочкой*) - необязательно к выполнению
