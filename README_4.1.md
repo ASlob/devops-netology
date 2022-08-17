@@ -35,6 +35,8 @@ done
 
 ### Ваш скрипт:
 ```bash
+#!/usr/bin/bash
+
 while ((1==1))
 do
         curl https://localhost:4757
@@ -51,6 +53,8 @@ done
 
 ### Ваш скрипт:
 ```bash
+#!/usr/bin/bash
+
 array_ip=("192.168.0.1 173.194.222.113 87.250.250.242")
 port=80
 a=5
@@ -71,6 +75,8 @@ cat -n ip.log
 
 ### Ваш скрипт:
 ```bash
+#!/usr/bin/bash
+
 array_ip=("192.168.0.1 173.194.222.113 87.250.250.242")
 port=80
 while ((1==1))
