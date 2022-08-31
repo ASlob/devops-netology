@@ -37,23 +37,22 @@ for result in result_os.split('\n'):
 
 ### Ваш скрипт:
 ```python
-#! C:\Users\USER\AppData\Local\Programs\Python\Python38\python.exe
+#!/usr/bin/env python3
 
 import os
 
-bash_command = ["cd c:/gitproject/netology", "git status"]
+bash_command = ["cd ~/gitproject/netology", "git status"]
 result_os = os.popen(' && '.join(bash_command)).read()
-#is_change = False
 for result in result_os.split('\n'):
     if result.find('modified') != -1:
         prepare_result = result.replace('\tmodified:   ', '')
         print(os.path.abspath(prepare_result))
-
 ```
 
 ### Вывод скрипта при запуске при тестировании:
 ```
-???
+user@linserv:~/gitproject/netology$ ./script1.py
+/home/user/gitproject/netology/README_4.2.md
 ```
 
 ## Обязательная задача 3
