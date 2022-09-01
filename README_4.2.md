@@ -60,7 +60,7 @@ user@linserv:~/gitproject/netology$ ./script1.py
 
 ### Ваш скрипт:
 ```python
-???
+??
 ```
 
 ### Вывод скрипта при запуске при тестировании:
