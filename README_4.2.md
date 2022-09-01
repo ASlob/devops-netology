@@ -53,6 +53,7 @@ for result in result_os.split('\n'):
 ```
 user@linserv:~/gitproject/netology$ ./script1.py
 /home/user/gitproject/netology/README_4.2.md
+/home/user/gitproject/netology/newdir/new_file.txt
 ```
 
 ## Обязательная задача 3
@@ -60,12 +61,28 @@ user@linserv:~/gitproject/netology$ ./script1.py
 
 ### Ваш скрипт:
 ```python
-??
+#!/usr/bin/env python3
+print("Введите путь репозитория в формате 'path/':")
+path = input()
+
+import os
+
+os.chdir(path)
+bash_command = ["git status"]
+result_os = os.popen(' && '.join(bash_command)).read()
+for result in result_os.split('\n'):
+    if result.find('modified') != -1:
+        prepare_result = result.replace('\tmodified:   ', '')
+        print(path+prepare_result)
 ```
 
 ### Вывод скрипта при запуске при тестировании:
 ```
-???
+user@linserv:~$ ./script3.py
+Введите путь репозитория в формате 'path/':
+gitproject/netology/
+gitproject/netology/README_4.2.md
+gitproject/netology/newdir/new_file.txt
 ```
 
 ## Обязательная задача 4
@@ -73,10 +90,34 @@ user@linserv:~/gitproject/netology$ ./script1.py
 
 ### Ваш скрипт:
 ```python
-???
+#!/usr/bin/env python3
+
+import socket
+import time
+
+hosts = {'drive.google.com':'0.0.0.0', 'mail.google.com':'0.0.0.0', 'google.com':'0.0.0.0'}
+while 1 == 1 :
+  for host in hosts :
+    ip = socket.gethostbyname(host)
+    if ip != hosts[host] :
+      print(' [ERROR] ' + str(host) +' IP mistmatch: '+hosts[host]+' '+ip)
+      hosts[host]=ip
+    else :
+        print(str(host) + ' ' + ip)
+    time.sleep(2)
 ```
 
 ### Вывод скрипта при запуске при тестировании:
 ```
-???
+user@linserv:~$ ./script4.py
+ [ERROR] drive.google.com IP mistmatch: 0.0.0.0 64.233.165.194
+ [ERROR] mail.google.com IP mistmatch: 0.0.0.0 64.233.161.83
+ [ERROR] google.com IP mistmatch: 0.0.0.0 173.194.222.102
+drive.google.com 64.233.165.194
+ [ERROR] mail.google.com IP mistmatch: 64.233.161.83 64.233.161.17
+ [ERROR] google.com IP mistmatch: 173.194.222.102 173.194.222.113
+drive.google.com 64.233.165.194
+mail.google.com 64.233.161.17
+google.com 173.194.222.113
+...
 ```
