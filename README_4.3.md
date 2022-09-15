@@ -49,30 +49,48 @@
 
 import socket
 import time
+import json
+import yaml
 
 hosts = {'drive.google.com':'0.0.0.0', 'mail.google.com':'0.0.0.0', 'google.com':'0.0.0.0'}
+
 while True :
-  for host in hosts :
-    ip = socket.gethostbyname(host)
-    if ip != hosts[host] :
-      print(' [ERROR] ' + str(host) +' IP mistmatch: '+hosts[host]+' '+ip)
-      hosts[host]=ip
-    else :
-        print(str(host) + ' ' + ip)
+    for host in hosts :
+        ip = socket.gethostbyname(host)
+        if ip != hosts[host] :
+            print(' [ERROR] ' + str(host) +' IP mistmatch: '+hosts[host]+' '+ip)
+            hosts[host]=ip
+            with open("./file.json", 'w+') as write_json, open("./file.yaml", 'w+') as write_yaml:
+                write_json.write(json.dumps(hosts, indent=4))
+                write_yaml.write(yaml.dump(hosts, indent=4))
+        else :
+            print(str(host) + ' ' + ip)
     time.sleep(2)
 ```
 
 ### Вывод скрипта при запуске при тестировании:
 ```
-???
+root@vps17920:~# ./script4_3.py
+ [ERROR] drive.google.com IP mistmatch: 0.0.0.0 172.217.5.14
+ [ERROR] mail.google.com IP mistmatch: 0.0.0.0 172.217.1.101
+ [ERROR] google.com IP mistmatch: 0.0.0.0 142.250.191.238
+drive.google.com 172.217.5.14
+mail.google.com 172.217.1.101
+google.com 142.250.191.238
 ```
 
 ### json-файл(ы), который(е) записал ваш скрипт:
 ```json
-???
+{
+    "drive.google.com": "142.251.1.194",
+    "mail.google.com": "142.250.74.165",
+    "google.com": "142.250.74.174"
+}
 ```
 
 ### yml-файл(ы), который(е) записал ваш скрипт:
 ```yaml
-???
+drive.google.com: 142.251.1.194
+google.com: 142.250.74.174
+mail.google.com: 142.250.74.165
 ```
