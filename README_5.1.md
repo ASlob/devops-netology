@@ -1,9 +1,10 @@
 <div id="readme" class="Box-body readme blob js-code-block-container p-5 p-xl-6 gist-border-0">
 <article class="markdown-body entry-content container-lg" itemprop="text">
 <h1 dir="auto"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"></svg></a>Домашнее задание к занятию "5.1. Введение в виртуализацию. Типы и функции гипервизоров. Обзор рынка вендоров и областей применения."</h1>
-<hr>
 <h2 dir="auto"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"></svg></a>Задача 1</h2>
 <p dir="auto">Опишите кратко, как вы поняли: в чем основное отличие полной (аппаратной) виртуализации, паравиртуализации и виртуализации на основе ОС.</p>
+<hr>
+<p dir="auto">Ответ: </p>
 <h2 dir="auto"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"></svg></a>Задача 2</h2>
 <p dir="auto">Выберите один из вариантов использования организации физических серверов, в зависимости от условий использования.</p>
 <p dir="auto">Организация серверов:</p>
