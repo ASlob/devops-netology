@@ -21,11 +21,8 @@ Hey, Netology
 </html>
 ```
 Опубликуйте созданный форк в своем репозитории и предоставьте ответ в виде ссылки на https://hub.docker.com/username_repo.
-<ins>Ответ:</ins> Iaac позваляет описывать систему ввиде кода, что позваляет быстро развернуть систему и в дальнейшем избежать дрейфа конфигурации. Так же из приемуществ можно выделить удобная масштабируемость, бэкапирование, поиск ошибок, стандартизация. Iaac вобрал в себя все приемущества при работе с кодом.
-<ul dir="auto">
-<li>Какой из принципов IaaC является основополагающим?</li>
-</ul>
-<ins>Ответ:</ins> Идемпоте́нтность — свойство объекта или операции при повторном применении операции к объекту давать тот же результат, что и при первом.
+
+<ins>Ответ:</ins> [ССЫЛКА](https://hub.docker.com/layers/slowback/nginx/latest/images/sha256-1ec87efba992d60ca80f97b31356f801323086cdbad8ef83aac57698cb31cea5?context=explore)
 <hr>
 <h2 dir="auto"><a id="user-content-задача-2" class="anchor" aria-hidden="true" href="#задача-2"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"></svg></a>Задача 2</h2>
 <ul dir="auto">
