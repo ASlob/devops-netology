@@ -1,14 +1,12 @@
-<div id="readme" class="Box-body readme blob js-code-block-container p-5 p-xl-6 gist-border-0">
-<article class="markdown-body entry-content container-lg" itemprop="text">
-<h1 dir="auto"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"></svg></a>Домашнее задание к занятию "5.3. Введение. Экосистема. Архитектура. Жизненный цикл Docker контейнера"</h1>
-<h2 dir="auto"><a id="user-content-задача-1" class="anchor" aria-hidden="true" href="#задача-1"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"></svg></a>Задача 1</h2>
+# Домашнее задание к занятию "5.3. Введение. Экосистема. Архитектура. Жизненный цикл Docker контейнера"
+
+## Задача 1
 Сценарий выполения задачи:
-<ul dir="auto">
-<li>создайте свой репозиторий на https://hub.docker.com;</li>
-<li>выберете любой образ, который содержит веб-сервер Nginx;</li>
-<li>создайте свой fork образа;</li>
-<li>реализуйте функциональность: запуск веб-сервера в фоне с индекс-страницей, содержащей HTML-код ниже:</li>
-</ul>
+
+- создайте свой репозиторий на https://hub.docker.com;
+- выберете любой образ, который содержит веб-сервер Nginx;
+- создайте свой fork образа;
+- реализуйте функциональность: запуск веб-сервера в фоне с индекс-страницей, содержащей HTML-код ниже:
 
 ```
 <html>
@@ -23,46 +21,31 @@ Hey, Netology
 Опубликуйте созданный форк в своем репозитории и предоставьте ответ в виде ссылки на https://hub.docker.com/username_repo.
 
 <ins>Ответ:</ins> [ССЫЛКА](https://hub.docker.com/layers/slowback/nginx/latest/images/sha256-1ec87efba992d60ca80f97b31356f801323086cdbad8ef83aac57698cb31cea5?context=explore)
-<hr>
-<h2 dir="auto"><a id="user-content-задача-2" class="anchor" aria-hidden="true" href="#задача-2"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"></svg></a>Задача 2</h2>
-<ul dir="auto">
-<li>Чем Ansible выгодно отличается от других систем управление конфигурациями?</li>
-</ul>
-<ins>Ответ:</ins> Не требует установки клиентской части, имеет систему оповещений, поддерживает работу с сетевыми устройствами по SSH или WinRM.
-<ul dir="auto">
-<li>Какой, на ваш взгляд, метод работы систем конфигурации более надёжный push или pull?</li>
-</ul>
-<ins>Ответ:</ins> У каждого метода есть свои плюсы и минусы. Некоторые задачи легче осуществить с одним и сложнее — с другим, ну а при построении более сложных систем используется гибридный метод. Однако я бы выбрал Push-метод при условии, что управляющий кластер максимально будет защищён от несанкционированного доступа.
-<hr>
-<h2 dir="auto"><a id="user-content-задача-3" class="anchor" aria-hidden="true" href="#задача-3"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"></svg></a>Задача 3</h2>
-<p dir="auto">Установить на личный компьютер:</p>
-<ul dir="auto">
-<li>VirtualBox</li>
-<li>Vagrant</li>
-<li>Ansible</li>
-</ul>
-<p dir="auto"><em>Приложить вывод команд установленных версий каждой из программ, оформленный в markdown.</em></p>
 
-```
-C:\Program Files\Oracle\VirtualBox>vboxmanage.exe --version
-6.1.34rlS0636
-```
-```
-C:\>vagrant --version
-Vagrant 2.2.19
-```
-```
-vagrant@VM1:~$ ansible --version
-ansible 2.9.6
-```
-<hr>
-<h2 dir="auto"><a id="user-content-задача-4-" class="anchor" aria-hidden="true" href="#задача-4-"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"></svg></a>Задача 4 (*)</h2>
-<p dir="auto">Воспроизвести практическую часть лекции самостоятельно.</p>
-<ul dir="auto">
-<li>Создать виртуальную машину.</li>
-<li>Зайти внутрь ВМ, убедиться, что Docker установлен с помощью команды</li>
-</ul>
-<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="docker ps"><pre class="notranslate"><code>docker ps
-</code></pre></div>
-</article>
-  </div>
+---
+
+## Задача 2
+
+Посмотрите на сценарий ниже и ответьте на вопрос:
+"Подходит ли в этом сценарии использование Docker контейнеров или лучше подойдет виртуальная машина, физическая машина? Может быть возможны разные варианты?"
+
+Детально опишите и обоснуйте свой выбор.
+
+Сценарий:
+
+- Высоконагруженное монолитное java веб-приложение;
+- Nodejs веб-приложение;
+- Мобильное приложение c версиями для Android и iOS;
+- Шина данных на базе Apache Kafka;
+- Elasticsearch кластер для реализации логирования продуктивного веб-приложения - три ноды elasticsearch, два logstash и две ноды kibana;
+- Мониторинг-стек на базе Prometheus и Grafana;
+- MongoDB, как основное хранилище данных для java-приложения;
+- Gitlab сервер для реализации CI/CD процессов и приватный (закрытый) Docker Registry.
+
+## Задача 3
+
+- Запустите первый контейнер из образа ***centos*** c любым тэгом в фоновом режиме, подключив папку ```/data``` из текущей рабочей директории на хостовой машине в ```/data``` контейнера;
+- Запустите второй контейнер из образа ***debian*** в фоновом режиме, подключив папку ```/data``` из текущей рабочей директории на хостовой машине в ```/data``` контейнера;
+- Подключитесь к первому контейнеру с помощью ```docker exec``` и создайте текстовый файл любого содержания в ```/data```;
+- Добавьте еще один файл в папку ```/data``` на хостовой машине;
+- Подключитесь во второй контейнер и отобразите листинг и содержание файлов в ```/data``` контейнера.
