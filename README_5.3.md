@@ -82,7 +82,7 @@ Hey, Netology
 
 > - Gitlab сервер для реализации CI/CD процессов и приватный (закрытый) Docker Registry.
 
-Под данный сценарий подойдёт контейнеризация, под управлением Docker Compose. Данный способ упрощает миграцию с одних мощностей на другие.
+Под данный сценарий подойдёт контейнеризация, под управлением Docker Compose. Данный способ упрощает миграцию с одних мощностей на другие и даёт дополнительные возможности управления.
 
 ---
 
@@ -93,3 +93,64 @@ Hey, Netology
 - Подключитесь к первому контейнеру с помощью ```docker exec``` и создайте текстовый файл любого содержания в ```/data```;
 - Добавьте еще один файл в папку ```/data``` на хостовой машине;
 - Подключитесь во второй контейнер и отобразите листинг и содержание файлов в ```/data``` контейнера.
+
+---
+
+## РЕШЕНИЕ к задаче 3
+
+```shell
+user@linserv://$ docker pull centos
+Using default tag: latest
+latest: Pulling from library/centos
+a1d0c7532777: Pull complete
+Digest: sha256:a27fd8080b517143cbbbab9dfb7c8571c40d67d534bbdee55bd6c473f432b177
+Status: Downloaded newer image for centos:latest
+docker.io/library/centos:latest
+
+user@linserv://$ docker pull debian
+Using default tag: latest
+latest: Pulling from library/debian
+f606d8928ed3: Pull complete
+Digest: sha256:e538a2f0566efc44db21503277c7312a142f4d0dedc5d2886932b92626104bff
+Status: Downloaded newer image for debian:latest
+docker.io/library/debian:latest
+
+user@linserv://$ docker images
+REPOSITORY       TAG       IMAGE ID       CREATED         SIZE
+slowback/nginx   latest    cf10aa91138a   3 days ago      142MB
+nginx            latest    51086ed63d8c   2 weeks ago     142MB
+debian           latest    d91720f514f7   2 weeks ago     124MB
+hello-world      latest    feb5d9fea6a5   13 months ago   13.3kB
+centos           latest    5d0da3dc9764   13 months ago   231MB
+
+user@linserv://$ docker run -it --rm -d --name centos -v /data:/data centos:latest
+7f78cc914ef9ea04840d2665e75262eb49ef2a3e7db35bb9c9c343eb722d5691
+
+user@linserv://$ docker ps
+CONTAINER ID   IMAGE           COMMAND       CREATED          STATUS         PORTS     NAMES
+7f78cc914ef9   centos:latest   "/bin/bash"   12 seconds ago   Up 7 seconds             centos
+
+user@linserv://$ docker run -it --rm -d --name debian -v /data:/data debian:latest
+af44101a60304139c97c7182305997c077cbb2481f5d12e156ac95e23ff559a6
+
+user@linserv://$ docker ps
+CONTAINER ID   IMAGE           COMMAND       CREATED              STATUS              PORTS     NAMES
+af44101a6030   debian:latest   "bash"        21 seconds ago       Up 17 seconds                 debian
+7f78cc914ef9   centos:latest   "/bin/bash"   About a minute ago   Up About a minute             centos
+
+user@linserv://$ docker exec -it centos /bin/bash
+[root@7f78cc914ef9 /]# touch /data/centos.txt
+[root@7f78cc914ef9 /]# ls /data
+centos.txt
+[root@7f78cc914ef9 /]# exit
+exit
+
+user@linserv://$ sudo touch /data/host.txt
+[sudo] password for user:
+
+user@linserv://$ docker exec -it debian /bin/bash
+root@af44101a6030:/# ls /data
+centos.txt  host.txt
+root@af44101a6030:/# exit
+exit
+```
