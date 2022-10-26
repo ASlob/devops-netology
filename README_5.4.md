@@ -12,7 +12,7 @@
 ## Решение к Задаче 2
 
 <p align="center">
-  <img width="1900" height="900" src="./images/ex1.png">
+  <img src="./images/ex1.png">
 </p>
 ---
 
