@@ -9,10 +9,10 @@
 
 ---
 
-## Решение к Задаче 2
+## Решение к Задаче 1
 
 <p align="center">
-  <img src="./images/ex1.png">
+  <img src="./images/ex1.png" alt=>
 </p>
 ---
 
