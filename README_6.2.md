@@ -11,6 +11,44 @@
 
 Приведите получившуюся команду или docker-compose манифест.
 
+---
+
+## Решение к Задаче 1
+
+`docker-compos.yml`
+
+```yaml
+version: '3'
+services:
+ db:
+   container_name: pgsql12
+   image: postgres:12
+   environment:
+     POSTGRES_USER: slowback
+     POSTGRES_PASSWORD: 111111
+     POSTGRES_DB: new_db
+   ports:
+     - "5432:5432"
+   volumes:      
+     - db_volume:/home/user/database/
+     - backup_volume:/home/user/backup/
+
+volumes:
+ db_volume:
+ backup_volume:
+
+```
+
+```bash
+user@linserv:~$ docker pull postgres:12
+user@linserv:~$ docker-compose up -d
+user@linserv:~$ sudo docker exec -it pgsql12 psql -U slowback -d new_db
+psql (12.13 (Debian 12.13-1.pgdg110+1))
+Type "help" for help.
+
+new_db=#
+```
+
 ## Задача 2
 
 В БД из задачи 1:
