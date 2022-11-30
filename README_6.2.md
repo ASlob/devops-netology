@@ -39,16 +39,6 @@ volumes:
 
 ```
 
-```bash
-user@linserv:~$ docker pull postgres:12
-user@linserv:~$ docker-compose up -d
-user@linserv:~$ sudo docker exec -it pgsql12 psql -U slowback -d new_db
-psql (12.13 (Debian 12.13-1.pgdg110+1))
-Type "help" for help.
-
-new_db=#
-```
-
 ## Задача 2
 
 В БД из задачи 1:
@@ -83,10 +73,113 @@ new_db=#
 
 ## Решение к Задаче 2
 
+> - итоговый список БД после выполнения пунктов выше,
 
+```bash
+test_db=# \l
+                                 List of databases
+   Name    |  Owner   | Encoding |  Collate   |   Ctype    |   Access privileges
+-----------+----------+----------+------------+------------+-----------------------
+ new_db    | slowback | UTF8     | en_US.utf8 | en_US.utf8 |
+ postgres  | slowback | UTF8     | en_US.utf8 | en_US.utf8 |
+ template0 | slowback | UTF8     | en_US.utf8 | en_US.utf8 | =c/slowback          +
+           |          |          |            |            | slowback=CTc/slowback
+ template1 | slowback | UTF8     | en_US.utf8 | en_US.utf8 | =c/slowback          +
+           |          |          |            |            | slowback=CTc/slowback
+ test_db   | slowback | UTF8     | en_US.utf8 | en_US.utf8 |
+(5 rows)
+```
 
+>- описание таблиц (describe)
 
+```bash
+test_db=# \d orders
+                               Table "public.orders"
+    Column    |  Type   | Collation | Nullable |              Default
+--------------+---------+-----------+----------+------------------------------------
+ id           | integer |           | not null | nextval('orders_id_seq'::regclass)
+ наименование | text    |           |          |
+ цена         | integer |           |          |
+Indexes:
+    "orders_pkey" PRIMARY KEY, btree (id)
+Referenced by:
+    TABLE "clients" CONSTRAINT "clients_заказ_fkey" FOREIGN KEY ("заказ") REFERENCES orders(id)
+```
 
+```bash
+test_db=# \d clients
+                                  Table "public.clients"
+      Column       |  Type   | Collation | Nullable |               Default
+
+-------------------+---------+-----------+----------+---------------------------------
+----
+ id                | integer |           | not null | nextval('clients_id_seq'::regcla
+ss)
+ фамилия           | text    |           |          |
+ страна проживания | text    |           |          |
+ заказ             | integer |           |          |
+Indexes:
+    "clients_pkey" PRIMARY KEY, btree (id)
+    "country_index" btree ("страна проживания")
+Foreign-key constraints:
+    "clients_заказ_fkey" FOREIGN KEY ("заказ") REFERENCES orders(id)
+```
+
+>- SQL-запрос для выдачи списка пользователей с правами над таблицами test_db
+
+```sql
+SELECT 
+    grantee, table_catalog, table_name, privilege_type 
+FROM 
+    information_schema.table_privileges 
+WHERE 
+    table_name in ('orders','clients');
+```
+
+>- список пользователей с правами над таблицами test_db
+
+```bash
+test_db=# SELECT grantee, table_catalog, table_name, privilege_type FROM information_schema.table_privileges WHERE table_name IN ('orders','clients');
+     grantee      | table_catalog | table_name | privilege_type
+------------------+---------------+------------+----------------
+ slowback         | test_db       | orders     | INSERT
+ slowback         | test_db       | orders     | SELECT
+ slowback         | test_db       | orders     | UPDATE
+ slowback         | test_db       | orders     | DELETE
+ slowback         | test_db       | orders     | TRUNCATE
+ slowback         | test_db       | orders     | REFERENCES
+ slowback         | test_db       | orders     | TRIGGER
+ test_admin_user  | test_db       | orders     | INSERT
+ test_admin_user  | test_db       | orders     | SELECT
+ test_admin_user  | test_db       | orders     | UPDATE
+ test_admin_user  | test_db       | orders     | DELETE
+ test_admin_user  | test_db       | orders     | TRUNCATE
+ test_admin_user  | test_db       | orders     | REFERENCES
+ test_admin_user  | test_db       | orders     | TRIGGER
+ test_simple_user | test_db       | orders     | INSERT
+ test_simple_user | test_db       | orders     | SELECT
+ test_simple_user | test_db       | orders     | UPDATE
+ test_simple_user | test_db       | orders     | DELETE
+ slowback         | test_db       | clients    | INSERT
+ slowback         | test_db       | clients    | SELECT
+ slowback         | test_db       | clients    | UPDATE
+ slowback         | test_db       | clients    | DELETE
+ slowback         | test_db       | clients    | TRUNCATE
+ slowback         | test_db       | clients    | REFERENCES
+ slowback         | test_db       | clients    | TRIGGER
+ test_admin_user  | test_db       | clients    | INSERT
+ test_admin_user  | test_db       | clients    | SELECT
+ test_admin_user  | test_db       | clients    | UPDATE
+ test_admin_user  | test_db       | clients    | DELETE
+ test_admin_user  | test_db       | clients    | TRUNCATE
+ test_admin_user  | test_db       | clients    | REFERENCES
+ test_admin_user  | test_db       | clients    | TRIGGER
+ test_simple_user | test_db       | clients    | INSERT
+ test_simple_user | test_db       | clients    | SELECT
+ test_simple_user | test_db       | clients    | UPDATE
+ test_simple_user | test_db       | clients    | DELETE
+(36 rows)
+```
 
 ## Задача 3
 
