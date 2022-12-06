@@ -387,6 +387,30 @@ Filter: ("заказ" IS NOT NULL): фильтр, сравнивает все з
 
 ---
 
+## Решение к Задаче 6
+
+> Создайте бэкап БД test_db и поместите его в volume, предназначенный для бэкапов (см. Задачу 1).
+> Остановите контейнер с PostgreSQL (но не удаляйте volumes).
+> Поднимите новый пустой контейнер с PostgreSQL.
+> Восстановите БД test_db в новом контейнере.
+> Приведите список операций, который вы применяли для бэкапа данных и восстановления
+
+```bash
+user@linserv:~$ docker exec -it pgsql12 bash
+root@e963e2d24e4c:/# pg_dump -U slowback test_db > /home/user/backup/test_db.backup
+root@e963e2d24e4c:/# exit
+user@linserv:~$ docker stop pgsql12
+user@linserv:~$ docker run --name pgsql12_new -e POSTGRES_PASSWORD=12345678 -d postgres:12
+user@linserv:~$ docker cp pgsql12:/home/user/backup/test_db.backup backup/ && docker cp backup/test_db.backup pgsql12_new:/home/
+user@linserv:~$ docker exec -it pgsql12_new psql -U postgres
+postgres=# create database test_db;
+postgres=# \q
+user@linserv:~$ docker exec -it pgsql12_new bash
+root@852eb3181b54:/# psql -U postgres -d test_db -f /home/test_db.backup
+```
+
+---
+
 ### Как cдавать задание
 
 Выполненное домашнее задание пришлите ссылкой на .md-файл в вашем репозитории.
