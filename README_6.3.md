@@ -24,6 +24,51 @@
 
 В следующих заданиях мы будем продолжать работу с данным контейнером.
 
+---
+
+## Решение к Задаче 1
+
+> Найдите команду для выдачи статуса БД и **приведите в ответе** из ее вывода версию сервера БД.
+
+```bash
+mysql> \s
+--------------
+mysql  Ver 8.0.31 for Linux on x86_64 (MySQL Community Server - GPL)
+
+Connection id:          11
+Current database:       test_db
+Current user:           slowback@localhost
+SSL:                    Not in use
+Current pager:          stdout
+Using outfile:          ''
+Using delimiter:        ;
+Server version:         8.0.31 MySQL Community Server - GPL
+Protocol version:       10
+Connection:             Localhost via UNIX socket
+Server characterset:    utf8mb4
+Db     characterset:    utf8mb4
+Client characterset:    latin1
+Conn.  characterset:    latin1
+UNIX socket:            /var/run/mysqld/mysqld.sock
+Binary data as:         Hexadecimal
+Uptime:                 5 min 27 sec
+
+Threads: 2  Questions: 50  Slow queries: 0  Opens: 167  Flush tables: 3  Open tables: 85  Queries per second avg: 0.152
+--------------
+```
+
+> **Приведите в ответе** количество записей с `price` > 300.
+
+```bash
+mysql> select * from orders where price > 300;
++----+----------------+-------+
+| id | title          | price |
++----+----------------+-------+
+|  2 | My little pony |   500 |
++----+----------------+-------+
+1 row in set (0.02 sec)
+```
+
 ## Задача 2
 
 Создайте пользователя test в БД c паролем test-pass, используя:
