@@ -30,7 +30,7 @@
 
 > Найдите команду для выдачи статуса БД и **приведите в ответе** из ее вывода версию сервера БД.
 
-```bash
+```sql
 mysql> \s
 --------------
 mysql  Ver 8.0.31 for Linux on x86_64 (MySQL Community Server - GPL)
@@ -59,8 +59,8 @@ Threads: 2  Questions: 50  Slow queries: 0  Opens: 167  Flush tables: 3  Open ta
 
 > **Приведите в ответе** количество записей с `price` > 300.
 
-```bash
-mysql> select * from orders where price > 300;
+```sql
+mysql> SELECT * FROM orders WHERE price > 300;
 +----+----------------+-------+
 | id | title          | price |
 +----+----------------+-------+
@@ -86,6 +86,60 @@ mysql> select * from orders where price > 300;
 Используя таблицу INFORMATION_SCHEMA.USER_ATTRIBUTES получите данные по пользователю `test` и
 **приведите в ответе к задаче**.
 
+---
+
+## Решение к Задаче 2
+
+>Создайте пользователя test в БД c паролем test-pass, используя:
+>
+>- плагин авторизации mysql_native_password
+>- срок истечения пароля - 180 дней
+>- количество попыток авторизации - 3
+>- максимальное количество запросов в час - 100
+>- аттрибуты пользователя:
+>   - Фамилия "Pretty"
+>   - Имя "James"
+
+```sql
+mysql> CREATE USER 'test'@'localhost'
+    -> IDENTIFIED WITH mysql_native_password BY 'test-pass'
+    -> WITH MAX_CONNECTIONS_PER_HOUR 100
+    -> PASSWORD EXPIRE INTERVAL 180 DAY
+    -> FAILED_LOGIN_ATTEMPTS 3 PASSWORD_LOCK_TIME 2
+    -> ATTRIBUTE '{"first_name":"James", "last_name":"Pretty"}';
+Query OK, 0 rows affected (2.94 sec)
+```
+
+> Предоставьте привелегии пользователю `test` на операции SELECT базы `test_db`.
+
+```sql
+mysql> GRANT SELECT ON test_db.* TO test@localhost;
+Query OK, 0 rows affected, 1 warning (0.98 sec)
+```
+
+Используя таблицу INFORMATION_SCHEMA.USER_ATTRIBUTES получите данные по пользователю `test` и
+**приведите в ответе к задаче**.
+
+```sql
+mysql> SELECT * FROM INFORMATION_SCHEMA.USER_ATTRIBUTES WHERE USER = 'test';
++------+-----------+------------------------------------------------+
+| USER | HOST      | ATTRIBUTE                                      |
++------+-----------+------------------------------------------------+
+| test | localhost | {"last_name": "Pretty", "first_name": "James"} |
++------+-----------+------------------------------------------------+
+1 row in set (0.97 sec)
+```
+
+```sql
+mysql> SELECT User, max_questions, password_lifetime, User_attributes  FROM mysql.user where user='test';
++------+---------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------+
+| User | max_questions | password_lifetime | User_attributes                                                                                                                              |
++------+---------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------+
+| test |             0 |               180 | {"metadata": {"last_name": "Pretty", "first_name": "James"}, "Password_locking": {"failed_login_attempts": 3, "password_lock_time_days": 2}} |
++------+---------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+```
+
 ## Задача 3
 
 Установите профилирование `SET profiling = 1`.
@@ -97,6 +151,93 @@ mysql> select * from orders where price > 300;
 
 - на `MyISAM`
 - на `InnoDB`
+
+---
+
+## Решение к Задаче 3
+
+>Установите профилирование `SET profiling = 1`.  
+>Изучите вывод профилирования команд `SHOW PROFILES;`.
+
+```sql
+mysql> SET profiling = 1;
+Query OK, 0 rows affected, 1 warning (0.03 sec)
+
+mysql> SHOW PROFILES;
++----------+------------+-------------------+
+| Query_ID | Duration   | Query             |
++----------+------------+-------------------+
+|        1 | 0.00028800 | SET profiling = 1 |
++----------+------------+-------------------+
+1 row in set, 1 warning (0.00 sec)
+```
+
+>Исследуйте, какой `engine` используется в таблице БД `test_db` и **приведите в ответе**.
+
+```sql
+mysql> use test_db;
+Database changed
+mysql> SELECT table_schema,table_name,engine FROM information_schema.tables WHERE table_schema = DATABASE();
++--------------+------------+--------+
+| TABLE_SCHEMA | TABLE_NAME | ENGINE |
++--------------+------------+--------+
+| test_db      | orders     | InnoDB |
++--------------+------------+--------+
+1 row in set (0.02 sec)
+```
+
+>Измените `engine` и **приведите время выполнения и запрос на изменения из профайлера в ответе**:
+>
+>- на `MyISAM`
+>- на `InnoDB`
+
+```sql
+mysql> use test_db;
+Database changed
+mysql> ALTER TABLE orders ENGINE=MyISAM;
+Query OK, 5 rows affected (15.27 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> SHOW PROFILES;
++----------+-------------+----------------------------------+
+| Query_ID | Duration    | Query                            |
++----------+-------------+----------------------------------+
+|        1 |  0.00037500 | SELECT DATABASE()                |
+|        2 | 15.28424625 | ALTER TABLE orders ENGINE=MyISAM |
++----------+-------------+----------------------------------+
+2 rows in set, 1 warning (0.00 sec)
+
+mysql> SELECT table_schema,table_name,engine FROM information_schema.tables WHERE table_schema = DATABASE();
++--------------+------------+--------+
+| TABLE_SCHEMA | TABLE_NAME | ENGINE |
++--------------+------------+--------+
+| test_db      | orders     | MyISAM |
++--------------+------------+--------+
+1 row in set (0.02 sec)
+
+mysql> ALTER TABLE orders ENGINE=InnoDB;
+Query OK, 5 rows affected (7.89 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> SHOW PROFILES;
++----------+-------------+------------------------------------------------------------------------------------------------------+
+| Query_ID | Duration    | Query                                                                                                |
++----------+-------------+------------------------------------------------------------------------------------------------------+
+|        1 |  0.00045975 | SELECT DATABASE()                                                                                    |
+|        2 | 15.28424625 | ALTER TABLE orders ENGINE=MyISAM                                                                     |
+|        3 |  0.01832725 | SELECT table_schema,table_name,engine FROM information_schema.tables WHERE table_schema = DATABASE() |
+|        4 |  7.91136775 | ALTER TABLE orders ENGINE=InnoDB                                                                     |
++----------+-------------+------------------------------------------------------------------------------------------------------+
+4 rows in set, 1 warning (0.00 sec)
+
+mysql> SELECT table_schema,table_name,engine FROM information_schema.tables WHERE table_schema = DATABASE();
++--------------+------------+--------+
+| TABLE_SCHEMA | TABLE_NAME | ENGINE |
++--------------+------------+--------+
+| test_db      | orders     | InnoDB |
++--------------+------------+--------+
+1 row in set (0.01 sec)
+```
 
 ## Задача 4
 
@@ -112,6 +253,25 @@ mysql> select * from orders where price > 300;
 
 Приведите в ответе измененный файл `my.cnf`.
 
+---
+
+## Решение к Задаче 4
+
+>Изучите файл `my.cnf` в директории /etc/mysql.
+>
+>Измените его согласно ТЗ (движок InnoDB):
+>
+>- Скорость IO важнее сохранности данных
+>- Нужна компрессия таблиц для экономии места на диске
+>- Размер буффера с незакомиченными транзакциями 1 Мб
+>- Буффер кеширования 30% от ОЗУ
+>- Размер файла логов операций 100 Мб
+>
+>Приведите в ответе измененный файл `my.cnf`
+
+```bash
+
+```
 ---
 
 ### Как оформить ДЗ?
