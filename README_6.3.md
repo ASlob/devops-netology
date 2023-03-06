@@ -117,7 +117,7 @@ mysql> GRANT SELECT ON test_db.* TO test@localhost;
 Query OK, 0 rows affected, 1 warning (0.98 sec)
 ```
 
-Используя таблицу INFORMATION_SCHEMA.USER_ATTRIBUTES получите данные по пользователю `test` и
+> Используя таблицу INFORMATION_SCHEMA.USER_ATTRIBUTES получите данные по пользователю `test` и
 **приведите в ответе к задаче**.
 
 ```sql
