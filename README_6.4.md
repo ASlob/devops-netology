@@ -56,6 +56,19 @@
 
 ## Решение к Задаче 2
 
+>Используя таблицу [pg_stats](https://postgrespro.ru/docs/postgresql/12/view-pg-stats), найдите столбец таблицы `orders`
+>с наибольшим средним значением размера элементов в байтах.
+>
+>**Приведите в ответе** команду, которую вы использовали для вычисления, и полученный результат.
+
+```sql
+test_db=# select attname, avg_width from pg_stats where tablename='orders' order by avg_width desc limit 1;
+ attname | avg_width
+---------+-----------
+ title   |        16
+(1 row)
+```
+
 ## Задача 3
 
 Архитектор и администратор БД выяснили, что ваша таблица orders разрослась до невиданных размеров и
