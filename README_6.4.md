@@ -118,8 +118,8 @@ pg_dump -U postgres -d test_db > home/user/backup/test_db_dump.sql
 
 >Как бы вы доработали бэкап-файл, чтобы добавить уникальность значения столбца `title` для таблиц `test_database`?
 
-```sql
-CREATE unique INDEX title_un ON public.orders(title);
+```bash
+echo 'ALTER TABLE ONLY public.orders ADD CONSTRAINT title_unique UNIQUE (title);' > home/user/backup/test_db_dmp.sql
 ```
 
 ### Как cдавать задание
