@@ -1,0 +1,26 @@
+FROM centos:7
+MAINTAINER slow.back@yandex.ru
+RUN groupadd elasticsearch
+RUN useradd elasticsearch -g elasticsearch -p elasticsearch
+RUN yum -y update
+RUN yum clean all
+RUN yum -y install perl-Digest-SHA
+RUN yum -y install java-11-openjdk
+RUN yum -y install wget
+WORKDIR /opt/elasticsearch
+RUN wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.14.0-x86_64.rpm
+RUN wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.14.0-x86_64.rpm.sha512
+RUN sha512sum -c elasticsearch-7.14.0-x86_64.rpm.sha512
+RUN rpm --install elasticsearch-7.14.0-x86_64.rpm
+RUN mkdir /usr/share/elasticsearch/config
+COPY elasticsearch.yml /etc/elasticsearch
+COPY log4j2.properties /etc/elasticsearch
+RUN cp -R /usr/share/elasticsearch/* /home/elasticsearch/
+RUN chown -R elasticsearch:elasticsearch /home/elasticsearch/*
+RUN chown elasticsearch:elasticsearch /var/lib/elasticsearch
+RUN chown elasticsearch:elasticsearch /var/log/elasticsearch
+WORKDIR /home/elasticsearch
+USER elasticsearch
+EXPOSE 9200
+EXPOSE 9300
+CMD ["/home/elasticsearch/bin/elasticsearch"]
