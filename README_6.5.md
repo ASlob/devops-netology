@@ -62,35 +62,64 @@ CMD ["/home/elasticsearch/bin/elasticsearch"]
 }
 ```
 
-## Задача 2
+## Решение к Задаче 2
 
-В этом задании вы научитесь:
+> Получите список индексов и их статусов, используя API, и **приведите в ответе** на задание.
 
-- создавать и удалять индексы,
-- изучать состояние кластера,
-- обосновывать причину деградации доступности данных.
+```bash
+vagrant@VM2:~$ curl http://localhost:9200/_cat/indices
+green  open .geoip_databases xDZMYiotRWmMGpVFVrtXRA 1 0 42 39 40.6mb 40.6mb
+green  open ind-1            t85liETQSnyR2bHxpyMcCQ 1 0  0  0   208b   208b
+yellow open ind-3            1Ms3qegNR_a9XeGSNoYQOA 4 2  0  0   832b   832b
+yellow open ind-2            TWQUaSJhT8-O5PEaPDZQZw 2 1  0  0   416b   416b
+```
 
-Ознакомьтесь с [документацией](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-create-index.html)
-и добавьте в `Elasticsearch` 3 индекса в соответствии с таблицей:
+> Получите состояние кластера `Elasticsearch`, используя API.
 
-| Имя | Количество реплик | Количество шард |
-|-----|-------------------|-----------------|
-| ind-1| 0 | 1 |
-| ind-2 | 1 | 2 |
-| ind-3 | 2 | 4 |
+```bash
+vagrant@VM2:~$ curl -X GET "localhost:9200/_cluster/health?pretty"
+{
+  "cluster_name" : "elasticsearch",
+  "status" : "yellow",
+  "timed_out" : false,
+  "number_of_nodes" : 1,
+  "number_of_data_nodes" : 1,
+  "active_primary_shards" : 8,
+  "active_shards" : 8,
+  "relocating_shards" : 0,
+  "initializing_shards" : 0,
+  "unassigned_shards" : 10,
+  "delayed_unassigned_shards" : 0,
+  "number_of_pending_tasks" : 0,
+  "number_of_in_flight_fetch" : 0,
+  "task_max_waiting_in_queue_millis" : 0,
+  "active_shards_percent_as_number" : 44.44444444444444
+}
+```
 
-Получите список индексов и их статусов, используя API, и **приведите в ответе** на задание.
+> Как вы думаете, почему часть индексов и кластер находятся в состоянии yellow?
 
-Получите состояние кластера `Elasticsearch`, используя API.
+Кластер помечает индексы Yellow потому что их некуда реплицировать (нода только одна).
 
-Как вы думаете, почему часть индексов и кластер находятся в состоянии yellow?
+> Удалите все индексы.
 
-Удалите все индексы.
+```bash
+vagrant@VM2:~$ curl -ku elastic  -X DELETE localhost:9200/ind-1
+Enter host password for user 'elastic':
+{"acknowledged":true}
+```
 
-### Важно
+```bash
+vagrant@VM2:~$ curl -ku elastic  -X DELETE localhost:9200/ind-2
+Enter host password for user 'elastic':
+{"acknowledged":true}
+```
 
-При проектировании кластера Elasticsearch нужно корректно рассчитывать количество реплик и шард,
-иначе возможна потеря данных индексов, вплоть до полной, при деградации системы.
+```bash
+vagrant@VM2:~$ curl -ku elastic  -X DELETE localhost:9200/ind-3
+Enter host password for user 'elastic':
+{"acknowledged":true}
+```
 
 ## Задача 3
 
