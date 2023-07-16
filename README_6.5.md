@@ -135,7 +135,7 @@ Enter host password for user 'elastic':
 {"acknowledged":true}
 ```
 
-## Задача 3
+## Решение к Задаче 3
 
 > Создайте директорию `{путь до корневой директории с Elasticsearch в образе}/snapshots`.
 
