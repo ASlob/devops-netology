@@ -67,7 +67,7 @@ vagrant@VM2:/src$ terraform validate
 │ This object has no argument, nested block, or exported attribute named "resulT". Did you mean "result"?
 ```
 
-Ошибка в 23 строке main.tf: Все блоки ресурсов должны иметь 2 метки. Исправление: Добавляем имя "nginx"
+Ошибка в 23 строке **main.tf**: Все блоки ресурсов должны иметь 2 метки. Исправление: Добавляем имя "nginx"
 
 Правильный вариант блока кода:
 
