@@ -128,7 +128,7 @@ CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS  
 }
 ```
 
->Объясните, почему при этом не был удален docker образ **nginx:latest** ? 
+>Объясните, почему при этом не был удален docker образ **nginx:latest** ?
 
 Команда ```terraform destroy``` удаляет только те ресурсы, которыми управляет сам Terraform. Ресурсы, которые он создал  и передал в управление другому сервису не удаляются командой ```terraform destroy```.
 
