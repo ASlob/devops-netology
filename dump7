@@ -1,0 +1,207 @@
+user@opi3:~$ sudo tcpdump -ni any 'host 192.168.50.98 and tcp port 443'
+tcpdump: data link type LINUX_SLL2
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on any, link-type LINUX_SLL2 (Linux cooked v2), snapshot length 262144 bytes
+13:09:43.569246 wlan0 In  IP 192.168.50.98.51411 > 54.229.145.163.443: Flags [S], seq 2126434483, win 29200, options [mss 1460,sackOK,TS val 3817516 ecr 0,nop,wscale 7], length 0
+13:09:43.569434 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51411: Flags [S.], seq 2463741084, ack 2126434484, win 65160, options [mss 1460,sackOK,TS val 3477377682 ecr 3817516,nop,wscale 7], length 0
+13:09:43.579067 wlan0 In  IP 192.168.50.98.51411 > 54.229.145.163.443: Flags [.], ack 1, win 229, options [nop,nop,TS val 3817519 ecr 3477377682], length 0
+13:09:43.635637 wlan0 In  IP 192.168.50.98.51411 > 54.229.145.163.443: Flags [P.], seq 1:518, ack 1, win 229, options [nop,nop,TS val 3817534 ecr 3477377682], length 517
+13:09:43.635778 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51411: Flags [.], ack 518, win 506, options [nop,nop,TS val 3477377748 ecr 3817534], length 0
+13:09:43.838765 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51411: Flags [P.], seq 1:1441, ack 518, win 506, options [nop,nop,TS val 3477377951 ecr 3817534], length 1440
+13:09:43.838959 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51411: Flags [.], seq 1441:2889, ack 518, win 506, options [nop,nop,TS val 3477377951 ecr 3817534], length 1448
+13:09:43.838989 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51411: Flags [P.], seq 2889:4337, ack 518, win 506, options [nop,nop,TS val 3477377951 ecr 3817534], length 1448
+13:09:43.839650 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51411: Flags [.], seq 4337:5785, ack 518, win 506, options [nop,nop,TS val 3477377952 ecr 3817534], length 1448
+13:09:43.839685 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51411: Flags [P.], seq 5785:7233, ack 518, win 506, options [nop,nop,TS val 3477377952 ecr 3817534], length 1448
+13:09:43.871346 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51411: Flags [P.], seq 7233:7337, ack 518, win 506, options [nop,nop,TS val 3477377984 ecr 3817534], length 104
+13:09:43.917950 wlan0 In  IP 192.168.50.98.51411 > 54.229.145.163.443: Flags [.], ack 1441, win 251, options [nop,nop,TS val 3817586 ecr 3477377951], length 0
+13:09:44.019370 wlan0 In  IP 192.168.50.98.51411 > 54.229.145.163.443: Flags [.], ack 4337, win 296, options [nop,nop,TS val 3817586 ecr 3477377951], length 0
+13:09:44.022095 wlan0 In  IP 192.168.50.98.51411 > 54.229.145.163.443: Flags [.], ack 5785, win 319, options [nop,nop,TS val 3817586 ecr 3477377952], length 0
+13:09:44.058045 wlan0 In  IP 192.168.50.98.51411 > 54.229.145.163.443: Flags [.], ack 7233, win 342, options [nop,nop,TS val 3817587 ecr 3477377952], length 0
+13:09:44.058089 wlan0 In  IP 192.168.50.98.51411 > 54.229.145.163.443: Flags [.], ack 7337, win 342, options [nop,nop,TS val 3817594 ecr 3477377984], length 0
+13:09:44.058127 wlan0 In  IP 192.168.50.98.51411 > 54.229.145.163.443: Flags [P.], seq 518:644, ack 7337, win 342, options [nop,nop,TS val 3817595 ecr 3477377984], length 126
+13:09:44.058188 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51411: Flags [.], ack 644, win 506, options [nop,nop,TS val 3477378170 ecr 3817595], length 0
+13:09:44.143272 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51411: Flags [P.], seq 7337:7457, ack 644, win 506, options [nop,nop,TS val 3477378255 ecr 3817595], length 120
+13:09:44.149026 wlan0 In  IP 192.168.50.98.51411 > 54.229.145.163.443: Flags [P.], seq 644:697, ack 7457, win 342, options [nop,nop,TS val 3817662 ecr 3477378255], length 53
+13:09:44.149129 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51411: Flags [.], ack 697, win 506, options [nop,nop,TS val 3477378261 ecr 3817662], length 0
+13:09:44.149183 wlan0 In  IP 192.168.50.98.51411 > 54.229.145.163.443: Flags [P.], seq 697:795, ack 7457, win 342, options [nop,nop,TS val 3817662 ecr 3477378255], length 98
+13:09:44.149239 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51411: Flags [.], ack 795, win 506, options [nop,nop,TS val 3477378261 ecr 3817662], length 0
+13:09:44.149313 wlan0 In  IP 192.168.50.98.51411 > 54.229.145.163.443: Flags [P.], seq 795:1411, ack 7457, win 342, options [nop,nop,TS val 3817662 ecr 3477378255], length 616
+13:09:44.149382 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51411: Flags [.], ack 1411, win 502, options [nop,nop,TS val 3477378262 ecr 3817662], length 0
+13:09:44.149412 wlan0 In  IP 192.168.50.98.51411 > 54.229.145.163.443: Flags [P.], seq 1411:1449, ack 7457, win 342, options [nop,nop,TS val 3817663 ecr 3477378255], length 38
+13:09:44.149460 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51411: Flags [.], ack 1449, win 502, options [nop,nop,TS val 3477378262 ecr 3817663], length 0
+13:09:44.233553 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51411: Flags [P.], seq 7457:7495, ack 1449, win 502, options [nop,nop,TS val 3477378346 ecr 3817663], length 38
+13:09:44.277567 wlan0 In  IP 192.168.50.98.51411 > 54.229.145.163.443: Flags [.], ack 7495, win 342, options [nop,nop,TS val 3817695 ecr 3477378346], length 0
+13:09:44.277643 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51411: Flags [P.], seq 7495:7783, ack 1449, win 502, options [nop,nop,TS val 3477378390 ecr 3817695], length 288
+13:09:44.280634 wlan0 In  IP 192.168.50.98.51411 > 54.229.145.163.443: Flags [.], ack 7783, win 364, options [nop,nop,TS val 3817696 ecr 3477378390], length 0
+13:09:44.280680 wlan0 In  IP 192.168.50.98.51411 > 54.229.145.163.443: Flags [P.], seq 1449:1480, ack 7783, win 364, options [nop,nop,TS val 3817696 ecr 3477378390], length 31
+13:09:44.280730 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51411: Flags [.], ack 1480, win 502, options [nop,nop,TS val 3477378393 ecr 3817696], length 0
+13:09:44.289893 wlan0 In  IP 192.168.50.98.51411 > 54.229.145.163.443: Flags [F.], seq 1480, ack 7783, win 364, options [nop,nop,TS val 3817698 ecr 3477378393], length 0
+13:09:44.290344 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51411: Flags [F.], seq 7783, ack 1481, win 502, options [nop,nop,TS val 3477378403 ecr 3817698], length 0
+13:09:44.293655 wlan0 In  IP 192.168.50.98.51411 > 54.229.145.163.443: Flags [.], ack 7784, win 364, options [nop,nop,TS val 3817699 ecr 3477378403], length 0
+13:09:46.207389 wlan0 In  IP 192.168.50.98.51413 > 54.229.145.163.443: Flags [S], seq 3206155318, win 29200, options [mss 1460,sackOK,TS val 3818178 ecr 0,nop,wscale 7], length 0
+13:09:46.207578 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51413: Flags [S.], seq 3586116985, ack 3206155319, win 65160, options [mss 1460,sackOK,TS val 3477380320 ecr 3818178,nop,wscale 7], length 0
+13:09:46.210142 wlan0 In  IP 192.168.50.98.51413 > 54.229.145.163.443: Flags [.], ack 1, win 229, options [nop,nop,TS val 3818178 ecr 3477380320], length 0
+13:09:46.321733 wlan0 In  IP 192.168.50.98.51413 > 54.229.145.163.443: Flags [P.], seq 1:518, ack 1, win 229, options [nop,nop,TS val 3818206 ecr 3477380320], length 517
+13:09:46.321852 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51413: Flags [.], ack 518, win 506, options [nop,nop,TS val 3477380434 ecr 3818206], length 0
+13:09:46.505756 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51413: Flags [P.], seq 1:1441, ack 518, win 506, options [nop,nop,TS val 3477380618 ecr 3818206], length 1440
+13:09:46.505961 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51413: Flags [.], seq 1441:2889, ack 518, win 506, options [nop,nop,TS val 3477380618 ecr 3818206], length 1448
+13:09:46.505996 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51413: Flags [P.], seq 2889:4337, ack 518, win 506, options [nop,nop,TS val 3477380618 ecr 3818206], length 1448
+13:09:46.506678 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51413: Flags [.], seq 4337:5785, ack 518, win 506, options [nop,nop,TS val 3477380619 ecr 3818206], length 1448
+13:09:46.506709 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51413: Flags [P.], seq 5785:7233, ack 518, win 506, options [nop,nop,TS val 3477380619 ecr 3818206], length 1448
+13:09:46.523349 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51413: Flags [P.], seq 7233:7337, ack 518, win 506, options [nop,nop,TS val 3477380636 ecr 3818206], length 104
+13:09:46.723363 wlan0 In  IP 192.168.50.98.51413 > 54.229.145.163.443: Flags [.], ack 2889, win 274, options [nop,nop,TS val 3818253 ecr 3477380618], length 0
+13:09:46.723437 wlan0 In  IP 192.168.50.98.51413 > 54.229.145.163.443: Flags [.], ack 4337, win 296, options [nop,nop,TS val 3818253 ecr 3477380618], length 0
+13:09:46.723474 wlan0 In  IP 192.168.50.98.51413 > 54.229.145.163.443: Flags [.], ack 5785, win 319, options [nop,nop,TS val 3818253 ecr 3477380619], length 0
+13:09:46.723507 wlan0 In  IP 192.168.50.98.51413 > 54.229.145.163.443: Flags [.], ack 7233, win 342, options [nop,nop,TS val 3818253 ecr 3477380619], length 0
+13:09:46.723540 wlan0 In  IP 192.168.50.98.51413 > 54.229.145.163.443: Flags [.], ack 7337, win 342, options [nop,nop,TS val 3818257 ecr 3477380636], length 0
+13:09:46.723574 wlan0 In  IP 192.168.50.98.51413 > 54.229.145.163.443: Flags [P.], seq 518:644, ack 7337, win 342, options [nop,nop,TS val 3818263 ecr 3477380636], length 126
+13:09:46.723636 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51413: Flags [.], ack 644, win 506, options [nop,nop,TS val 3477380836 ecr 3818263], length 0
+13:09:46.814304 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51413: Flags [P.], seq 7337:7457, ack 644, win 506, options [nop,nop,TS val 3477380926 ecr 3818263], length 120
+13:09:46.824346 wlan0 In  IP 192.168.50.98.51413 > 54.229.145.163.443: Flags [P.], seq 644:697, ack 7457, win 342, options [nop,nop,TS val 3818332 ecr 3477380926], length 53
+13:09:46.824470 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51413: Flags [.], ack 697, win 506, options [nop,nop,TS val 3477380937 ecr 3818332], length 0
+13:09:46.824549 wlan0 In  IP 192.168.50.98.51413 > 54.229.145.163.443: Flags [P.], seq 697:753, ack 7457, win 342, options [nop,nop,TS val 3818332 ecr 3477380926], length 56
+13:09:46.824616 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51413: Flags [.], ack 753, win 506, options [nop,nop,TS val 3477380937 ecr 3818332], length 0
+13:09:46.824648 wlan0 In  IP 192.168.50.98.51413 > 54.229.145.163.443: Flags [P.], seq 753:795, ack 7457, win 342, options [nop,nop,TS val 3818332 ecr 3477380926], length 42
+13:09:46.824700 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51413: Flags [.], ack 795, win 506, options [nop,nop,TS val 3477380937 ecr 3818332], length 0
+13:09:46.824728 wlan0 In  IP 192.168.50.98.51413 > 54.229.145.163.443: Flags [P.], seq 795:1411, ack 7457, win 342, options [nop,nop,TS val 3818332 ecr 3477380926], length 616
+13:09:46.824781 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51413: Flags [.], ack 1411, win 502, options [nop,nop,TS val 3477380937 ecr 3818332], length 0
+13:09:46.824804 wlan0 In  IP 192.168.50.98.51413 > 54.229.145.163.443: Flags [P.], seq 1411:1449, ack 7457, win 342, options [nop,nop,TS val 3818332 ecr 3477380926], length 38
+13:09:46.824850 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51413: Flags [.], ack 1449, win 502, options [nop,nop,TS val 3477380937 ecr 3818332], length 0
+13:09:46.914698 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51413: Flags [P.], seq 7457:7495, ack 1449, win 502, options [nop,nop,TS val 3477381027 ecr 3818332], length 38
+13:09:46.954348 wlan0 In  IP 192.168.50.98.51413 > 54.229.145.163.443: Flags [.], ack 7495, win 342, options [nop,nop,TS val 3818365 ecr 3477381027], length 0
+13:09:46.954444 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51413: Flags [P.], seq 7495:7783, ack 1449, win 502, options [nop,nop,TS val 3477381067 ecr 3818365], length 288
+13:09:46.956503 wlan0 In  IP 192.168.50.98.51413 > 54.229.145.163.443: Flags [.], ack 7783, win 364, options [nop,nop,TS val 3818365 ecr 3477381067], length 0
+13:09:46.956688 wlan0 In  IP 192.168.50.98.51413 > 54.229.145.163.443: Flags [P.], seq 1449:1480, ack 7783, win 364, options [nop,nop,TS val 3818365 ecr 3477381067], length 31
+13:09:46.956832 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51413: Flags [.], ack 1480, win 502, options [nop,nop,TS val 3477381069 ecr 3818365], length 0
+13:09:46.964372 wlan0 In  IP 192.168.50.98.51413 > 54.229.145.163.443: Flags [F.], seq 1480, ack 7783, win 364, options [nop,nop,TS val 3818367 ecr 3477381069], length 0
+13:09:46.964812 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51413: Flags [F.], seq 7783, ack 1481, win 502, options [nop,nop,TS val 3477381077 ecr 3818367], length 0
+13:09:46.966808 wlan0 In  IP 192.168.50.98.51413 > 54.229.145.163.443: Flags [.], ack 7784, win 364, options [nop,nop,TS val 3818368 ecr 3477381077], length 0
+13:09:47.684236 wlan0 In  IP 192.168.50.98.40072 > 142.251.156.4.443: Flags [S], seq 326074606, win 29200, options [mss 1460,sackOK,TS val 3818547 ecr 0,nop,wscale 7], length 0
+13:09:47.684421 wlan0 Out IP 142.251.156.4.443 > 192.168.50.98.40072: Flags [S.], seq 1435950387, ack 326074607, win 65160, options [mss 1460,sackOK,TS val 3477381797 ecr 3818547,nop,wscale 7], length 0
+13:09:47.687152 wlan0 In  IP 192.168.50.98.40072 > 142.251.156.4.443: Flags [.], ack 1, win 229, options [nop,nop,TS val 3818548 ecr 3477381797], length 0
+13:09:47.689168 wlan0 In  IP 192.168.50.98.40072 > 142.251.156.4.443: Flags [P.], seq 1:207, ack 1, win 229, options [nop,nop,TS val 3818548 ecr 3477381797], length 206
+13:09:47.689261 wlan0 Out IP 142.251.156.4.443 > 192.168.50.98.40072: Flags [.], ack 207, win 508, options [nop,nop,TS val 3477381801 ecr 3818548], length 0
+13:09:53.679999 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 4237418611:4237418671, ack 2984088260, win 342, options [nop,nop,TS val 3820046 ecr 3477328876], length 60
+13:09:53.680180 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 60, win 501, options [nop,nop,TS val 3477387792 ecr 3820046], length 0
+13:09:53.680310 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 60:424, ack 1, win 342, options [nop,nop,TS val 3820046 ecr 3477328876], length 364
+13:09:53.680374 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 424, win 501, options [nop,nop,TS val 3477387793 ecr 3820046], length 0
+13:09:54.011474 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 1:79, ack 424, win 501, options [nop,nop,TS val 3477388124 ecr 3820046], length 78
+13:09:54.013238 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 424:463, ack 79, win 342, options [nop,nop,TS val 3820129 ecr 3477388124], length 39
+13:09:54.013319 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 463, win 501, options [nop,nop,TS val 3477388125 ecr 3820129], length 0
+13:09:54.017333 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 463:520, ack 79, win 342, options [nop,nop,TS val 3820130 ecr 3477388125], length 57
+13:09:54.017389 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 520, win 501, options [nop,nop,TS val 3477388130 ecr 3820130], length 0
+13:09:54.017611 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 520:833, ack 79, win 342, options [nop,nop,TS val 3820130 ecr 3477388125], length 313
+13:09:54.017664 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 833, win 501, options [nop,nop,TS val 3477388130 ecr 3820130], length 0
+13:09:54.347387 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 79:157, ack 833, win 501, options [nop,nop,TS val 3477388460 ecr 3820130], length 78
+13:09:54.349247 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 833:872, ack 157, win 342, options [nop,nop,TS val 3820213 ecr 3477388460], length 39
+13:09:54.349307 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 872, win 501, options [nop,nop,TS val 3477388461 ecr 3820213], length 0
+13:09:54.353317 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 872:930, ack 157, win 342, options [nop,nop,TS val 3820214 ecr 3477388461], length 58
+13:09:54.353355 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 930, win 501, options [nop,nop,TS val 3477388466 ecr 3820214], length 0
+13:09:54.353739 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 930:1387, ack 157, win 342, options [nop,nop,TS val 3820214 ecr 3477388461], length 457
+13:09:54.353777 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 1387, win 501, options [nop,nop,TS val 3477388466 ecr 3820214], length 0
+13:09:54.684359 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 157:235, ack 1387, win 501, options [nop,nop,TS val 3477388797 ecr 3820214], length 78
+13:09:54.687139 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 1387:1426, ack 235, win 342, options [nop,nop,TS val 3820298 ecr 3477388797], length 39
+13:09:54.687223 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 1426, win 501, options [nop,nop,TS val 3477388799 ecr 3820298], length 0
+13:09:54.690076 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 1426:1484, ack 235, win 342, options [nop,nop,TS val 3820299 ecr 3477388799], length 58
+13:09:54.690134 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 1484, win 501, options [nop,nop,TS val 3477388802 ecr 3820299], length 0
+13:09:54.690303 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 1484:1948, ack 235, win 342, options [nop,nop,TS val 3820299 ecr 3477388799], length 464
+13:09:54.690356 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 1948, win 501, options [nop,nop,TS val 3477388803 ecr 3820299], length 0
+13:09:55.018040 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 235:313, ack 1948, win 501, options [nop,nop,TS val 3477389130 ecr 3820299], length 78
+13:09:55.020068 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 1948:1987, ack 313, win 342, options [nop,nop,TS val 3820381 ecr 3477389130], length 39
+13:09:55.020150 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 1987, win 501, options [nop,nop,TS val 3477389132 ecr 3820381], length 0
+13:09:55.023130 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 1987:2052, ack 313, win 342, options [nop,nop,TS val 3820382 ecr 3477389132], length 65
+13:09:55.023185 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 2052, win 501, options [nop,nop,TS val 3477389135 ecr 3820382], length 0
+13:09:55.023393 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 2052:2497, ack 313, win 342, options [nop,nop,TS val 3820382 ecr 3477389132], length 445
+13:09:55.023448 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 2497, win 501, options [nop,nop,TS val 3477389136 ecr 3820382], length 0
+13:09:55.353364 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 313:391, ack 2497, win 501, options [nop,nop,TS val 3477389466 ecr 3820382], length 78
+13:09:55.355548 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 2497:2536, ack 391, win 342, options [nop,nop,TS val 3820465 ecr 3477389466], length 39
+13:09:55.355631 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 2536, win 501, options [nop,nop,TS val 3477389468 ecr 3820465], length 0
+13:09:55.359452 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 2536:2597, ack 391, win 342, options [nop,nop,TS val 3820466 ecr 3477389468], length 61
+13:09:55.359514 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 2597, win 501, options [nop,nop,TS val 3477389472 ecr 3820466], length 0
+13:09:55.359655 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 2597:2965, ack 391, win 342, options [nop,nop,TS val 3820466 ecr 3477389468], length 368
+13:09:55.359719 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 2965, win 501, options [nop,nop,TS val 3477389472 ecr 3820466], length 0
+13:09:55.688005 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 391:469, ack 2965, win 501, options [nop,nop,TS val 3477389800 ecr 3820466], length 78
+13:09:55.692262 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 2965:3004, ack 469, win 342, options [nop,nop,TS val 3820549 ecr 3477389800], length 39
+13:09:55.692347 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 3004, win 501, options [nop,nop,TS val 3477389805 ecr 3820549], length 0
+13:09:55.695013 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 3004:3065, ack 469, win 342, options [nop,nop,TS val 3820549 ecr 3477389800], length 61
+13:09:55.695069 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 3065, win 501, options [nop,nop,TS val 3477389807 ecr 3820549], length 0
+13:09:55.695827 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 3065:4091, ack 469, win 342, options [nop,nop,TS val 3820549 ecr 3477389805], length 1026
+13:09:55.695884 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 4091, win 501, options [nop,nop,TS val 3477389808 ecr 3820549], length 0
+13:09:56.030372 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 469:547, ack 4091, win 501, options [nop,nop,TS val 3477390143 ecr 3820549], length 78
+13:09:56.032089 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 4091:4130, ack 547, win 342, options [nop,nop,TS val 3820634 ecr 3477390143], length 39
+13:09:56.032170 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 4130, win 501, options [nop,nop,TS val 3477390144 ecr 3820634], length 0
+13:09:56.035486 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 4130:4191, ack 547, win 342, options [nop,nop,TS val 3820635 ecr 3477390144], length 61
+13:09:56.035543 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 4191, win 501, options [nop,nop,TS val 3477390148 ecr 3820635], length 0
+13:09:56.036092 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [.], seq 4191:5639, ack 547, win 342, options [nop,nop,TS val 3820635 ecr 3477390144], length 1448
+13:09:56.036148 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 5639, win 501, options [nop,nop,TS val 3477390148 ecr 3820635], length 0
+13:09:56.042167 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [.], seq 5639:7087, ack 547, win 342, options [nop,nop,TS val 3820635 ecr 3477390144], length 1448
+13:09:56.042233 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 7087, win 501, options [nop,nop,TS val 3477390154 ecr 3820635], length 0
+13:09:56.042276 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [.], seq 7087:8535, ack 547, win 342, options [nop,nop,TS val 3820635 ecr 3477390144], length 1448
+13:09:56.042346 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 8535, win 496, options [nop,nop,TS val 3477390155 ecr 3820635], length 0
+13:09:56.043139 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [.], seq 8535:9983, ack 547, win 342, options [nop,nop,TS val 3820635 ecr 3477390144], length 1448
+13:09:56.043198 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 9983, win 501, options [nop,nop,TS val 3477390155 ecr 3820635], length 0
+13:09:56.044083 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [.], seq 9983:11431, ack 547, win 342, options [nop,nop,TS val 3820635 ecr 3477390144], length 1448
+13:09:56.044142 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 11431, win 501, options [nop,nop,TS val 3477390156 ecr 3820635], length 0
+13:09:56.044292 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 11431:11773, ack 547, win 342, options [nop,nop,TS val 3820635 ecr 3477390144], length 342
+13:09:56.044346 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 11773, win 501, options [nop,nop,TS val 3477390157 ecr 3820635], length 0
+13:09:56.419448 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 547:625, ack 11773, win 501, options [nop,nop,TS val 3477390532 ecr 3820635], length 78
+13:09:56.421085 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 11773:11812, ack 625, win 342, options [nop,nop,TS val 3820731 ecr 3477390532], length 39
+13:09:56.421168 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 11812, win 501, options [nop,nop,TS val 3477390533 ecr 3820731], length 0
+13:10:17.101768 wlan0 In  IP 192.168.50.98.52297 > 142.251.14.102.443: Flags [S], seq 381513165, win 29200, options [mss 1460,sackOK,TS val 3825901 ecr 0,nop,wscale 7], length 0
+13:10:17.101929 wlan0 Out IP 142.251.14.102.443 > 192.168.50.98.52297: Flags [S.], seq 3750793389, ack 381513166, win 65160, options [mss 1460,sackOK,TS val 3477411214 ecr 3825901,nop,wscale 7], length 0
+13:10:17.103158 wlan0 In  IP 192.168.50.98.52297 > 142.251.14.102.443: Flags [.], ack 1, win 229, options [nop,nop,TS val 3825902 ecr 3477411214], length 0
+13:10:17.103649 wlan0 In  IP 192.168.50.98.52297 > 142.251.14.102.443: Flags [P.], seq 1:208, ack 1, win 229, options [nop,nop,TS val 3825902 ecr 3477411214], length 207
+13:10:17.103744 wlan0 Out IP 142.251.14.102.443 > 192.168.50.98.52297: Flags [.], ack 208, win 508, options [nop,nop,TS val 3477411216 ecr 3825902], length 0
+13:10:17.688582 wlan0 In  IP 192.168.50.98.40072 > 142.251.156.4.443: Flags [F.], seq 207, ack 1, win 229, options [nop,nop,TS val 3826048 ecr 3477381801], length 0
+13:10:17.689176 wlan0 Out IP 142.251.156.4.443 > 192.168.50.98.40072: Flags [F.], seq 1, ack 208, win 508, options [nop,nop,TS val 3477411801 ecr 3826048], length 0
+13:10:17.690605 wlan0 In  IP 192.168.50.98.40072 > 142.251.156.4.443: Flags [.], ack 2, win 229, options [nop,nop,TS val 3826049 ecr 3477411801], length 0
+13:10:17.964877 wlan0 In  IP 192.168.50.98.52297 > 142.251.14.102.443: Flags [F.], seq 208, ack 1, win 229, options [nop,nop,TS val 3826117 ecr 3477411216], length 0
+13:10:17.965467 wlan0 Out IP 142.251.14.102.443 > 192.168.50.98.52297: Flags [F.], seq 1, ack 209, win 508, options [nop,nop,TS val 3477412078 ecr 3826117], length 0
+13:10:17.966837 wlan0 In  IP 192.168.50.98.52297 > 142.251.14.102.443: Flags [.], ack 2, win 229, options [nop,nop,TS val 3826118 ecr 3477412078], length 0
+13:10:18.690547 wlan0 In  IP 192.168.50.98.56481 > 52.209.211.230.443: Flags [S], seq 3893116246, win 29200, options [mss 1460,sackOK,TS val 3826298 ecr 0,nop,wscale 7], length 0
+13:10:18.690738 wlan0 Out IP 52.209.211.230.443 > 192.168.50.98.56481: Flags [S.], seq 1448566178, ack 3893116247, win 65160, options [mss 1460,sackOK,TS val 3477412803 ecr 3826298,nop,wscale 7], length 0
+13:10:18.702022 wlan0 In  IP 192.168.50.98.56481 > 52.209.211.230.443: Flags [.], ack 1, win 229, options [nop,nop,TS val 3826299 ecr 3477412803], length 0
+13:10:18.852572 wlan0 In  IP 192.168.50.98.56481 > 52.209.211.230.443: Flags [P.], seq 1:518, ack 1, win 229, options [nop,nop,TS val 3826336 ecr 3477412803], length 517
+13:10:18.852685 wlan0 Out IP 52.209.211.230.443 > 192.168.50.98.56481: Flags [.], ack 518, win 506, options [nop,nop,TS val 3477412965 ecr 3826336], length 0
+13:10:19.029943 wlan0 Out IP 52.209.211.230.443 > 192.168.50.98.56481: Flags [P.], seq 1:1441, ack 518, win 506, options [nop,nop,TS val 3477413142 ecr 3826336], length 1440
+13:10:19.030132 wlan0 Out IP 52.209.211.230.443 > 192.168.50.98.56481: Flags [.], seq 1441:2889, ack 518, win 506, options [nop,nop,TS val 3477413142 ecr 3826336], length 1448
+13:10:19.030162 wlan0 Out IP 52.209.211.230.443 > 192.168.50.98.56481: Flags [P.], seq 2889:4337, ack 518, win 506, options [nop,nop,TS val 3477413142 ecr 3826336], length 1448
+13:10:19.030774 wlan0 Out IP 52.209.211.230.443 > 192.168.50.98.56481: Flags [.], seq 4337:5785, ack 518, win 506, options [nop,nop,TS val 3477413143 ecr 3826336], length 1448
+13:10:19.030807 wlan0 Out IP 52.209.211.230.443 > 192.168.50.98.56481: Flags [P.], seq 5785:7233, ack 518, win 506, options [nop,nop,TS val 3477413143 ecr 3826336], length 1448
+13:10:19.063340 wlan0 Out IP 52.209.211.230.443 > 192.168.50.98.56481: Flags [P.], seq 7233:7337, ack 518, win 506, options [nop,nop,TS val 3477413176 ecr 3826336], length 104
+13:10:19.303372 wlan0 Out IP 52.209.211.230.443 > 192.168.50.98.56481: Flags [P.], seq 1:1441, ack 518, win 506, options [nop,nop,TS val 3477413416 ecr 3826336], length 1440
+13:10:19.783357 wlan0 Out IP 52.209.211.230.443 > 192.168.50.98.56481: Flags [P.], seq 1:1441, ack 518, win 506, options [nop,nop,TS val 3477413896 ecr 3826336], length 1440
+13:10:19.879366 wlan0 In  IP 192.168.50.98.56481 > 52.209.211.230.443: Flags [P.], seq 518:644, ack 7337, win 342, options [nop,nop,TS val 3826394 ecr 3477413176], length 126
+13:10:19.879502 wlan0 Out IP 52.209.211.230.443 > 192.168.50.98.56481: Flags [.], ack 644, win 506, options [nop,nop,TS val 3477413992 ecr 3826394], length 0
+13:10:19.879550 wlan0 In  IP 192.168.50.98.56481 > 52.209.211.230.443: Flags [P.], seq 518:644, ack 7337, win 342, options [nop,nop,TS val 3826445 ecr 3477413176], length 126
+13:10:19.879608 wlan0 Out IP 52.209.211.230.443 > 192.168.50.98.56481: Flags [.], ack 644, win 506, options [nop,nop,TS val 3477413992 ecr 3826445,nop,nop,sack 1 {518:644}], length 0
+13:10:19.879629 wlan0 In  IP 192.168.50.98.56481 > 52.209.211.230.443: Flags [.], ack 7337, win 342, options [nop,nop,TS val 3826452 ecr 3477413176,nop,nop,sack 1 {1:1441}], length 0
+13:10:19.879666 wlan0 In  IP 192.168.50.98.56481 > 52.209.211.230.443: Flags [P.], seq 518:644, ack 7337, win 342, options [nop,nop,TS val 3826496 ecr 3477413176], length 126
+13:10:19.879716 wlan0 Out IP 52.209.211.230.443 > 192.168.50.98.56481: Flags [.], ack 644, win 506, options [nop,nop,TS val 3477413992 ecr 3826496,nop,nop,sack 1 {518:644}], length 0
+13:10:19.879744 wlan0 In  IP 192.168.50.98.56481 > 52.209.211.230.443: Flags [.], ack 7337, win 342, options [nop,nop,TS val 3826573 ecr 3477413176,nop,nop,sack 1 {1:1441}], length 0
+13:10:19.966599 wlan0 Out IP 52.209.211.230.443 > 192.168.50.98.56481: Flags [P.], seq 7337:7457, ack 644, win 506, options [nop,nop,TS val 3477414079 ecr 3826573], length 120
+13:10:20.207365 wlan0 In  IP 192.168.50.98.56481 > 52.209.211.230.443: Flags [P.], seq 644:697, ack 7457, win 342, options [nop,nop,TS val 3826619 ecr 3477414079], length 53
+13:10:20.207471 wlan0 Out IP 52.209.211.230.443 > 192.168.50.98.56481: Flags [.], ack 697, win 506, options [nop,nop,TS val 3477414320 ecr 3826619], length 0
+13:10:20.207533 wlan0 In  IP 192.168.50.98.56481 > 52.209.211.230.443: Flags [P.], seq 697:753, ack 7457, win 342, options [nop,nop,TS val 3826619 ecr 3477414079], length 56
+13:10:20.207589 wlan0 Out IP 52.209.211.230.443 > 192.168.50.98.56481: Flags [.], ack 753, win 506, options [nop,nop,TS val 3477414320 ecr 3826619], length 0
+13:10:20.207617 wlan0 In  IP 192.168.50.98.56481 > 52.209.211.230.443: Flags [P.], seq 753:795, ack 7457, win 342, options [nop,nop,TS val 3826619 ecr 3477414079], length 42
+13:10:20.207663 wlan0 Out IP 52.209.211.230.443 > 192.168.50.98.56481: Flags [.], ack 795, win 506, options [nop,nop,TS val 3477414320 ecr 3826619], length 0
+13:10:20.207682 wlan0 In  IP 192.168.50.98.56481 > 52.209.211.230.443: Flags [P.], seq 795:1411, ack 7457, win 342, options [nop,nop,TS val 3826619 ecr 3477414079], length 616
+13:10:20.207754 wlan0 Out IP 52.209.211.230.443 > 192.168.50.98.56481: Flags [.], ack 1411, win 502, options [nop,nop,TS val 3477414320 ecr 3826619], length 0
+13:10:20.207784 wlan0 In  IP 192.168.50.98.56481 > 52.209.211.230.443: Flags [P.], seq 1411:1449, ack 7457, win 342, options [nop,nop,TS val 3826619 ecr 3477414079], length 38
+13:10:20.207831 wlan0 Out IP 52.209.211.230.443 > 192.168.50.98.56481: Flags [.], ack 1449, win 502, options [nop,nop,TS val 3477414320 ecr 3826619], length 0
+13:10:20.212499 wlan0 In  IP 192.168.50.98.56481 > 52.209.211.230.443: Flags [P.], seq 1411:1449, ack 7457, win 342, options [nop,nop,TS val 3826673 ecr 3477414079], length 38
+13:10:20.212598 wlan0 Out IP 52.209.211.230.443 > 192.168.50.98.56481: Flags [.], ack 1449, win 502, options [nop,nop,TS val 3477414325 ecr 3826673,nop,nop,sack 1 {1411:1449}], length 0
+13:10:20.294472 wlan0 Out IP 52.209.211.230.443 > 192.168.50.98.56481: Flags [P.], seq 7457:7495, ack 1449, win 502, options [nop,nop,TS val 3477414407 ecr 3826673], length 38
+13:10:20.342147 wlan0 In  IP 192.168.50.98.56481 > 52.209.211.230.443: Flags [.], ack 7495, win 342, options [nop,nop,TS val 3826710 ecr 3477414407], length 0
+13:10:20.342275 wlan0 Out IP 52.209.211.230.443 > 192.168.50.98.56481: Flags [P.], seq 7495:7784, ack 1449, win 502, options [nop,nop,TS val 3477414454 ecr 3826710], length 289
+13:10:20.345900 wlan0 In  IP 192.168.50.98.56481 > 52.209.211.230.443: Flags [.], ack 7784, win 364, options [nop,nop,TS val 3826712 ecr 3477414454], length 0
+13:10:20.345958 wlan0 In  IP 192.168.50.98.56481 > 52.209.211.230.443: Flags [P.], seq 1449:1480, ack 7784, win 364, options [nop,nop,TS val 3826712 ecr 3477414454], length 31
+13:10:20.346012 wlan0 Out IP 52.209.211.230.443 > 192.168.50.98.56481: Flags [.], ack 1480, win 502, options [nop,nop,TS val 3477414458 ecr 3826712], length 0
+13:10:20.354196 wlan0 In  IP 192.168.50.98.56481 > 52.209.211.230.443: Flags [F.], seq 1480, ack 7784, win 364, options [nop,nop,TS val 3826714 ecr 3477414458], length 0
+13:10:20.354641 wlan0 Out IP 52.209.211.230.443 > 192.168.50.98.56481: Flags [F.], seq 7784, ack 1481, win 502, options [nop,nop,TS val 3477414467 ecr 3826714], length 0
+13:10:20.371784 wlan0 In  IP 192.168.50.98.56481 > 52.209.211.230.443: Flags [.], ack 7785, win 364, options [nop,nop,TS val 3826715 ecr 3477414467], length 0
+^C
+199 packets captured
+200 packets received by filter
+0 packets dropped by kernel
