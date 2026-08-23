@@ -1,0 +1,1022 @@
+user@opi3:~$ sudo tcpdump -ni any 'host 192.168.50.98 and (tcp or udp)'
+tcpdump: data link type LINUX_SLL2
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on any, link-type LINUX_SLL2 (Linux cooked v2), snapshot length 262144 bytes
+13:02:37.102780 wlan0 Out IP 192.168.50.1.67 > 192.168.50.98.68: BOOTP/DHCP, Reply, length 300
+13:02:37.133480 wlan0 Out IP 192.168.50.1.67 > 192.168.50.98.68: BOOTP/DHCP, Reply, length 301
+13:02:37.159579 wlan0 M   IP 192.168.50.98.3942 > 239.255.255.250.1900: UDP, length 127
+13:02:37.164445 wlan0 M   IP 192.168.50.98.3942 > 239.255.255.250.1900: UDP, length 127
+13:02:37.164612 wlan0 M   IP 192.168.50.98.3942 > 239.255.255.250.1900: UDP, length 124
+13:02:37.164664 wlan0 M   IP 192.168.50.98.3942 > 239.255.255.250.1900: UDP, length 124
+13:02:37.164709 wlan0 M   IP 192.168.50.98.3942 > 239.255.255.250.1900: UDP, length 136
+13:02:37.164751 wlan0 M   IP 192.168.50.98.3942 > 239.255.255.250.1900: UDP, length 136
+13:02:37.164793 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 190
+13:02:37.164838 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 199
+13:02:37.164881 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 246
+13:02:37.164924 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 254
+13:02:37.164966 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 256
+13:02:37.165008 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 244
+13:02:37.165050 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 190
+13:02:37.263327 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 199
+13:02:37.563343 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 256
+13:02:37.563393 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 244
+13:02:40.559879 wlan0 In  IP 192.168.50.98.33647 > 192.168.50.1.53: 35049+ A? customerevents.netflix.com. (44)
+13:02:40.560036 wlan0 In  IP 192.168.50.98.33647 > 192.168.50.1.53: 19121+ AAAA? customerevents.netflix.com. (44)
+13:02:40.560064 wlan0 In  IP 192.168.50.98.33647 > 192.168.50.1.53: 60225+ A? ichnaea.netflix.com. (37)
+13:02:40.560083 wlan0 In  IP 192.168.50.98.33647 > 192.168.50.1.53: 31446+ AAAA? ichnaea.netflix.com. (37)
+13:02:40.560118 wlan0 In  IP 192.168.50.98.33647 > 192.168.50.1.53: 29638+ A? cdn-0.nflximg.com. (35)
+13:02:40.560139 wlan0 In  IP 192.168.50.98.33647 > 192.168.50.1.53: 25584+ AAAA? cdn-0.nflximg.com. (35)
+13:02:40.560170 wlan0 In  IP 192.168.50.98.33647 > 192.168.50.1.53: 31903+ A? nrdp.prod.ftl.netflix.com. (43)
+13:02:40.560189 wlan0 In  IP 192.168.50.98.33647 > 192.168.50.1.53: 37749+ AAAA? nrdp.prod.ftl.netflix.com. (43)
+13:02:40.560206 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 43165+ A? nrdp70-appboot.netflix.com. (44)
+13:02:40.560243 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 5205+ AAAA? nrdp70-appboot.netflix.com. (44)
+13:02:40.560261 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 39486+ A? nrdp.nccp.netflix.com. (39)
+13:02:40.560280 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 42908+ AAAA? nrdp.nccp.netflix.com. (39)
+13:02:40.560314 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 15014+ A? api-global.netflix.com. (40)
+13:02:40.560334 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 29109+ AAAA? api-global.netflix.com. (40)
+13:02:40.560351 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 51437+ A? secure.netflix.com. (36)
+13:02:40.560368 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 52432+ AAAA? secure.netflix.com. (36)
+13:02:40.560386 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 26336+ A? uiboot.netflix.com. (36)
+13:02:40.560403 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 12122+ AAAA? uiboot.netflix.com. (36)
+13:02:40.560419 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 26788+ A? customerevents.netflix.com. (44)
+13:02:40.560436 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 53314+ AAAA? customerevents.netflix.com. (44)
+13:02:40.560454 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 46735+ A? ichnaea.netflix.com. (37)
+13:02:40.560471 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 21845+ AAAA? ichnaea.netflix.com. (37)
+13:02:40.560489 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 42136+ A? cdn-0.nflximg.com. (35)
+13:02:40.560506 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 9410+ AAAA? cdn-0.nflximg.com. (35)
+13:02:40.560523 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 64803+ A? nrdp.prod.ftl.netflix.com. (43)
+13:02:40.560557 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 52276+ AAAA? nrdp.prod.ftl.netflix.com. (43)
+13:02:40.560576 wlan0 In  IP 192.168.50.98.60946 > 192.168.50.1.53: 46994+ A? osb-v2.samsungqbe.com. (39)
+13:02:40.560613 wlan0 In  IP 192.168.50.98.60946 > 192.168.50.1.53: 50795+ AAAA? osb-v2.samsungqbe.com. (39)
+13:02:40.560711 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 304
+13:02:40.560787 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 313
+13:02:40.560838 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 360
+13:02:40.560882 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 368
+13:02:40.560925 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 370
+13:02:40.560968 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 358
+13:02:40.561010 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 310
+13:02:40.561081 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 319
+13:02:40.561130 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 372
+13:02:40.561181 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 358
+13:02:40.561207 wlan0 In  IP 192.168.50.98.46795 > 192.168.50.1.53: 57172+ A? cdn.samsungcloudsolution.com. (46)
+13:02:40.561276 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 304
+13:02:40.561356 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 313
+13:02:40.561417 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 360
+13:02:40.561465 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 368
+13:02:40.561508 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 370
+13:02:40.561578 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 358
+13:02:40.561622 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 310
+13:02:40.561665 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 319
+13:02:40.561758 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 372
+13:02:40.561803 wlan0 M   IP 192.168.50.98.3955 > 239.255.255.250.1900: UDP, length 358
+13:02:40.561850 wlan0 M   IP 192.168.50.98.5353 > 224.0.0.251.5353: 0 [2q] [2n] [1au] ANY (QM)? Samsung AU7570 50 TV._airplay._tcp.local. ANY (QM)? Samsung.local. (128)
+13:02:40.561875 wlan0 In  IP 192.168.50.98.33757 > 192.168.50.1.53: 45579+ A? mediaservices.cdn-apple.com. (45)
+13:02:40.561937 wlan0 In  IP 192.168.50.98.33757 > 192.168.50.1.53: 41599+ AAAA? mediaservices.cdn-apple.com. (45)
+13:02:40.561958 wlan0 In  IP 192.168.50.98.34908 > 192.168.50.1.53: 13646+ A? gld.push.samsungosp.com. (41)
+13:02:40.561996 wlan0 In  IP 192.168.50.98.34908 > 192.168.50.1.53: 50898+ AAAA? gld.push.samsungosp.com. (41)
+13:02:40.562044 wlan0 M   IP 192.168.50.98.5353 > 224.0.0.251.5353: 0 [2q] [2n] [1au] ANY (QM)? Samsung AU7570 50 TV._airplay._tcp.local. ANY (QM)? Samsung.local. (128)
+13:02:40.562091 wlan0 M   IP 192.168.50.98.5353 > 224.0.0.251.5353: 0 [2q] [2n] [1au] ANY (QM)? Samsung AU7570 50 TV._airplay._tcp.local. ANY (QM)? Samsung.local. (128)
+13:02:40.562170 wlan0 M   IP 192.168.50.98.5353 > 224.0.0.251.5353: 0*- [0q] 1/0/2 (Cache flush) PTR Samsung.local. (103)
+13:02:40.562198 wlan0 In  IP 192.168.50.98.54621 > 8.8.8.8.53: 43165+ A? nrdp70-appboot.netflix.com. (44)
+13:02:40.562247 eth0  Out IP 192.168.50.98.54621 > 8.8.8.8.53: 43165+ A? nrdp70-appboot.netflix.com. (44)
+13:02:40.562267 wlan0 In  IP 192.168.50.98.54621 > 8.8.8.8.53: 5205+ AAAA? nrdp70-appboot.netflix.com. (44)
+13:02:40.562289 eth0  Out IP 192.168.50.98.54621 > 8.8.8.8.53: 5205+ AAAA? nrdp70-appboot.netflix.com. (44)
+13:02:40.562306 wlan0 In  IP 192.168.50.98.54621 > 8.8.8.8.53: 39486+ A? nrdp.nccp.netflix.com. (39)
+13:02:40.562325 eth0  Out IP 192.168.50.98.54621 > 8.8.8.8.53: 39486+ A? nrdp.nccp.netflix.com. (39)
+13:02:40.562362 wlan0 In  IP 192.168.50.98.54621 > 8.8.8.8.53: 42908+ AAAA? nrdp.nccp.netflix.com. (39)
+13:02:40.562383 eth0  Out IP 192.168.50.98.54621 > 8.8.8.8.53: 42908+ AAAA? nrdp.nccp.netflix.com. (39)
+13:02:40.562407 wlan0 In  IP 192.168.50.98.54621 > 8.8.8.8.53: 15014+ A? api-global.netflix.com. (40)
+13:02:40.562427 eth0  Out IP 192.168.50.98.54621 > 8.8.8.8.53: 15014+ A? api-global.netflix.com. (40)
+13:02:40.562441 wlan0 In  IP 192.168.50.98.54621 > 8.8.8.8.53: 29109+ AAAA? api-global.netflix.com. (40)
+13:02:40.562459 eth0  Out IP 192.168.50.98.54621 > 8.8.8.8.53: 29109+ AAAA? api-global.netflix.com. (40)
+13:02:40.562472 wlan0 In  IP 192.168.50.98.54621 > 8.8.8.8.53: 51437+ A? secure.netflix.com. (36)
+13:02:40.562490 eth0  Out IP 192.168.50.98.54621 > 8.8.8.8.53: 51437+ A? secure.netflix.com. (36)
+13:02:40.562568 wlan0 In  IP 192.168.50.98.54621 > 8.8.8.8.53: 52432+ AAAA? secure.netflix.com. (36)
+13:02:40.562592 eth0  Out IP 192.168.50.98.54621 > 8.8.8.8.53: 52432+ AAAA? secure.netflix.com. (36)
+13:02:40.562608 wlan0 In  IP 192.168.50.98.54621 > 8.8.8.8.53: 26336+ A? uiboot.netflix.com. (36)
+13:02:40.562627 eth0  Out IP 192.168.50.98.54621 > 8.8.8.8.53: 26336+ A? uiboot.netflix.com. (36)
+13:02:40.562641 wlan0 In  IP 192.168.50.98.54621 > 8.8.8.8.53: 12122+ AAAA? uiboot.netflix.com. (36)
+13:02:40.562692 eth0  Out IP 192.168.50.98.54621 > 8.8.8.8.53: 12122+ AAAA? uiboot.netflix.com. (36)
+13:02:40.562705 wlan0 In  IP 192.168.50.98.54621 > 8.8.8.8.53: 26788+ A? customerevents.netflix.com. (44)
+13:02:40.562742 eth0  Out IP 192.168.50.98.54621 > 8.8.8.8.53: 26788+ A? customerevents.netflix.com. (44)
+13:02:40.562756 wlan0 In  IP 192.168.50.98.54621 > 8.8.8.8.53: 53314+ AAAA? customerevents.netflix.com. (44)
+13:02:40.562774 eth0  Out IP 192.168.50.98.54621 > 8.8.8.8.53: 53314+ AAAA? customerevents.netflix.com. (44)
+13:02:40.562801 wlan0 In  IP 192.168.50.98.54621 > 8.8.8.8.53: 46735+ A? ichnaea.netflix.com. (37)
+13:02:40.562819 eth0  Out IP 192.168.50.98.54621 > 8.8.8.8.53: 46735+ A? ichnaea.netflix.com. (37)
+13:02:40.562833 wlan0 In  IP 192.168.50.98.54621 > 8.8.8.8.53: 21845+ AAAA? ichnaea.netflix.com. (37)
+13:02:40.562851 eth0  Out IP 192.168.50.98.54621 > 8.8.8.8.53: 21845+ AAAA? ichnaea.netflix.com. (37)
+13:02:40.562863 wlan0 In  IP 192.168.50.98.54621 > 8.8.8.8.53: 42136+ A? cdn-0.nflximg.com. (35)
+13:02:40.562880 eth0  Out IP 192.168.50.98.54621 > 8.8.8.8.53: 42136+ A? cdn-0.nflximg.com. (35)
+13:02:40.562893 wlan0 In  IP 192.168.50.98.54621 > 8.8.8.8.53: 9410+ AAAA? cdn-0.nflximg.com. (35)
+13:02:40.562910 eth0  Out IP 192.168.50.98.54621 > 8.8.8.8.53: 9410+ AAAA? cdn-0.nflximg.com. (35)
+13:02:40.562923 wlan0 In  IP 192.168.50.98.54621 > 8.8.8.8.53: 64803+ A? nrdp.prod.ftl.netflix.com. (43)
+13:02:40.562956 eth0  Out IP 192.168.50.98.54621 > 8.8.8.8.53: 64803+ A? nrdp.prod.ftl.netflix.com. (43)
+13:02:40.562969 wlan0 In  IP 192.168.50.98.54621 > 8.8.8.8.53: 52276+ AAAA? nrdp.prod.ftl.netflix.com. (43)
+13:02:40.562988 eth0  Out IP 192.168.50.98.54621 > 8.8.8.8.53: 52276+ AAAA? nrdp.prod.ftl.netflix.com. (43)
+13:02:40.563038 wlan0 M   IP 192.168.50.98.5353 > 224.0.0.251.5353: 0*- [0q] 5/0/3 (Cache flush) TXT "acl=0" "deviceid=D8:A3:5C:60:10:0A" "features=0x7F8AD0,0x38BCF46" "rsf=0x3" "fv=p20.T-KSU2EDEUC-2301.1" "at=0x1" "flags=0x204" "model=UAU7000" "company=Samsung" "manufacturer=Samsung" "serialNumber=0CZZ3LDRB01528V" "protovers=1.1" "srcvers=377.30.02" "pi=6F:E8:6D:83:EE:99" "psi=00000000-0000-0000-0000-6FE86D83EE99" "gid=00000000-0000-0000-0000-6FE86D83EE99" "gcgl=0" "pk=64f1775b561797103e53a75813994244da2f1d72d7b40cf89a18ebc200131cd9", PTR _airplay._tcp.local., PTR Samsung AU7570 50 TV._airplay._tcp.local., (Cache flush) SRV Samsung.local.:56894 0 0, (Cache flush) A 192.168.50.98 (621)
+13:02:40.563122 wlan0 M   IP 192.168.50.98.38697 > 239.255.255.250.15600: UDP, length 35
+13:02:40.563151 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 43165+ A? nrdp70-appboot.netflix.com. (44)
+13:02:40.563202 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 5205+ AAAA? nrdp70-appboot.netflix.com. (44)
+13:02:40.563278 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 39486+ A? nrdp.nccp.netflix.com. (39)
+13:02:40.563342 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 42908+ AAAA? nrdp.nccp.netflix.com. (39)
+13:02:40.563926 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 15014+ A? api-global.netflix.com. (40)
+13:02:40.564619 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 29109+ AAAA? api-global.netflix.com. (40)
+13:02:40.564662 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 51437+ A? secure.netflix.com. (36)
+13:02:40.564682 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 52432+ AAAA? secure.netflix.com. (36)
+13:02:40.564703 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 26336+ A? uiboot.netflix.com. (36)
+13:02:40.564738 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 12122+ AAAA? uiboot.netflix.com. (36)
+13:02:40.564931 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 26788+ A? customerevents.netflix.com. (44)
+13:02:40.564954 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 53314+ AAAA? customerevents.netflix.com. (44)
+13:02:40.564972 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 46735+ A? ichnaea.netflix.com. (37)
+13:02:40.579978 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 21845+ AAAA? ichnaea.netflix.com. (37)
+13:02:40.580135 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 42136+ A? cdn-0.nflximg.com. (35)
+13:02:40.580378 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 9410+ AAAA? cdn-0.nflximg.com. (35)
+13:02:40.580700 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 64803+ A? nrdp.prod.ftl.netflix.com. (43)
+13:02:40.580919 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 52276+ AAAA? nrdp.prod.ftl.netflix.com. (43)
+13:02:40.581172 wlan0 In  IP 192.168.50.98.54537 > 192.168.50.1.53: 48714+ A? cdn.samsungcloudsolution.com. (46)
+13:02:40.582494 wlan0 M   IP 192.168.50.98.5353 > 224.0.0.251.5353: 0*- [0q] 5/0/3 (Cache flush) TXT "acl=0" "deviceid=D8:A3:5C:60:10:0A" "features=0x7F8AD0,0x38BCF46" "rsf=0x3" "fv=p20.T-KSU2EDEUC-2301.1" "at=0x1" "flags=0x204" "model=UAU7000" "company=Samsung" "manufacturer=Samsung" "serialNumber=0CZZ3LDRB01528V" "protovers=1.1" "srcvers=377.30.02" "pi=6F:E8:6D:83:EE:99" "psi=00000000-0000-0000-0000-6FE86D83EE99" "gid=00000000-0000-0000-0000-6FE86D83EE99" "gcgl=0" "pk=64f1775b561797103e53a75813994244da2f1d72d7b40cf89a18ebc200131cd9", PTR _airplay._tcp.local., PTR Samsung AU7570 50 TV._airplay._tcp.local., (Cache flush) SRV Samsung.local.:56894 0 0, (Cache flush) A 192.168.50.98 (621)
+13:02:40.583028 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:02:40.583269 wlan0 M   IP 192.168.50.98.5353 > 224.0.0.251.5353: 0*- [0q] 1/0/2 (Cache flush) PTR Samsung.local. (103)
+13:02:40.585423 wlan0 In  IP 192.168.50.98.48166 > 8.8.8.8.53: 50898+ AAAA? gld.push.samsungosp.com. (41)
+13:02:40.585492 eth0  Out IP 192.168.50.98.48166 > 8.8.8.8.53: 50898+ AAAA? gld.push.samsungosp.com. (41)
+13:02:40.621693 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 39486 0/1/0 (116)
+13:02:40.622941 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.33647: 29638 4/0/0 CNAME dscg.netflix.com.edgesuite.net., CNAME a743.dscg.akamai.net., A 2.21.20.142, A 2.21.20.135 (142)
+13:02:40.623017 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 42136 4/0/0 CNAME dscg.netflix.com.edgesuite.net., CNAME a743.dscg.akamai.net., A 2.21.20.142, A 2.21.20.135 (142)
+13:02:40.624183 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.33647: 35049 6/0/0 CNAME customerevents.dradis.netflix.com., CNAME customerevents.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-log-nlb-d0872ab45f5e09a4.elb.eu-west-1.amazonaws.com., A 54.220.250.181, A 54.76.168.36, A 52.210.175.228 (248)
+13:02:40.624257 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 26788 6/0/0 CNAME customerevents.dradis.netflix.com., CNAME customerevents.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-log-nlb-d0872ab45f5e09a4.elb.eu-west-1.amazonaws.com., A 54.220.250.181, A 54.76.168.36, A 52.210.175.228 (248)
+13:02:40.626322 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.33647: 60225 6/0/0 CNAME ichnaea.dradis.netflix.com., CNAME ichnaea.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-log-nlb-d0872ab45f5e09a4.elb.eu-west-1.amazonaws.com., A 54.220.250.181, A 54.76.168.36, A 52.210.175.228 (227)
+13:02:40.626389 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 46735 6/0/0 CNAME ichnaea.dradis.netflix.com., CNAME ichnaea.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-log-nlb-d0872ab45f5e09a4.elb.eu-west-1.amazonaws.com., A 54.220.250.181, A 54.76.168.36, A 52.210.175.228 (227)
+13:02:40.627702 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.33647: 19121 6/0/0 CNAME customerevents.dradis.netflix.com., CNAME customerevents.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-log-nlb-d0872ab45f5e09a4.elb.eu-west-1.amazonaws.com., AAAA 2a05:d018:76c:b682::265e, AAAA 2a05:d018:76c:b683::f7af, AAAA 2a05:d018:76c:b684::a504 (284)
+13:02:40.627776 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 53314 6/0/0 CNAME customerevents.dradis.netflix.com., CNAME customerevents.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-log-nlb-d0872ab45f5e09a4.elb.eu-west-1.amazonaws.com., AAAA 2a05:d018:76c:b682::265e, AAAA 2a05:d018:76c:b683::f7af, AAAA 2a05:d018:76c:b684::a504 (284)
+13:02:40.628605 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 29109 6/0/0 CNAME api-global.dradis.netflix.com., CNAME api-global.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-prod-nlb-s1-8de05bbdc1a4b0b7.elb.eu-west-1.amazonaws.com., AAAA 2a05:d018:76c:b684::248, AAAA 2a05:d018:76c:b682::998a, AAAA 2a05:d018:76c:b683::e867 (276)
+13:02:40.629204 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.33647: 31903 3/0/0 CNAME nrdp-ixanycast-def.ftl.netflix.com., A 45.57.40.1, A 45.57.41.1 (108)
+13:02:40.629374 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 64803 3/0/0 CNAME nrdp-ixanycast-def.ftl.netflix.com., A 45.57.40.1, A 45.57.41.1 (108)
+13:02:40.630264 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46795: 57172 8/0/0 CNAME cdn.samsungcloudsolution.com.edgesuite.net., CNAME a1963.d.akamai.net., A 23.50.131.207, A 2.16.10.91, A 23.36.163.17, A 23.36.163.4, A 23.50.131.197, A 23.36.163.9 (227)
+13:02:40.630335 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.54537: 48714 8/0/0 CNAME cdn.samsungcloudsolution.com.edgesuite.net., CNAME a1963.d.akamai.net., A 23.50.131.207, A 2.16.10.91, A 23.36.163.17, A 23.36.163.4, A 23.50.131.197, A 23.36.163.9 (227)
+13:02:40.630708 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 42908 0/1/0 (116)
+13:02:40.631473 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 15014 6/0/0 CNAME api-global.dradis.netflix.com., CNAME api-global.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-prod-nlb-s1-8de05bbdc1a4b0b7.elb.eu-west-1.amazonaws.com., A 176.34.94.213, A 54.76.212.68, A 52.215.78.165 (240)
+13:02:40.631874 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.34908: 50898 1/1/0 CNAME velb-pew1gld-1366174266.eu-west-1.elb.amazonaws.com. (185)
+13:02:40.632543 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 43165 5/0/0 CNAME appboot.dradis.netflix.com., CNAME appboot.eu-west-1.origin.prodaa.netflix.com., A 99.80.13.184, A 54.217.127.99, A 52.211.238.216 (167)
+13:02:40.632987 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 52432 3/0/0 CNAME sec-oc.netflix.com., AAAA 2a00:86c0:2091::1, AAAA 2a00:86c0:2090::1 (113)
+13:02:40.633985 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 26336 6/0/0 CNAME uiboot.dradis.netflix.com., CNAME uiboot.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-appboot-nlb-50692193f724556a.elb.eu-west-1.amazonaws.com., A 54.217.127.99, A 52.211.238.216, A 99.80.13.184 (228)
+13:02:40.634790 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.33647: 31446 6/0/0 CNAME ichnaea.dradis.netflix.com., CNAME ichnaea.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-log-nlb-d0872ab45f5e09a4.elb.eu-west-1.amazonaws.com., AAAA 2a05:d018:76c:b682::265e, AAAA 2a05:d018:76c:b683::f7af, AAAA 2a05:d018:76c:b684::a504 (263)
+13:02:40.634857 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 21845 6/0/0 CNAME ichnaea.dradis.netflix.com., CNAME ichnaea.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-log-nlb-d0872ab45f5e09a4.elb.eu-west-1.amazonaws.com., AAAA 2a05:d018:76c:b682::265e, AAAA 2a05:d018:76c:b683::f7af, AAAA 2a05:d018:76c:b684::a504 (263)
+13:02:40.635744 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.33647: 25584 7/0/0 CNAME dscg.netflix.com.edgesuite.net., CNAME a743.dscg.akamai.net., AAAA 2a02:26f0:7100::1720:ee2a, AAAA 2a02:26f0:7100::1720:ee29, AAAA 2a02:26f0:7100::1720:ee22, AAAA 2a02:26f0:7100::1720:ee38, AAAA 2a02:26f0:7100::1720:ee21 (250)
+13:02:40.635817 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 9410 7/0/0 CNAME dscg.netflix.com.edgesuite.net., CNAME a743.dscg.akamai.net., AAAA 2a02:26f0:7100::1720:ee2a, AAAA 2a02:26f0:7100::1720:ee29, AAAA 2a02:26f0:7100::1720:ee22, AAAA 2a02:26f0:7100::1720:ee38, AAAA 2a02:26f0:7100::1720:ee21 (250)
+13:02:40.636248 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.33647: 37749 3/0/0 CNAME nrdp-ixanycast-def.ftl.netflix.com., AAAA 2a00:86c0:2041::1, AAAA 2a00:86c0:2040::1 (132)
+13:02:40.636311 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 52276 3/0/0 CNAME nrdp-ixanycast-def.ftl.netflix.com., AAAA 2a00:86c0:2041::1, AAAA 2a00:86c0:2040::1 (132)
+13:02:40.636623 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.60946: 46994 1/0/0 A 13.32.120.192 (55)
+13:02:40.637804 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.33757: 41599 5/0/0 CNAME mediaservices-cdn-apple-com.v.aaplimg.com., CNAME mediaservices.cdn-apple.com.edgesuite.net., CNAME a1915.dscw154.akamai.net., AAAA 2a02:26f0:7100::1720:ee18, AAAA 2a02:26f0:7100::1720:ee50 (243)
+13:02:40.638280 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 51437 3/0/0 CNAME sec-oc.netflix.com., A 45.57.91.1, A 45.57.90.1 (89)
+13:02:40.639158 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.34908: 13646 9/0/0 CNAME velb-pew1gld-1366174266.eu-west-1.elb.amazonaws.com., A 52.215.39.30, A 52.211.234.147, A 54.220.181.213, A 34.248.211.197, A 34.240.147.160, A 34.249.156.201, A 18.200.117.64, A 52.49.52.138 (231)
+13:02:40.639867 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 5205 5/0/0 CNAME appboot.dradis.netflix.com., CNAME appboot.eu-west-1.origin.prodaa.netflix.com., AAAA 2a05:d018:76c:b683::c559, AAAA 2a05:d018:76c:b685::3a45, AAAA 2a05:d018:76c:b684::b49e (203)
+13:02:40.640095 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.60946: 50795 0/1/0 (116)
+13:02:40.641094 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.33757: 45579 7/0/0 CNAME mediaservices-cdn-apple-com.v.aaplimg.com., CNAME mediaservices.cdn-apple.com.edgesuite.net., CNAME a1915.dscw154.akamai.net., A 184.25.50.193, A 184.25.50.131, A 184.25.50.130, A 184.25.50.128 (251)
+13:02:40.643807 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 12122 6/0/0 CNAME uiboot.dradis.netflix.com., CNAME uiboot.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-appboot-nlb-50692193f724556a.elb.eu-west-1.amazonaws.com., AAAA 2a05:d018:76c:b685::3a45, AAAA 2a05:d018:76c:b683::c559, AAAA 2a05:d018:76c:b684::b49e (264)
+13:02:41.053468 wlan0 In  IP 192.168.50.98.44399 > 23.50.131.207.80: Flags [S], seq 3035532073, win 29200, options [mss 1460,sackOK,TS val 3711889 ecr 0,nop,wscale 7], length 0
+13:02:41.053580 wlan0 Out IP 23.50.131.207.80 > 192.168.50.98.44399: Flags [S.], seq 294093158, ack 3035532074, win 65160, options [mss 1460,sackOK,TS val 3476955166 ecr 3711889,nop,wscale 7], length 0
+13:02:41.071221 wlan0 In  IP 192.168.50.98.50221 > 99.80.13.184.80: Flags [S], seq 3296845512, win 29200, options [mss 1460,sackOK,TS val 3711894 ecr 0,nop,wscale 7], length 0
+13:02:41.071322 wlan0 Out IP 99.80.13.184.80 > 192.168.50.98.50221: Flags [S.], seq 692177508, ack 3296845513, win 65160, options [mss 1460,sackOK,TS val 3476955184 ecr 3711894,nop,wscale 7], length 0
+13:02:41.092454 wlan0 In  IP 192.168.50.98.55987 > 52.215.39.30.5223: Flags [S], seq 2365531064, win 29200, options [mss 1460,sackOK,TS val 3711899 ecr 0,nop,wscale 7], length 0
+13:02:41.092493 wlan0 Out IP 52.215.39.30.5223 > 192.168.50.98.55987: Flags [S.], seq 3476029630, ack 2365531065, win 65160, options [mss 1460,sackOK,TS val 3476955205 ecr 3711899,nop,wscale 7], length 0
+13:02:41.095631 wlan0 In  IP 192.168.50.98.54068 > 13.32.120.192.443: Flags [S], seq 938098028, win 29200, options [mss 1460,sackOK,TS val 3711900 ecr 0,nop,wscale 7], length 0
+13:02:41.095661 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54068: Flags [S.], seq 4006187073, ack 938098029, win 65160, options [mss 1460,sackOK,TS val 3476955208 ecr 3711900,nop,wscale 7], length 0
+13:02:41.098414 wlan0 In  IP 192.168.50.98.50840 > 184.25.50.193.443: Flags [S], seq 1252329164, win 29200, options [mss 1460,sackOK,TS val 3711901 ecr 0,nop,wscale 7], length 0
+13:02:41.098440 wlan0 Out IP 184.25.50.193.443 > 192.168.50.98.50840: Flags [S.], seq 2329458006, ack 1252329165, win 65160, options [mss 1460,sackOK,TS val 3476955211 ecr 3711901,nop,wscale 7], length 0
+13:02:41.098680 wlan0 In  IP 192.168.50.98.46613 > 184.25.50.131.443: Flags [S], seq 3378538205, win 29200, options [mss 1460,sackOK,TS val 3711901 ecr 0,nop,wscale 7], length 0
+13:02:41.098705 wlan0 Out IP 184.25.50.131.443 > 192.168.50.98.46613: Flags [S.], seq 60901530, ack 3378538206, win 65160, options [mss 1460,sackOK,TS val 3476955211 ecr 3711901,nop,wscale 7], length 0
+13:02:41.098936 wlan0 In  IP 192.168.50.98.50542 > 184.25.50.130.443: Flags [S], seq 123363843, win 29200, options [mss 1460,sackOK,TS val 3711901 ecr 0,nop,wscale 7], length 0
+13:02:41.098961 wlan0 Out IP 184.25.50.130.443 > 192.168.50.98.50542: Flags [S.], seq 604255359, ack 123363844, win 65160, options [mss 1460,sackOK,TS val 3476955211 ecr 3711901,nop,wscale 7], length 0
+13:02:41.099196 wlan0 In  IP 192.168.50.98.37336 > 184.25.50.128.443: Flags [S], seq 3969452287, win 29200, options [mss 1460,sackOK,TS val 3711901 ecr 0,nop,wscale 7], length 0
+13:02:41.099221 wlan0 Out IP 184.25.50.128.443 > 192.168.50.98.37336: Flags [S.], seq 102199021, ack 3969452288, win 65160, options [mss 1460,sackOK,TS val 3476955211 ecr 3711901,nop,wscale 7], length 0
+13:02:41.103281 wlan0 In  IP 192.168.50.98.44399 > 23.50.131.207.80: Flags [.], ack 1, win 229, options [nop,nop,TS val 3711902 ecr 3476955166], length 0
+13:02:41.103676 wlan0 In  IP 192.168.50.98.44399 > 23.50.131.207.80: Flags [P.], seq 1:98, ack 1, win 229, options [nop,nop,TS val 3711902 ecr 3476955166], length 97: HTTP: GET /Public/network/files/check.xml HTTP/1.1
+13:02:41.103733 wlan0 Out IP 23.50.131.207.80 > 192.168.50.98.44399: Flags [.], ack 98, win 509, options [nop,nop,TS val 3476955216 ecr 3711902], length 0
+13:02:41.105556 wlan0 In  IP 192.168.50.98.50221 > 99.80.13.184.80: Flags [.], ack 1, win 229, options [nop,nop,TS val 3711903 ecr 3476955184], length 0
+13:02:41.107840 wlan0 In  IP 192.168.50.98.55987 > 52.215.39.30.5223: Flags [.], ack 1, win 229, options [nop,nop,TS val 3711903 ecr 3476955205], length 0
+13:02:41.108854 wlan0 In  IP 192.168.50.98.50221 > 99.80.13.184.80: Flags [P.], seq 1:580, ack 1, win 229, options [nop,nop,TS val 3711903 ecr 3476955184], length 579: HTTP: POST /appboot/SSTV-KUE1-?suspended=true HTTP/1.1
+13:02:41.108895 wlan0 Out IP 99.80.13.184.80 > 192.168.50.98.50221: Flags [.], ack 580, win 505, options [nop,nop,TS val 3476955221 ecr 3711903], length 0
+13:02:41.111124 wlan0 In  IP 192.168.50.98.50221 > 99.80.13.184.80: Flags [.], seq 580:2028, ack 1, win 229, options [nop,nop,TS val 3711903 ecr 3476955184], length 1448: HTTP
+13:02:41.111147 wlan0 Out IP 99.80.13.184.80 > 192.168.50.98.50221: Flags [.], ack 2028, win 501, options [nop,nop,TS val 3476955223 ecr 3711903], length 0
+13:02:41.113466 wlan0 In  IP 192.168.50.98.50221 > 99.80.13.184.80: Flags [.], seq 2028:3476, ack 1, win 229, options [nop,nop,TS val 3711903 ecr 3476955184], length 1448: HTTP
+13:02:41.113484 wlan0 Out IP 99.80.13.184.80 > 192.168.50.98.50221: Flags [.], ack 3476, win 501, options [nop,nop,TS val 3476955226 ecr 3711903], length 0
+13:02:41.117176 wlan0 In  IP 192.168.50.98.50221 > 99.80.13.184.80: Flags [.], seq 3476:4924, ack 1, win 229, options [nop,nop,TS val 3711903 ecr 3476955184], length 1448: HTTP
+13:02:41.117194 wlan0 Out IP 99.80.13.184.80 > 192.168.50.98.50221: Flags [.], ack 4924, win 501, options [nop,nop,TS val 3476955229 ecr 3711903], length 0
+13:02:41.125050 wlan0 In  IP 192.168.50.98.50221 > 99.80.13.184.80: Flags [.], seq 4924:6372, ack 1, win 229, options [nop,nop,TS val 3711903 ecr 3476955184], length 1448: HTTP
+13:02:41.125069 wlan0 Out IP 99.80.13.184.80 > 192.168.50.98.50221: Flags [.], ack 6372, win 501, options [nop,nop,TS val 3476955237 ecr 3711903], length 0
+13:02:41.127537 wlan0 In  IP 192.168.50.98.50221 > 99.80.13.184.80: Flags [.], seq 6372:7820, ack 1, win 229, options [nop,nop,TS val 3711903 ecr 3476955184], length 1448: HTTP
+13:02:41.127556 wlan0 Out IP 99.80.13.184.80 > 192.168.50.98.50221: Flags [.], ack 7820, win 501, options [nop,nop,TS val 3476955240 ecr 3711903], length 0
+13:02:41.129844 wlan0 In  IP 192.168.50.98.50221 > 99.80.13.184.80: Flags [.], seq 7820:9268, ack 1, win 229, options [nop,nop,TS val 3711903 ecr 3476955184], length 1448: HTTP
+13:02:41.129861 wlan0 Out IP 99.80.13.184.80 > 192.168.50.98.50221: Flags [.], ack 9268, win 501, options [nop,nop,TS val 3476955242 ecr 3711903], length 0
+13:02:41.132185 wlan0 In  IP 192.168.50.98.50221 > 99.80.13.184.80: Flags [.], seq 9268:10716, ack 1, win 229, options [nop,nop,TS val 3711903 ecr 3476955184], length 1448: HTTP
+13:02:41.132203 wlan0 Out IP 99.80.13.184.80 > 192.168.50.98.50221: Flags [.], ack 10716, win 501, options [nop,nop,TS val 3476955244 ecr 3711903], length 0
+13:02:41.134441 wlan0 In  IP 192.168.50.98.50221 > 99.80.13.184.80: Flags [.], seq 10716:12164, ack 1, win 229, options [nop,nop,TS val 3711903 ecr 3476955184], length 1448: HTTP
+13:02:41.134457 wlan0 Out IP 99.80.13.184.80 > 192.168.50.98.50221: Flags [.], ack 12164, win 501, options [nop,nop,TS val 3476955247 ecr 3711903], length 0
+13:02:41.140074 wlan0 In  IP 192.168.50.98.50221 > 99.80.13.184.80: Flags [.], seq 12164:13612, ack 1, win 229, options [nop,nop,TS val 3711903 ecr 3476955184], length 1448: HTTP
+13:02:41.140091 wlan0 Out IP 99.80.13.184.80 > 192.168.50.98.50221: Flags [.], ack 13612, win 501, options [nop,nop,TS val 3476955252 ecr 3711903], length 0
+13:02:41.143664 wlan0 In  IP 192.168.50.98.55987 > 52.215.39.30.5223: Flags [P.], seq 1:518, ack 1, win 229, options [nop,nop,TS val 3711904 ecr 3476955205], length 517
+13:02:41.143692 wlan0 Out IP 52.215.39.30.5223 > 192.168.50.98.55987: Flags [.], ack 518, win 506, options [nop,nop,TS val 3476955256 ecr 3711904], length 0
+13:02:41.144155 wlan0 In  IP 192.168.50.98.54068 > 13.32.120.192.443: Flags [.], ack 1, win 229, options [nop,nop,TS val 3711905 ecr 3476955208], length 0
+13:02:41.144415 wlan0 In  IP 192.168.50.98.50840 > 184.25.50.193.443: Flags [.], ack 1, win 229, options [nop,nop,TS val 3711905 ecr 3476955211], length 0
+13:02:41.145110 wlan0 In  IP 192.168.50.98.50840 > 184.25.50.193.443: Flags [P.], seq 1:294, ack 1, win 229, options [nop,nop,TS val 3711906 ecr 3476955211], length 293
+13:02:41.145142 wlan0 Out IP 184.25.50.193.443 > 192.168.50.98.50840: Flags [.], ack 294, win 507, options [nop,nop,TS val 3476955257 ecr 3711906], length 0
+13:02:41.145324 wlan0 In  IP 192.168.50.98.50840 > 184.25.50.193.443: Flags [.], ack 1, win 229, options [nop,nop,TS val 3711907 ecr 3476955211], length 0
+13:02:41.145545 wlan0 In  IP 192.168.50.98.46613 > 184.25.50.131.443: Flags [.], ack 1, win 229, options [nop,nop,TS val 3711907 ecr 3476955211], length 0
+13:02:41.145786 wlan0 In  IP 192.168.50.98.46613 > 184.25.50.131.443: Flags [.], ack 1, win 229, options [nop,nop,TS val 3711908 ecr 3476955211], length 0
+13:02:41.146173 wlan0 In  IP 192.168.50.98.50542 > 184.25.50.130.443: Flags [.], ack 1, win 229, options [nop,nop,TS val 3711912 ecr 3476955211], length 0
+13:02:41.148754 wlan0 In  IP 192.168.50.98.37336 > 184.25.50.128.443: Flags [.], ack 1, win 229, options [nop,nop,TS val 3711913 ecr 3476955211], length 0
+13:02:41.149517 wlan0 In  IP 192.168.50.98.37336 > 184.25.50.128.443: Flags [.], ack 1, win 229, options [nop,nop,TS val 3711913 ecr 3476955211], length 0
+13:02:41.171002 wlan0 In  IP 192.168.50.98.50221 > 99.80.13.184.80: Flags [.], seq 13612:15060, ack 1, win 229, options [nop,nop,TS val 3711914 ecr 3476955221], length 1448: HTTP
+13:02:41.171062 wlan0 Out IP 99.80.13.184.80 > 192.168.50.98.50221: Flags [.], ack 15060, win 501, options [nop,nop,TS val 3476955283 ecr 3711914], length 0
+13:02:41.173233 wlan0 In  IP 192.168.50.98.50221 > 99.80.13.184.80: Flags [.], seq 15060:16508, ack 1, win 229, options [nop,nop,TS val 3711914 ecr 3476955221], length 1448: HTTP
+13:02:41.173272 wlan0 Out IP 99.80.13.184.80 > 192.168.50.98.50221: Flags [.], ack 16508, win 501, options [nop,nop,TS val 3476955285 ecr 3711914], length 0
+13:02:41.185923 wlan0 In  IP 192.168.50.98.50221 > 99.80.13.184.80: Flags [.], seq 16508:17956, ack 1, win 229, options [nop,nop,TS val 3711916 ecr 3476955223], length 1448: HTTP
+13:02:41.186022 wlan0 Out IP 99.80.13.184.80 > 192.168.50.98.50221: Flags [.], ack 17956, win 501, options [nop,nop,TS val 3476955298 ecr 3711916], length 0
+13:02:41.188052 wlan0 In  IP 192.168.50.98.50221 > 99.80.13.184.80: Flags [.], seq 17956:19404, ack 1, win 229, options [nop,nop,TS val 3711916 ecr 3476955223], length 1448: HTTP
+13:02:41.188089 wlan0 Out IP 99.80.13.184.80 > 192.168.50.98.50221: Flags [.], ack 19404, win 501, options [nop,nop,TS val 3476955300 ecr 3711916], length 0
+13:02:41.190394 wlan0 In  IP 192.168.50.98.50221 > 99.80.13.184.80: Flags [.], seq 19404:20852, ack 1, win 229, options [nop,nop,TS val 3711917 ecr 3476955226], length 1448: HTTP
+13:02:41.190414 wlan0 Out IP 99.80.13.184.80 > 192.168.50.98.50221: Flags [.], ack 20852, win 501, options [nop,nop,TS val 3476955303 ecr 3711917], length 0
+13:02:41.192677 wlan0 In  IP 192.168.50.98.50221 > 99.80.13.184.80: Flags [.], seq 20852:22300, ack 1, win 229, options [nop,nop,TS val 3711917 ecr 3476955226], length 1448: HTTP
+13:02:41.192695 wlan0 Out IP 99.80.13.184.80 > 192.168.50.98.50221: Flags [.], ack 22300, win 501, options [nop,nop,TS val 3476955305 ecr 3711917], length 0
+13:02:41.194978 wlan0 In  IP 192.168.50.98.50221 > 99.80.13.184.80: Flags [.], seq 22300:23748, ack 1, win 229, options [nop,nop,TS val 3711917 ecr 3476955229], length 1448: HTTP
+13:02:41.196570 wlan0 In  IP 192.168.50.98.50221 > 99.80.13.184.80: Flags [P.], seq 23748:23913, ack 1, win 229, options [nop,nop,TS val 3711917 ecr 3476955229], length 165: HTTP
+13:02:41.196593 wlan0 Out IP 99.80.13.184.80 > 192.168.50.98.50221: Flags [.], ack 23913, win 501, options [nop,nop,TS val 3476955309 ecr 3711917], length 0
+13:02:41.200997 wlan0 In  IP 192.168.50.98.54068 > 13.32.120.192.443: Flags [P.], seq 1:518, ack 1, win 229, options [nop,nop,TS val 3711919 ecr 3476955208], length 517
+13:02:41.201041 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54068: Flags [.], ack 518, win 506, options [nop,nop,TS val 3476955313 ecr 3711919], length 0
+13:02:41.344535 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54068: Flags [P.], seq 1:1429, ack 518, win 506, options [nop,nop,TS val 3476955457 ecr 3711919], length 1428
+13:02:41.344666 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54068: Flags [.], seq 1429:2877, ack 518, win 506, options [nop,nop,TS val 3476955457 ecr 3711919], length 1448
+13:02:41.345820 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54068: Flags [.], seq 2877:4325, ack 518, win 506, options [nop,nop,TS val 3476955458 ecr 3711919], length 1448
+13:02:41.348005 wlan0 In  IP 192.168.50.98.54068 > 13.32.120.192.443: Flags [.], ack 1429, win 251, options [nop,nop,TS val 3711963 ecr 3476955457], length 0
+13:02:41.348037 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54068: Flags [P.], seq 4325:5512, ack 518, win 506, options [nop,nop,TS val 3476955460 ecr 3711963], length 1187
+13:02:41.351733 wlan0 In  IP 192.168.50.98.54068 > 13.32.120.192.443: Flags [.], ack 2877, win 274, options [nop,nop,TS val 3711964 ecr 3476955457], length 0
+13:02:41.353302 wlan0 Out IP 184.25.50.193.443 > 192.168.50.98.50840: Flags [P.], seq 1:1441, ack 294, win 507, options [nop,nop,TS val 3476955465 ecr 3711907], length 1440
+13:02:41.353422 wlan0 In  IP 192.168.50.98.54068 > 13.32.120.192.443: Flags [.], ack 4325, win 296, options [nop,nop,TS val 3711965 ecr 3476955458], length 0
+13:02:41.355970 wlan0 In  IP 192.168.50.98.54068 > 13.32.120.192.443: Flags [.], ack 5512, win 319, options [nop,nop,TS val 3711965 ecr 3476955460], length 0
+13:02:41.357529 wlan0 In  IP 192.168.50.98.50840 > 184.25.50.193.443: Flags [.], ack 1441, win 251, options [nop,nop,TS val 3711966 ecr 3476955465], length 0
+13:02:41.357552 wlan0 Out IP 184.25.50.193.443 > 192.168.50.98.50840: Flags [P.], seq 1441:2765, ack 294, win 507, options [nop,nop,TS val 3476955470 ecr 3711966], length 1324
+13:02:41.361074 wlan0 In  IP 192.168.50.98.50840 > 184.25.50.193.443: Flags [.], ack 2765, win 274, options [nop,nop,TS val 3711967 ecr 3476955470], length 0
+13:02:41.363412 wlan0 In  IP 192.168.50.98.54068 > 13.32.120.192.443: Flags [P.], seq 518:582, ack 5512, win 319, options [nop,nop,TS val 3711967 ecr 3476955460], length 64
+13:02:41.363430 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54068: Flags [.], ack 582, win 506, options [nop,nop,TS val 3476955476 ecr 3711967], length 0
+13:02:41.363931 wlan0 In  IP 192.168.50.98.54068 > 13.32.120.192.443: Flags [P.], seq 582:628, ack 5512, win 319, options [nop,nop,TS val 3711967 ecr 3476955460], length 46
+13:02:41.363947 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54068: Flags [.], ack 628, win 506, options [nop,nop,TS val 3476955476 ecr 3711967], length 0
+13:02:41.364937 wlan0 In  IP 192.168.50.98.54068 > 13.32.120.192.443: Flags [P.], seq 628:677, ack 5512, win 319, options [nop,nop,TS val 3711967 ecr 3476955460], length 49
+13:02:41.364953 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54068: Flags [.], ack 677, win 506, options [nop,nop,TS val 3476955477 ecr 3711967], length 0
+13:02:41.365226 wlan0 In  IP 192.168.50.98.54068 > 13.32.120.192.443: Flags [P.], seq 677:712, ack 5512, win 319, options [nop,nop,TS val 3711967 ecr 3476955460], length 35
+13:02:41.365242 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54068: Flags [.], ack 712, win 506, options [nop,nop,TS val 3476955477 ecr 3711967], length 0
+13:02:41.366245 wlan0 In  IP 192.168.50.98.54068 > 13.32.120.192.443: Flags [P.], seq 712:1290, ack 5512, win 319, options [nop,nop,TS val 3711967 ecr 3476955460], length 578
+13:02:41.366262 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54068: Flags [.], ack 1290, win 502, options [nop,nop,TS val 3476955478 ecr 3711967], length 0
+13:02:41.380181 wlan0 Out IP 52.215.39.30.5223 > 192.168.50.98.55987: Flags [P.], seq 1:1159, ack 518, win 506, options [nop,nop,TS val 3476955492 ecr 3711904], length 1158
+13:02:41.383910 wlan0 In  IP 192.168.50.98.55987 > 52.215.39.30.5223: Flags [.], ack 1159, win 247, options [nop,nop,TS val 3711972 ecr 3476955492], length 0
+13:02:41.388509 wlan0 In  IP 192.168.50.98.55987 > 52.215.39.30.5223: Flags [P.], seq 518:644, ack 1159, win 247, options [nop,nop,TS val 3711973 ecr 3476955492], length 126
+13:02:41.388531 wlan0 Out IP 52.215.39.30.5223 > 192.168.50.98.55987: Flags [.], ack 644, win 506, options [nop,nop,TS val 3476955501 ecr 3711973], length 0
+13:02:41.389805 wlan0 In  IP 192.168.50.98.50840 > 184.25.50.193.443: Flags [P.], seq 294:374, ack 2765, win 274, options [nop,nop,TS val 3711974 ecr 3476955470], length 80
+13:02:41.389827 wlan0 Out IP 184.25.50.193.443 > 192.168.50.98.50840: Flags [.], ack 374, win 507, options [nop,nop,TS val 3476955502 ecr 3711974], length 0
+13:02:41.390180 wlan0 In  IP 192.168.50.98.50840 > 184.25.50.193.443: Flags [P.], seq 374:475, ack 2765, win 274, options [nop,nop,TS val 3711974 ecr 3476955470], length 101
+13:02:41.390198 wlan0 Out IP 184.25.50.193.443 > 192.168.50.98.50840: Flags [.], ack 475, win 507, options [nop,nop,TS val 3476955502 ecr 3711974], length 0
+13:02:41.394365 wlan0 M   IP 192.168.50.98.5353 > 224.0.0.251.5353: 0*- [0q] 5/0/3 (Cache flush) TXT "acl=0" "deviceid=D8:A3:5C:60:10:0A" "features=0x7F8AD0,0x38BCF46" "rsf=0x3" "fv=p20.T-KSU2EDEUC-2301.1" "at=0x1" "flags=0x204" "model=UAU7000" "company=Samsung" "manufacturer=Samsung" "serialNumber=0CZZ3LDRB01528V" "protovers=1.1" "srcvers=377.30.02" "pi=6F:E8:6D:83:EE:99" "psi=00000000-0000-0000-0000-6FE86D83EE99" "gid=00000000-0000-0000-0000-6FE86D83EE99" "gcgl=0" "pk=64f1775b561797103e53a75813994244da2f1d72d7b40cf89a18ebc200131cd9", PTR _airplay._tcp.local., PTR Samsung AU7570 50 TV._airplay._tcp.local., (Cache flush) SRV Samsung.local.:56894 0 0, (Cache flush) A 192.168.50.98 (621)
+13:02:41.428133 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54068: Flags [P.], seq 5512:5753, ack 1290, win 502, options [nop,nop,TS val 3476955540 ecr 3711967], length 241
+13:02:41.429900 wlan0 In  IP 192.168.50.98.54068 > 13.32.120.192.443: Flags [P.], seq 1290:1321, ack 5753, win 341, options [nop,nop,TS val 3711984 ecr 3476955540], length 31
+13:02:41.429928 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54068: Flags [P.], seq 5753:5784, ack 1321, win 502, options [nop,nop,TS val 3476955542 ecr 3711984], length 31
+13:02:41.450097 wlan0 Out IP 184.25.50.193.443 > 192.168.50.98.50840: Flags [P.], seq 2765:3036, ack 475, win 507, options [nop,nop,TS val 3476955562 ecr 3711974], length 271
+13:02:41.468806 wlan0 In  IP 192.168.50.98.54068 > 13.32.120.192.443: Flags [.], ack 5784, win 341, options [nop,nop,TS val 3711994 ecr 3476955542], length 0
+13:02:41.468832 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54068: Flags [P.], seq 5784:6184, ack 1321, win 502, options [nop,nop,TS val 3476955581 ecr 3711994], length 400
+13:02:41.469948 wlan0 In  IP 192.168.50.98.54068 > 13.32.120.192.443: Flags [.], ack 6184, win 364, options [nop,nop,TS val 3711994 ecr 3476955581], length 0
+13:02:41.470730 wlan0 In  IP 192.168.50.98.54068 > 13.32.120.192.443: Flags [P.], seq 1321:1345, ack 6184, win 364, options [nop,nop,TS val 3711994 ecr 3476955581], length 24
+13:02:41.470746 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54068: Flags [.], ack 1345, win 502, options [nop,nop,TS val 3476955583 ecr 3711994], length 0
+13:02:41.475510 wlan0 In  IP 192.168.50.98.54068 > 13.32.120.192.443: Flags [F.], seq 1345, ack 6184, win 364, options [nop,nop,TS val 3711995 ecr 3476955583], length 0
+13:02:41.475675 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54068: Flags [F.], seq 6184, ack 1346, win 502, options [nop,nop,TS val 3476955588 ecr 3711995], length 0
+13:02:41.476681 wlan0 Out IP 52.215.39.30.5223 > 192.168.50.98.55987: Flags [P.], seq 1159:1210, ack 644, win 506, options [nop,nop,TS val 3476955589 ecr 3711973], length 51
+13:02:41.476812 wlan0 In  IP 192.168.50.98.54068 > 13.32.120.192.443: Flags [.], ack 6185, win 364, options [nop,nop,TS val 3711996 ecr 3476955588], length 0
+13:02:41.477726 wlan0 In  IP 192.168.50.98.54068 > 13.32.120.192.443: Flags [.], ack 6185, win 364, options [nop,nop,TS val 3711996 ecr 3476955588], length 0
+13:02:41.477778 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54068: Flags [R], seq 4006193258, win 0, length 0
+13:02:41.479850 wlan0 In  IP 192.168.50.98.55987 > 52.215.39.30.5223: Flags [P.], seq 644:845, ack 1210, win 247, options [nop,nop,TS val 3711996 ecr 3476955589], length 201
+13:02:41.479921 wlan0 Out IP 52.215.39.30.5223 > 192.168.50.98.55987: Flags [.], ack 845, win 505, options [nop,nop,TS val 3476955592 ecr 3711996], length 0
+13:02:41.488904 wlan0 In  IP 192.168.50.98.50840 > 184.25.50.193.443: Flags [.], ack 3036, win 296, options [nop,nop,TS val 3711999 ecr 3476955562], length 0
+13:02:41.488951 wlan0 Out IP 184.25.50.193.443 > 192.168.50.98.50840: Flags [P.], seq 3036:3307, ack 475, win 507, options [nop,nop,TS val 3476955601 ecr 3711999], length 271
+13:02:41.490482 wlan0 In  IP 192.168.50.98.50840 > 184.25.50.193.443: Flags [.], ack 3307, win 319, options [nop,nop,TS val 3711999 ecr 3476955601], length 0
+13:02:41.501689 wlan0 In  IP 192.168.50.98.42232 > 192.168.50.1.53: 60791+ A? osb-v2.samsungqbe.com. (39)
+13:02:41.501970 wlan0 In  IP 192.168.50.98.42232 > 192.168.50.1.53: 19138+ AAAA? osb-v2.samsungqbe.com. (39)
+13:02:41.502052 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.42232: 60791 1/0/0 A 13.32.120.192 (55)
+13:02:41.502181 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.42232: 19138 0/0/0 (39)
+13:02:41.503814 wlan0 In  IP 192.168.50.98.54073 > 13.32.120.192.443: Flags [S], seq 2600468260, win 29200, options [mss 1460,sackOK,TS val 3712002 ecr 0,nop,wscale 7], length 0
+13:02:41.503913 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54073: Flags [S.], seq 3200544462, ack 2600468261, win 65160, options [mss 1460,sackOK,TS val 3476955616 ecr 3712002,nop,wscale 7], length 0
+13:02:41.504952 wlan0 In  IP 192.168.50.98.54073 > 13.32.120.192.443: Flags [.], ack 1, win 229, options [nop,nop,TS val 3712003 ecr 3476955616], length 0
+13:02:41.564387 wlan0 In  IP 192.168.50.98.54073 > 13.32.120.192.443: Flags [P.], seq 1:518, ack 1, win 229, options [nop,nop,TS val 3712017 ecr 3476955616], length 517
+13:02:41.564442 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54073: Flags [.], ack 518, win 506, options [nop,nop,TS val 3476955677 ecr 3712017], length 0
+13:02:41.584920 wlan0 Out IP 52.215.39.30.5223 > 192.168.50.98.55987: Flags [P.], seq 1210:1490, ack 845, win 505, options [nop,nop,TS val 3476955697 ecr 3711996], length 280
+13:02:41.585175 wlan0 Out IP 52.215.39.30.5223 > 192.168.50.98.55987: Flags [FP.], seq 1490:1521, ack 845, win 505, options [nop,nop,TS val 3476955697 ecr 3711996], length 31
+13:02:41.597906 wlan0 In  IP 192.168.50.98.55987 > 52.215.39.30.5223: Flags [R.], seq 845, ack 1522, win 265, options [nop,nop,TS val 3712026 ecr 3476955697], length 0
+13:02:41.607400 wlan0 In  IP 192.168.50.98.34313 > 54.78.32.143.5223: Flags [S], seq 3986085879, win 29200, options [mss 1460,sackOK,TS val 3712028 ecr 0,nop,wscale 7], length 0
+13:02:41.607502 wlan0 Out IP 54.78.32.143.5223 > 192.168.50.98.34313: Flags [S.], seq 2090597160, ack 3986085880, win 65160, options [mss 1460,sackOK,TS val 3476955720 ecr 3712028,nop,wscale 7], length 0
+13:02:41.608635 wlan0 In  IP 192.168.50.98.34313 > 54.78.32.143.5223: Flags [.], ack 1, win 229, options [nop,nop,TS val 3712028 ecr 3476955720], length 0
+13:02:41.611531 wlan0 In  IP 192.168.50.98.34313 > 54.78.32.143.5223: Flags [P.], seq 1:518, ack 1, win 229, options [nop,nop,TS val 3712029 ecr 3476955720], length 517
+13:02:41.611576 wlan0 Out IP 54.78.32.143.5223 > 192.168.50.98.34313: Flags [.], ack 518, win 506, options [nop,nop,TS val 3476955724 ecr 3712029], length 0
+13:02:41.718148 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:02:41.719670 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54073: Flags [.], seq 1:1449, ack 518, win 506, options [nop,nop,TS val 3476955832 ecr 3712017], length 1448
+13:02:41.719694 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54073: Flags [P.], seq 1449:2857, ack 518, win 506, options [nop,nop,TS val 3476955832 ecr 3712017], length 1408
+13:02:41.720576 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54073: Flags [.], seq 2857:4305, ack 518, win 506, options [nop,nop,TS val 3476955833 ecr 3712017], length 1448
+13:02:41.721078 wlan0 In  IP 192.168.50.98.54073 > 13.32.120.192.443: Flags [.], ack 1449, win 251, options [nop,nop,TS val 3712057 ecr 3476955832], length 0
+13:02:41.721740 wlan0 In  IP 192.168.50.98.54073 > 13.32.120.192.443: Flags [.], ack 2857, win 274, options [nop,nop,TS val 3712057 ecr 3476955832], length 0
+13:02:41.721762 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54073: Flags [P.], seq 4305:5512, ack 518, win 506, options [nop,nop,TS val 3476955834 ecr 3712057], length 1207
+13:02:41.722048 wlan0 In  IP 192.168.50.98.54073 > 13.32.120.192.443: Flags [.], ack 4305, win 296, options [nop,nop,TS val 3712057 ecr 3476955833], length 0
+13:02:41.722948 wlan0 In  IP 192.168.50.98.54073 > 13.32.120.192.443: Flags [.], ack 5512, win 319, options [nop,nop,TS val 3712057 ecr 3476955834], length 0
+13:02:41.729073 wlan0 In  IP 192.168.50.98.54073 > 13.32.120.192.443: Flags [P.], seq 518:582, ack 5512, win 319, options [nop,nop,TS val 3712059 ecr 3476955834], length 64
+13:02:41.729090 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54073: Flags [.], ack 582, win 506, options [nop,nop,TS val 3476955841 ecr 3712059], length 0
+13:02:41.729613 wlan0 In  IP 192.168.50.98.54073 > 13.32.120.192.443: Flags [P.], seq 582:628, ack 5512, win 319, options [nop,nop,TS val 3712059 ecr 3476955834], length 46
+13:02:41.729631 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54073: Flags [.], ack 628, win 506, options [nop,nop,TS val 3476955842 ecr 3712059], length 0
+13:02:41.731032 wlan0 In  IP 192.168.50.98.54073 > 13.32.120.192.443: Flags [P.], seq 628:677, ack 5512, win 319, options [nop,nop,TS val 3712059 ecr 3476955834], length 49
+13:02:41.731050 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54073: Flags [.], ack 677, win 506, options [nop,nop,TS val 3476955843 ecr 3712059], length 0
+13:02:41.731334 wlan0 In  IP 192.168.50.98.54073 > 13.32.120.192.443: Flags [P.], seq 677:712, ack 5512, win 319, options [nop,nop,TS val 3712059 ecr 3476955834], length 35
+13:02:41.731351 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54073: Flags [.], ack 712, win 506, options [nop,nop,TS val 3476955844 ecr 3712059], length 0
+13:02:41.732341 wlan0 In  IP 192.168.50.98.54073 > 13.32.120.192.443: Flags [P.], seq 712:1290, ack 5512, win 319, options [nop,nop,TS val 3712059 ecr 3476955834], length 578
+13:02:41.732362 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54073: Flags [.], ack 1290, win 502, options [nop,nop,TS val 3476955845 ecr 3712059], length 0
+13:02:41.798298 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54073: Flags [P.], seq 5512:5753, ack 1290, win 502, options [nop,nop,TS val 3476955910 ecr 3712059], length 241
+13:02:41.800211 wlan0 In  IP 192.168.50.98.54073 > 13.32.120.192.443: Flags [P.], seq 1290:1321, ack 5753, win 342, options [nop,nop,TS val 3712076 ecr 3476955910], length 31
+13:02:41.800245 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54073: Flags [P.], seq 5753:5784, ack 1321, win 502, options [nop,nop,TS val 3476955912 ecr 3712076], length 31
+13:02:41.840840 wlan0 In  IP 192.168.50.98.54073 > 13.32.120.192.443: Flags [.], ack 5784, win 342, options [nop,nop,TS val 3712087 ecr 3476955912], length 0
+13:02:41.840869 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54073: Flags [P.], seq 5784:6183, ack 1321, win 502, options [nop,nop,TS val 3476955953 ecr 3712087], length 399
+13:02:41.842127 wlan0 In  IP 192.168.50.98.54073 > 13.32.120.192.443: Flags [.], ack 6183, win 364, options [nop,nop,TS val 3712087 ecr 3476955953], length 0
+13:02:41.842860 wlan0 In  IP 192.168.50.98.54073 > 13.32.120.192.443: Flags [P.], seq 1321:1345, ack 6183, win 364, options [nop,nop,TS val 3712087 ecr 3476955953], length 24
+13:02:41.842877 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54073: Flags [.], ack 1345, win 502, options [nop,nop,TS val 3476955955 ecr 3712087], length 0
+13:02:41.849286 wlan0 In  IP 192.168.50.98.54073 > 13.32.120.192.443: Flags [F.], seq 1345, ack 6183, win 364, options [nop,nop,TS val 3712089 ecr 3476955955], length 0
+13:02:41.849450 wlan0 Out IP 13.32.120.192.443 > 192.168.50.98.54073: Flags [F.], seq 6183, ack 1346, win 502, options [nop,nop,TS val 3476955962 ecr 3712089], length 0
+13:02:41.850746 wlan0 In  IP 192.168.50.98.54073 > 13.32.120.192.443: Flags [.], ack 6184, win 364, options [nop,nop,TS val 3712089 ecr 3476955962], length 0
+13:02:41.902302 wlan0 Out IP 54.78.32.143.5223 > 192.168.50.98.34313: Flags [.], seq 1:1449, ack 518, win 506, options [nop,nop,TS val 3476956014 ecr 3712029], length 1448
+13:02:41.902337 wlan0 Out IP 54.78.32.143.5223 > 192.168.50.98.34313: Flags [P.], seq 1449:1939, ack 518, win 506, options [nop,nop,TS val 3476956014 ecr 3712029], length 490
+13:02:41.904515 wlan0 In  IP 192.168.50.98.34313 > 54.78.32.143.5223: Flags [.], ack 1449, win 251, options [nop,nop,TS val 3712102 ecr 3476956014], length 0
+13:02:41.904792 wlan0 In  IP 192.168.50.98.34313 > 54.78.32.143.5223: Flags [.], ack 1939, win 274, options [nop,nop,TS val 3712102 ecr 3476956014], length 0
+13:02:41.908451 wlan0 In  IP 192.168.50.98.34313 > 54.78.32.143.5223: Flags [P.], seq 518:644, ack 1939, win 274, options [nop,nop,TS val 3712103 ecr 3476956014], length 126
+13:02:41.908474 wlan0 Out IP 54.78.32.143.5223 > 192.168.50.98.34313: Flags [.], ack 644, win 506, options [nop,nop,TS val 3476956021 ecr 3712103], length 0
+13:02:41.995717 wlan0 Out IP 54.78.32.143.5223 > 192.168.50.98.34313: Flags [P.], seq 1939:1945, ack 644, win 506, options [nop,nop,TS val 3476956108 ecr 3712103], length 6
+13:02:42.036974 wlan0 In  IP 192.168.50.98.34313 > 54.78.32.143.5223: Flags [.], ack 1945, win 274, options [nop,nop,TS val 3712136 ecr 3476956108], length 0
+13:02:42.037024 wlan0 Out IP 54.78.32.143.5223 > 192.168.50.98.34313: Flags [P.], seq 1945:1990, ack 644, win 506, options [nop,nop,TS val 3476956149 ecr 3712136], length 45
+13:02:42.038134 wlan0 In  IP 192.168.50.98.34313 > 54.78.32.143.5223: Flags [.], ack 1990, win 274, options [nop,nop,TS val 3712136 ecr 3476956149], length 0
+13:02:42.039753 wlan0 In  IP 192.168.50.98.34313 > 54.78.32.143.5223: Flags [P.], seq 644:748, ack 1990, win 274, options [nop,nop,TS val 3712136 ecr 3476956149], length 104
+13:02:42.039772 wlan0 Out IP 54.78.32.143.5223 > 192.168.50.98.34313: Flags [.], ack 748, win 506, options [nop,nop,TS val 3476956152 ecr 3712136], length 0
+13:02:42.089523 wlan0 B   IP 192.168.50.98.37795 > 192.168.50.255.15600: UDP, length 35
+13:02:42.125658 wlan0 Out IP 54.78.32.143.5223 > 192.168.50.98.34313: Flags [P.], seq 1990:2029, ack 748, win 506, options [nop,nop,TS val 3476956238 ecr 3712136], length 39
+13:02:42.164867 wlan0 In  IP 192.168.50.98.34313 > 54.78.32.143.5223: Flags [.], ack 2029, win 274, options [nop,nop,TS val 3712168 ecr 3476956238], length 0
+13:02:42.337621 wlan0 Out IP 184.25.50.193.443 > 192.168.50.98.50840: Flags [P.], seq 3307:4031, ack 475, win 507, options [nop,nop,TS val 3476956450 ecr 3711999], length 724
+13:02:42.339049 wlan0 In  IP 192.168.50.98.50840 > 184.25.50.193.443: Flags [.], ack 4031, win 341, options [nop,nop,TS val 3712211 ecr 3476956450], length 0
+13:02:42.339531 wlan0 In  IP 192.168.50.98.37336 > 184.25.50.128.443: Flags [F.], seq 1, ack 1, win 229, options [nop,nop,TS val 3712211 ecr 3476955211], length 0
+13:02:42.339558 wlan0 In  IP 192.168.50.98.50542 > 184.25.50.130.443: Flags [F.], seq 1, ack 1, win 229, options [nop,nop,TS val 3712211 ecr 3476955211], length 0
+13:02:42.339778 wlan0 Out IP 184.25.50.128.443 > 192.168.50.98.37336: Flags [F.], seq 1, ack 2, win 510, options [nop,nop,TS val 3476956452 ecr 3712211], length 0
+13:02:42.340030 wlan0 In  IP 192.168.50.98.46613 > 184.25.50.131.443: Flags [F.], seq 1, ack 1, win 229, options [nop,nop,TS val 3712211 ecr 3476955211], length 0
+13:02:42.340036 wlan0 Out IP 184.25.50.130.443 > 192.168.50.98.50542: Flags [F.], seq 1, ack 2, win 510, options [nop,nop,TS val 3476956452 ecr 3712211], length 0
+13:02:42.340054 wlan0 In  IP 192.168.50.98.50840 > 184.25.50.193.443: Flags [F.], seq 475, ack 4031, win 341, options [nop,nop,TS val 3712211 ecr 3476956450], length 0
+13:02:42.340371 wlan0 Out IP 184.25.50.131.443 > 192.168.50.98.46613: Flags [F.], seq 1, ack 2, win 510, options [nop,nop,TS val 3476956453 ecr 3712211], length 0
+13:02:42.340521 wlan0 Out IP 184.25.50.193.443 > 192.168.50.98.50840: Flags [F.], seq 4031, ack 476, win 507, options [nop,nop,TS val 3476956453 ecr 3712211], length 0
+13:02:42.342083 wlan0 In  IP 192.168.50.98.37336 > 184.25.50.128.443: Flags [.], ack 2, win 229, options [nop,nop,TS val 3712212 ecr 3476956452], length 0
+13:02:42.342198 wlan0 In  IP 192.168.50.98.50542 > 184.25.50.130.443: Flags [.], ack 2, win 229, options [nop,nop,TS val 3712212 ecr 3476956452], length 0
+13:02:42.342224 wlan0 In  IP 192.168.50.98.46613 > 184.25.50.131.443: Flags [.], ack 2, win 229, options [nop,nop,TS val 3712212 ecr 3476956453], length 0
+13:02:42.342478 wlan0 In  IP 192.168.50.98.50840 > 184.25.50.193.443: Flags [.], ack 4032, win 341, options [nop,nop,TS val 3712212 ecr 3476956453], length 0
+13:02:42.369207 wlan0 M   IP 192.168.50.98.5353 > 224.0.0.251.5353: 0*- [0q] 1/0/2 (Cache flush) TXT "acl=0" "deviceid=D8:A3:5C:60:10:0A" "features=0x7F8AD0,0x38BCF46" "rsf=0x3" "fv=p20.T-KSU2EDEUC-2301.1" "at=0x1" "flags=0x244" "model=UAU7000" "company=Samsung" "manufacturer=Samsung" "serialNumber=0CZZ3LDRB01528V" "protovers=1.1" "srcvers=377.30.02" "pi=6F:E8:6D:83:EE:99" "psi=00000000-0000-0000-0000-6FE86D83EE99" "gid=00000000-0000-0000-0000-6FE86D83EE99" "gcgl=0" "pk=64f1775b561797103e53a75813994244da2f1d72d7b40cf89a18ebc200131cd9" (509)
+13:02:43.370414 wlan0 M   IP 192.168.50.98.5353 > 224.0.0.251.5353: 0*- [0q] 1/0/2 (Cache flush) TXT "acl=0" "deviceid=D8:A3:5C:60:10:0A" "features=0x7F8AD0,0x38BCF46" "rsf=0x3" "fv=p20.T-KSU2EDEUC-2301.1" "at=0x1" "flags=0x244" "model=UAU7000" "company=Samsung" "manufacturer=Samsung" "serialNumber=0CZZ3LDRB01528V" "protovers=1.1" "srcvers=377.30.02" "pi=6F:E8:6D:83:EE:99" "psi=00000000-0000-0000-0000-6FE86D83EE99" "gid=00000000-0000-0000-0000-6FE86D83EE99" "gcgl=0" "pk=64f1775b561797103e53a75813994244da2f1d72d7b40cf89a18ebc200131cd9" (509)
+13:02:43.723686 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:02:44.251536 wlan0 M   IP 192.168.50.98.5353 > 224.0.0.251.5353: 0*- [0q] 5/0/4 PTR _airplay._tcp.local., PTR Samsung AU7570 50 TV._airplay._tcp.local., (Cache flush) SRV Samsung.local.:56894 0 0, (Cache flush) PTR Samsung.local., (Cache flush) A 192.168.50.98 (263)
+13:02:45.090263 wlan0 M   IP 192.168.50.98.36562 > 239.255.255.250.15600: UDP, length 35
+13:02:45.371855 wlan0 M   IP 192.168.50.98.5353 > 224.0.0.251.5353: 0*- [0q] 1/0/2 (Cache flush) TXT "acl=0" "deviceid=D8:A3:5C:60:10:0A" "features=0x7F8AD0,0x38BCF46" "rsf=0x3" "fv=p20.T-KSU2EDEUC-2301.1" "at=0x1" "flags=0x244" "model=UAU7000" "company=Samsung" "manufacturer=Samsung" "serialNumber=0CZZ3LDRB01528V" "protovers=1.1" "srcvers=377.30.02" "pi=6F:E8:6D:83:EE:99" "psi=00000000-0000-0000-0000-6FE86D83EE99" "gid=00000000-0000-0000-0000-6FE86D83EE99" "gcgl=0" "pk=64f1775b561797103e53a75813994244da2f1d72d7b40cf89a18ebc200131cd9" (509)
+13:02:45.726170 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:02:47.728767 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:02:48.090830 wlan0 B   IP 192.168.50.98.58740 > 192.168.50.255.15600: UDP, length 35
+13:02:49.374440 wlan0 M   IP 192.168.50.98.5353 > 224.0.0.251.5353: 0*- [0q] 1/0/2 (Cache flush) TXT "acl=0" "deviceid=D8:A3:5C:60:10:0A" "features=0x7F8AD0,0x38BCF46" "rsf=0x3" "fv=p20.T-KSU2EDEUC-2301.1" "at=0x1" "flags=0x244" "model=UAU7000" "company=Samsung" "manufacturer=Samsung" "serialNumber=0CZZ3LDRB01528V" "protovers=1.1" "srcvers=377.30.02" "pi=6F:E8:6D:83:EE:99" "psi=00000000-0000-0000-0000-6FE86D83EE99" "gid=00000000-0000-0000-0000-6FE86D83EE99" "gcgl=0" "pk=64f1775b561797103e53a75813994244da2f1d72d7b40cf89a18ebc200131cd9" (509)
+13:02:49.730691 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:02:51.091281 wlan0 M   IP 192.168.50.98.53928 > 239.255.255.250.15600: UDP, length 35
+13:02:51.733223 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:02:53.393667 wlan0 In  IP 192.168.50.98.44399 > 23.50.131.207.80: Flags [F.], seq 98, ack 1, win 229, options [nop,nop,TS val 3714975 ecr 3476955216], length 0
+13:02:53.394375 wlan0 Out IP 23.50.131.207.80 > 192.168.50.98.44399: Flags [F.], seq 1, ack 99, win 509, options [nop,nop,TS val 3476967507 ecr 3714975], length 0
+13:02:53.458641 wlan0 In  IP 192.168.50.98.52558 > 192.168.50.1.53: 19448+ A? cdn.samsungcloudsolution.com. (46)
+13:02:53.528306 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.52558: 19448 8/0/0 CNAME cdn.samsungcloudsolution.com.edgesuite.net., CNAME a1963.d.akamai.net., A 2.16.10.91, A 23.36.163.9, A 23.36.163.4, A 23.50.131.207, A 23.36.163.17, A 23.50.131.197 (227)
+13:02:53.645014 wlan0 In  IP 192.168.50.98.44399 > 23.50.131.207.80: Flags [F.], seq 98, ack 1, win 229, options [nop,nop,TS val 3715038 ecr 3476955216], length 0
+13:02:53.645110 wlan0 Out IP 23.50.131.207.80 > 192.168.50.98.44399: Flags [.], ack 99, win 509, options [nop,nop,TS val 3476967757 ecr 3715038,nop,nop,sack 1 {98:99}], length 0
+13:02:53.684051 wlan0 In  IP 192.168.50.98.36582 > 192.168.50.1.53: 54067+ A? cdn.samsungcloudsolution.com. (46)
+13:02:53.685078 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.36582: 54067 8/0/0 CNAME cdn.samsungcloudsolution.com.edgesuite.net., CNAME a1963.d.akamai.net., A 23.50.131.197, A 23.36.163.17, A 23.50.131.207, A 23.36.163.4, A 23.36.163.9, A 2.16.10.91 (230)
+13:02:53.734707 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:02:53.795828 wlan0 Out IP 23.50.131.207.80 > 192.168.50.98.44399: Flags [F.], seq 1, ack 99, win 509, options [nop,nop,TS val 3476967908 ecr 3715038], length 0
+13:02:53.796740 wlan0 In  IP 192.168.50.98.44399 > 23.50.131.207.80: Flags [.], ack 2, win 229, options [nop,nop,TS val 3715075 ecr 3476967507], length 0
+13:02:53.797587 wlan0 In  IP 192.168.50.98.55680 > 23.50.131.197.80: Flags [S], seq 1139904625, win 29200, options [mss 1460,sackOK,TS val 3715076 ecr 0,nop,wscale 7], length 0
+13:02:53.797782 wlan0 Out IP 23.50.131.197.80 > 192.168.50.98.55680: Flags [S.], seq 3349609005, ack 1139904626, win 65160, options [mss 1460,sackOK,TS val 3476967910 ecr 3715076,nop,wscale 7], length 0
+13:02:53.797856 wlan0 In  IP 192.168.50.98.44399 > 23.50.131.207.80: Flags [.], ack 2, win 229, options [nop,nop,TS val 3715076 ecr 3476967757], length 0
+13:02:53.798020 wlan0 Out IP 23.50.131.207.80 > 192.168.50.98.44399: Flags [R], seq 294093160, win 0, length 0
+13:02:53.799245 wlan0 In  IP 192.168.50.98.55680 > 23.50.131.197.80: Flags [.], ack 1, win 229, options [nop,nop,TS val 3715076 ecr 3476967910], length 0
+13:02:53.800526 wlan0 In  IP 192.168.50.98.55680 > 23.50.131.197.80: Flags [P.], seq 1:98, ack 1, win 229, options [nop,nop,TS val 3715076 ecr 3476967910], length 97: HTTP: GET /Public/network/files/check.xml HTTP/1.1
+13:02:53.800606 wlan0 Out IP 23.50.131.197.80 > 192.168.50.98.55680: Flags [.], ack 98, win 509, options [nop,nop,TS val 3476967913 ecr 3715076], length 0
+13:02:54.092777 wlan0 B   IP 192.168.50.98.38834 > 192.168.50.255.15600: UDP, length 35
+13:02:55.736807 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:02:57.093308 wlan0 M   IP 192.168.50.98.35341 > 239.255.255.250.15600: UDP, length 35
+13:02:57.738547 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:02:59.447722 wlan0 In  IP 192.168.50.98.47925 > 192.168.50.1.53: 10744+ A? tvx.adgrx.com. (31)
+13:02:59.448017 wlan0 In  IP 192.168.50.98.47925 > 192.168.50.1.53: 9401+ AAAA? tvx.adgrx.com. (31)
+13:02:59.503947 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.47925: 9401 2/1/0 CNAME rtb-catalyst.adgrx.com., CNAME rtb-catalyst.adgrx.com.tech.akadns.net. (173)
+13:02:59.519091 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.47925: 10744 3/0/0 CNAME rtb-catalyst.adgrx.com., CNAME rtb-catalyst.adgrx.com.tech.akadns.net., A 54.229.145.163 (126)
+13:02:59.524151 wlan0 In  IP 192.168.50.98.51360 > 54.229.145.163.443: Flags [S], seq 3920637844, win 29200, options [mss 1460,sackOK,TS val 3716507 ecr 0,nop,wscale 7], length 0
+13:02:59.524345 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51360: Flags [S.], seq 4265287454, ack 3920637845, win 65160, options [mss 1460,sackOK,TS val 3476973637 ecr 3716507,nop,wscale 7], length 0
+13:02:59.534418 wlan0 In  IP 192.168.50.98.51360 > 54.229.145.163.443: Flags [.], ack 1, win 229, options [nop,nop,TS val 3716508 ecr 3476973637], length 0
+13:02:59.673697 wlan0 In  IP 192.168.50.98.51360 > 54.229.145.163.443: Flags [P.], seq 1:518, ack 1, win 229, options [nop,nop,TS val 3716538 ecr 3476973637], length 517
+13:02:59.673820 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51360: Flags [.], ack 518, win 506, options [nop,nop,TS val 3476973786 ecr 3716538], length 0
+13:02:59.751902 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:02:59.840603 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51360: Flags [P.], seq 1:1441, ack 518, win 506, options [nop,nop,TS val 3476973953 ecr 3716538], length 1440
+13:02:59.840841 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51360: Flags [.], seq 1441:2889, ack 518, win 506, options [nop,nop,TS val 3476973953 ecr 3716538], length 1448
+13:02:59.841075 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51360: Flags [.], seq 2889:4337, ack 518, win 506, options [nop,nop,TS val 3476973953 ecr 3716538], length 1448
+13:02:59.841426 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51360: Flags [.], seq 4337:5785, ack 518, win 506, options [nop,nop,TS val 3476973954 ecr 3716538], length 1448
+13:02:59.841461 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51360: Flags [P.], seq 5785:7233, ack 518, win 506, options [nop,nop,TS val 3476973954 ecr 3716538], length 1448
+13:02:59.875345 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51360: Flags [P.], seq 7233:7337, ack 518, win 506, options [nop,nop,TS val 3476973988 ecr 3716538], length 104
+13:03:00.199419 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51360: Flags [P.], seq 1:1441, ack 518, win 506, options [nop,nop,TS val 3476974312 ecr 3716538], length 1440
+13:03:00.807399 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51360: Flags [P.], seq 1:1441, ack 518, win 506, options [nop,nop,TS val 3476974920 ecr 3716538], length 1440
+13:03:01.519360 wlan0 In  IP 192.168.50.98.50221 > 99.80.13.184.80: Flags [F.], seq 23913, ack 1, win 229, options [nop,nop,TS val 3716917 ecr 3476955309], length 0
+13:03:01.519461 wlan0 In  IP 192.168.50.98.42678 > 99.80.13.184.443: Flags [S], seq 737547912, win 29200, options [mss 1460,sackOK,TS val 3716935 ecr 0,nop,wscale 7], length 0
+13:03:01.519644 wlan0 Out IP 99.80.13.184.443 > 192.168.50.98.42678: Flags [S.], seq 3517395836, ack 737547913, win 65160, options [mss 1460,sackOK,TS val 3476975632 ecr 3716935,nop,wscale 7], length 0
+13:03:01.519707 wlan0 In  IP 192.168.50.98.50221 > 99.80.13.184.80: Flags [F.], seq 23913, ack 1, win 229, options [nop,nop,TS val 3716982 ecr 3476955309], length 0
+13:03:01.519771 wlan0 Out IP 99.80.13.184.80 > 192.168.50.98.50221: Flags [.], ack 23914, win 501, options [nop,nop,TS val 3476975632 ecr 3716982,nop,nop,sack 1 {23913:23914}], length 0
+13:03:01.520040 wlan0 Out IP 99.80.13.184.80 > 192.168.50.98.50221: Flags [F.], seq 1, ack 23914, win 501, options [nop,nop,TS val 3476975632 ecr 3716982], length 0
+13:03:01.533751 wlan0 In  IP 192.168.50.98.42678 > 99.80.13.184.443: Flags [R], seq 737547913, win 0, length 0
+13:03:01.533823 wlan0 In  IP 192.168.50.98.50221 > 99.80.13.184.80: Flags [.], ack 2, win 229, options [nop,nop,TS val 3717007 ecr 3476975632], length 0
+13:03:01.557380 wlan0 In  IP 192.168.50.98.51360 > 54.229.145.163.443: Flags [P.], seq 518:644, ack 7337, win 342, options [nop,nop,TS val 3717013 ecr 3476973988], length 126
+13:03:01.557540 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51360: Flags [.], ack 644, win 506, options [nop,nop,TS val 3476975670 ecr 3717013], length 0
+13:03:01.638621 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51360: Flags [P.], seq 7337:7457, ack 644, win 506, options [nop,nop,TS val 3476975751 ecr 3717013], length 120
+13:03:01.642016 wlan0 In  IP 192.168.50.98.51360 > 54.229.145.163.443: Flags [.], ack 7457, win 342, options [nop,nop,TS val 3717037 ecr 3476975751], length 0
+13:03:01.644903 wlan0 In  IP 192.168.50.98.51360 > 54.229.145.163.443: Flags [P.], seq 644:697, ack 7457, win 342, options [nop,nop,TS val 3717037 ecr 3476975751], length 53
+13:03:01.644961 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51360: Flags [.], ack 697, win 506, options [nop,nop,TS val 3476975757 ecr 3717037], length 0
+13:03:01.645004 wlan0 In  IP 192.168.50.98.51360 > 54.229.145.163.443: Flags [P.], seq 697:753, ack 7457, win 342, options [nop,nop,TS val 3717037 ecr 3476975751], length 56
+13:03:01.645055 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51360: Flags [.], ack 753, win 506, options [nop,nop,TS val 3476975757 ecr 3717037], length 0
+13:03:01.650116 wlan0 In  IP 192.168.50.98.51360 > 54.229.145.163.443: Flags [P.], seq 753:1449, ack 7457, win 342, options [nop,nop,TS val 3717038 ecr 3476975757], length 696
+13:03:01.650172 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51360: Flags [.], ack 1449, win 501, options [nop,nop,TS val 3476975762 ecr 3717038], length 0
+13:03:01.726039 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51360: Flags [P.], seq 7457:7495, ack 1449, win 501, options [nop,nop,TS val 3476975838 ecr 3717038], length 38
+13:03:01.729317 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 29001+ A? nrdp.nccp.netflix.com. (39)
+13:03:01.729386 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 49040+ A? cdn-0.nflximg.com. (35)
+13:03:01.729852 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 29001 0/0/0 (39)
+13:03:01.768220 wlan0 In  IP 192.168.50.98.51360 > 54.229.145.163.443: Flags [.], ack 7495, win 342, options [nop,nop,TS val 3717068 ecr 3476975838], length 0
+13:03:01.768314 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51360: Flags [P.], seq 7495:7783, ack 1449, win 501, options [nop,nop,TS val 3476975880 ecr 3717068], length 288
+13:03:01.772310 wlan0 In  IP 192.168.50.98.51360 > 54.229.145.163.443: Flags [.], ack 7783, win 364, options [nop,nop,TS val 3717069 ecr 3476975880], length 0
+13:03:01.778881 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:01.785716 wlan0 In  IP 192.168.50.98.51360 > 54.229.145.163.443: Flags [P.], seq 1449:1480, ack 7783, win 364, options [nop,nop,TS val 3717072 ecr 3476975880], length 31
+13:03:01.785983 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51360: Flags [.], ack 1480, win 501, options [nop,nop,TS val 3476975898 ecr 3717072], length 0
+13:03:01.799956 wlan0 In  IP 192.168.50.98.51360 > 54.229.145.163.443: Flags [F.], seq 1480, ack 7783, win 364, options [nop,nop,TS val 3717076 ecr 3476975898], length 0
+13:03:01.800370 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 49040 4/0/0 CNAME dscg.netflix.com.edgesuite.net., CNAME a743.dscg.akamai.net., A 2.21.20.142, A 2.21.20.135 (142)
+13:03:01.800594 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51360: Flags [F.], seq 7783, ack 1481, win 501, options [nop,nop,TS val 3476975913 ecr 3717076], length 0
+13:03:01.804811 wlan0 In  IP 192.168.50.98.51360 > 54.229.145.163.443: Flags [.], ack 7784, win 364, options [nop,nop,TS val 3717077 ecr 3476975913], length 0
+13:03:01.905605 wlan0 In  IP 192.168.50.98.50233 > 99.80.13.184.80: Flags [S], seq 942629561, win 29200, options [mss 1460,sackOK,TS val 3717103 ecr 0,nop,wscale 7], length 0
+13:03:01.905793 wlan0 Out IP 99.80.13.184.80 > 192.168.50.98.50233: Flags [S.], seq 419417073, ack 942629562, win 65160, options [mss 1460,sackOK,TS val 3476976018 ecr 3717103,nop,wscale 7], length 0
+13:03:01.910681 wlan0 In  IP 192.168.50.98.50233 > 99.80.13.184.80: Flags [.], ack 1, win 229, options [nop,nop,TS val 3717103 ecr 3476976018], length 0
+13:03:01.938624 wlan0 In  IP 192.168.50.98.50233 > 99.80.13.184.80: Flags [P.], seq 1:335, ack 1, win 229, options [nop,nop,TS val 3717110 ecr 3476976018], length 334: HTTP: GET /appboot/ HTTP/1.1
+13:03:01.938716 wlan0 Out IP 99.80.13.184.80 > 192.168.50.98.50233: Flags [.], ack 335, win 507, options [nop,nop,TS val 3476976051 ecr 3717110], length 0
+13:03:02.036607 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 18659+ A? customerevents.netflix.com. (44)
+13:03:02.037558 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 18659 6/0/0 CNAME customerevents.dradis.netflix.com., CNAME customerevents.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-log-nlb-d0872ab45f5e09a4.elb.eu-west-1.amazonaws.com., A 52.210.175.228, A 54.76.168.36, A 54.220.250.181 (280)
+13:03:02.044777 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 43204+ AAAA? customerevents.netflix.com. (44)
+13:03:02.045562 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 43204 6/0/0 CNAME customerevents.dradis.netflix.com., CNAME customerevents.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-log-nlb-d0872ab45f5e09a4.elb.eu-west-1.amazonaws.com., AAAA 2a05:d018:76c:b684::a504, AAAA 2a05:d018:76c:b683::f7af, AAAA 2a05:d018:76c:b682::265e (316)
+13:03:02.048646 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 41722+ AAAA? api-global.netflix.com. (40)
+13:03:02.049354 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 41722 6/0/0 CNAME api-global.dradis.netflix.com., CNAME api-global.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-prod-nlb-s1-8de05bbdc1a4b0b7.elb.eu-west-1.amazonaws.com., AAAA 2a05:d018:76c:b683::e867, AAAA 2a05:d018:76c:b682::998a, AAAA 2a05:d018:76c:b684::248 (308)
+13:03:02.435365 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 42616+ AAAA? cdn-0.nflximg.com. (35)
+13:03:02.435441 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 19592+ A? nrdp70-appboot.netflix.com. (44)
+13:03:02.435465 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 17052+ AAAA? uiboot.netflix.com. (36)
+13:03:02.495234 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 17052 6/0/0 CNAME uiboot.dradis.netflix.com., CNAME uiboot.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-appboot-nlb-50692193f724556a.elb.eu-west-1.amazonaws.com., AAAA 2a05:d018:76c:b683::c559, AAAA 2a05:d018:76c:b685::3a45, AAAA 2a05:d018:76c:b684::b49e (264)
+13:03:02.499743 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 19592 5/0/0 CNAME appboot.dradis.netflix.com., CNAME appboot.eu-west-1.origin.prodaa.netflix.com., A 54.217.127.99, A 52.211.238.216, A 99.80.13.184 (167)
+13:03:02.500899 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 42616 7/0/0 CNAME dscg.netflix.com.edgesuite.net., CNAME a743.dscg.akamai.net., AAAA 2a02:26f0:7100::1720:ee21, AAAA 2a02:26f0:7100::1720:ee08, AAAA 2a02:26f0:7100::1720:ee12, AAAA 2a02:26f0:7100::1720:ee1a, AAAA 2a02:26f0:7100::1720:ee09 (250)
+13:03:02.552647 wlan0 Out IP 99.80.13.184.80 > 192.168.50.98.50233: Flags [.], seq 1:1449, ack 335, win 507, options [nop,nop,TS val 3476976665 ecr 3717110], length 1448: HTTP: HTTP/1.1 403 Forbidden
+13:03:02.552699 wlan0 Out IP 99.80.13.184.80 > 192.168.50.98.50233: Flags [P.], seq 1449:1903, ack 335, win 507, options [nop,nop,TS val 3476976665 ecr 3717110], length 454: HTTP
+13:03:02.555402 wlan0 In  IP 192.168.50.98.50233 > 99.80.13.184.80: Flags [.], ack 1449, win 251, options [nop,nop,TS val 3717265 ecr 3476976665], length 0
+13:03:02.555461 wlan0 In  IP 192.168.50.98.50233 > 99.80.13.184.80: Flags [.], ack 1903, win 274, options [nop,nop,TS val 3717265 ecr 3476976665], length 0
+13:03:02.583276 wlan0 In  IP 192.168.50.98.40807 > 45.57.91.1.443: Flags [S], seq 3096029041, win 29200, options [mss 1460,sackOK,TS val 3717272 ecr 0,nop,wscale 7], length 0
+13:03:02.583460 wlan0 Out IP 45.57.91.1.443 > 192.168.50.98.40807: Flags [S.], seq 2868281860, ack 3096029042, win 65160, options [mss 1460,sackOK,TS val 3476976696 ecr 3717272,nop,wscale 7], length 0
+13:03:02.585535 wlan0 In  IP 192.168.50.98.40807 > 45.57.91.1.443: Flags [.], ack 1, win 229, options [nop,nop,TS val 3717273 ecr 3476976696], length 0
+13:03:02.612482 wlan0 In  IP 192.168.50.98.40807 > 45.57.91.1.443: Flags [P.], seq 1:335, ack 1, win 229, options [nop,nop,TS val 3717279 ecr 3476976696], length 334
+13:03:02.612610 wlan0 Out IP 45.57.91.1.443 > 192.168.50.98.40807: Flags [.], ack 335, win 507, options [nop,nop,TS val 3476976725 ecr 3717279], length 0
+13:03:02.790070 wlan0 Out IP 45.57.91.1.443 > 192.168.50.98.40807: Flags [P.], seq 1:1441, ack 335, win 507, options [nop,nop,TS val 3476976902 ecr 3717279], length 1440
+13:03:02.790231 wlan0 Out IP 45.57.91.1.443 > 192.168.50.98.40807: Flags [.], seq 1441:2889, ack 335, win 507, options [nop,nop,TS val 3476976902 ecr 3717279], length 1448
+13:03:02.792482 wlan0 In  IP 192.168.50.98.40807 > 45.57.91.1.443: Flags [.], ack 1441, win 251, options [nop,nop,TS val 3717324 ecr 3476976902], length 0
+13:03:02.792565 wlan0 Out IP 45.57.91.1.443 > 192.168.50.98.40807: Flags [P.], seq 2889:3610, ack 335, win 507, options [nop,nop,TS val 3476976905 ecr 3717324], length 721
+13:03:02.792606 wlan0 In  IP 192.168.50.98.40807 > 45.57.91.1.443: Flags [.], ack 2889, win 274, options [nop,nop,TS val 3717324 ecr 3476976902], length 0
+13:03:02.794783 wlan0 In  IP 192.168.50.98.40807 > 45.57.91.1.443: Flags [.], ack 3610, win 296, options [nop,nop,TS val 3717325 ecr 3476976905], length 0
+13:03:02.815784 wlan0 In  IP 192.168.50.98.40807 > 45.57.91.1.443: Flags [P.], seq 335:739, ack 3610, win 296, options [nop,nop,TS val 3717330 ecr 3476976905], length 404
+13:03:02.815865 wlan0 Out IP 45.57.91.1.443 > 192.168.50.98.40807: Flags [.], ack 739, win 504, options [nop,nop,TS val 3476976928 ecr 3717330], length 0
+13:03:02.881933 wlan0 Out IP 45.57.91.1.443 > 192.168.50.98.40807: Flags [P.], seq 3610:3905, ack 739, win 504, options [nop,nop,TS val 3476976994 ecr 3717330], length 295
+13:03:02.921321 wlan0 In  IP 192.168.50.98.40807 > 45.57.91.1.443: Flags [.], ack 3905, win 319, options [nop,nop,TS val 3717357 ecr 3476976994], length 0
+13:03:02.921418 wlan0 Out IP 45.57.91.1.443 > 192.168.50.98.40807: Flags [P.], seq 3905:4380, ack 739, win 504, options [nop,nop,TS val 3476977034 ecr 3717357], length 475
+13:03:02.923623 wlan0 In  IP 192.168.50.98.40807 > 45.57.91.1.443: Flags [.], ack 4380, win 342, options [nop,nop,TS val 3717357 ecr 3476977034], length 0
+13:03:02.932147 wlan0 In  IP 192.168.50.98.41019 > 176.34.94.213.443: Flags [S], seq 3253836500, win 29200, options [mss 1460,sackOK,TS val 3717359 ecr 0,nop,wscale 7], length 0
+13:03:02.932311 wlan0 Out IP 176.34.94.213.443 > 192.168.50.98.41019: Flags [S.], seq 2839458782, ack 3253836501, win 65160, options [mss 1460,sackOK,TS val 3476977044 ecr 3717359,nop,wscale 7], length 0
+13:03:02.934489 wlan0 In  IP 192.168.50.98.41019 > 176.34.94.213.443: Flags [.], ack 1, win 229, options [nop,nop,TS val 3717360 ecr 3476977044], length 0
+13:03:02.945755 wlan0 In  IP 192.168.50.98.41019 > 176.34.94.213.443: Flags [P.], seq 1:339, ack 1, win 229, options [nop,nop,TS val 3717363 ecr 3476977044], length 338
+13:03:02.945852 wlan0 Out IP 176.34.94.213.443 > 192.168.50.98.41019: Flags [.], ack 339, win 507, options [nop,nop,TS val 3476977058 ecr 3717363], length 0
+13:03:03.082323 wlan0 In  IP 192.168.50.98.54621 > 8.8.8.8.53: 59979+ AAAA? nrdp.nccp.netflix.com. (39)
+13:03:03.082366 eth0  Out IP 192.168.50.98.54621 > 8.8.8.8.53: 59979+ AAAA? nrdp.nccp.netflix.com. (39)
+13:03:03.082458 wlan0 In  IP 192.168.50.98.54621 > 8.8.8.8.53: 37091+ A? uiboot.netflix.com. (36)
+13:03:03.082482 eth0  Out IP 192.168.50.98.54621 > 8.8.8.8.53: 37091+ A? uiboot.netflix.com. (36)
+13:03:03.095794 wlan0 M   IP 192.168.50.98.55902 > 239.255.255.250.15600: UDP, length 35
+13:03:03.616332 wlan0 Out IP 176.34.94.213.443 > 192.168.50.98.41019: Flags [P.], seq 1:1441, ack 339, win 507, options [nop,nop,TS val 3476977729 ecr 3717363], length 1440
+13:03:03.616498 wlan0 Out IP 176.34.94.213.443 > 192.168.50.98.41019: Flags [.], seq 1441:2889, ack 339, win 507, options [nop,nop,TS val 3476977729 ecr 3717363], length 1448
+13:03:03.618703 wlan0 In  IP 192.168.50.98.41019 > 176.34.94.213.443: Flags [.], ack 1441, win 251, options [nop,nop,TS val 3717531 ecr 3476977729], length 0
+13:03:03.618783 wlan0 Out IP 176.34.94.213.443 > 192.168.50.98.41019: Flags [P.], seq 2889:4031, ack 339, win 507, options [nop,nop,TS val 3476977731 ecr 3717531], length 1142
+13:03:03.622596 wlan0 In  IP 192.168.50.98.41019 > 176.34.94.213.443: Flags [.], ack 2889, win 274, options [nop,nop,TS val 3717532 ecr 3476977729], length 0
+13:03:03.622643 wlan0 In  IP 192.168.50.98.41019 > 176.34.94.213.443: Flags [.], ack 4031, win 296, options [nop,nop,TS val 3717532 ecr 3476977731], length 0
+13:03:03.643887 wlan0 In  IP 192.168.50.98.41019 > 176.34.94.213.443: Flags [P.], seq 339:763, ack 4031, win 296, options [nop,nop,TS val 3717537 ecr 3476977731], length 424
+13:03:03.643972 wlan0 Out IP 176.34.94.213.443 > 192.168.50.98.41019: Flags [.], ack 763, win 504, options [nop,nop,TS val 3476977756 ecr 3717537], length 0
+13:03:03.732744 wlan0 Out IP 176.34.94.213.443 > 192.168.50.98.41019: Flags [P.], seq 4031:4595, ack 763, win 504, options [nop,nop,TS val 3476977845 ecr 3717537], length 564
+13:03:03.745167 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 64455+ A? www.google.com. (32)
+13:03:03.759661 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:03.774044 wlan0 In  IP 192.168.50.98.41019 > 176.34.94.213.443: Flags [.], ack 4595, win 319, options [nop,nop,TS val 3717570 ecr 3476977845], length 0
+13:03:03.808685 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 64455 8/0/0 A 142.251.155.119, A 142.251.152.119, A 142.251.154.119, A 142.251.157.119, A 142.251.153.119, A 142.251.156.119, A 142.251.151.119, A 142.251.150.119 (160)
+13:03:03.816978 wlan0 In  IP 192.168.50.98.38675 > 142.251.155.119.80: Flags [S], seq 406141233, win 29200, options [mss 1460,sackOK,TS val 3717580 ecr 0,nop,wscale 7], length 0
+13:03:03.817166 wlan0 Out IP 142.251.155.119.80 > 192.168.50.98.38675: Flags [S.], seq 1730320094, ack 406141234, win 65160, options [mss 1460,sackOK,TS val 3476977929 ecr 3717580,nop,wscale 7], length 0
+13:03:03.818448 wlan0 In  IP 192.168.50.98.38675 > 142.251.155.119.80: Flags [.], ack 1, win 229, options [nop,nop,TS val 3717581 ecr 3476977929], length 0
+13:03:03.820030 wlan0 In  IP 192.168.50.98.38675 > 142.251.155.119.80: Flags [P.], seq 1:332, ack 1, win 229, options [nop,nop,TS val 3717581 ecr 3476977929], length 331: HTTP: GET / HTTP/1.1
+13:03:03.820112 wlan0 Out IP 142.251.155.119.80 > 192.168.50.98.38675: Flags [.], ack 332, win 507, options [nop,nop,TS val 3476977932 ecr 3717581], length 0
+13:03:04.093485 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 59979+ AAAA? nrdp.nccp.netflix.com. (39)
+13:03:04.093629 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 37091+ A? uiboot.netflix.com. (36)
+13:03:04.094111 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 59979 0/0/0 (39)
+13:03:04.163276 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 37091 6/0/0 CNAME uiboot.dradis.netflix.com., CNAME uiboot.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-appboot-nlb-50692193f724556a.elb.eu-west-1.amazonaws.com., A 99.80.13.184, A 52.211.238.216, A 54.217.127.99 (228)
+13:03:05.758774 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:06.095782 wlan0 B   IP 192.168.50.98.37306 > 192.168.50.255.15600: UDP, length 35
+13:03:07.085098 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 11716+ AAAA? ichnaea.netflix.com. (37)
+13:03:07.144221 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 11716 6/0/0 CNAME ichnaea.dradis.netflix.com., CNAME ichnaea.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-log-nlb-d0872ab45f5e09a4.elb.eu-west-1.amazonaws.com., AAAA 2a05:d018:76c:b683::f7af, AAAA 2a05:d018:76c:b684::a504, AAAA 2a05:d018:76c:b682::265e (263)
+13:03:07.760883 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:07.881111 wlan0 In  IP 192.168.50.98.38675 > 142.251.155.119.80: Flags [F.], seq 332, ack 1, win 229, options [nop,nop,TS val 3718597 ecr 3476977932], length 0
+13:03:07.881753 wlan0 Out IP 142.251.155.119.80 > 192.168.50.98.38675: Flags [F.], seq 1, ack 333, win 507, options [nop,nop,TS val 3476981994 ecr 3718597], length 0
+13:03:07.883106 wlan0 In  IP 192.168.50.98.38675 > 142.251.155.119.80: Flags [.], ack 2, win 229, options [nop,nop,TS val 3718597 ecr 3476981994], length 0
+13:03:07.916011 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 18578+ A? www.yahoo.com. (31)
+13:03:07.981267 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 18578 3/0/0 CNAME me-ycpi-cf-www.g06.yahoodns.net., A 87.248.119.251, A 87.248.119.252 (108)
+13:03:07.984150 wlan0 In  IP 192.168.50.98.46357 > 87.248.119.251.80: Flags [S], seq 1668379361, win 29200, options [mss 1460,sackOK,TS val 3718622 ecr 0,nop,wscale 7], length 0
+13:03:07.984339 wlan0 Out IP 87.248.119.251.80 > 192.168.50.98.46357: Flags [S.], seq 3010279227, ack 1668379362, win 65160, options [mss 1460,sackOK,TS val 3476982097 ecr 3718622,nop,wscale 7], length 0
+13:03:07.986297 wlan0 In  IP 192.168.50.98.46357 > 87.248.119.251.80: Flags [.], ack 1, win 229, options [nop,nop,TS val 3718623 ecr 3476982097], length 0
+13:03:07.990446 wlan0 In  IP 192.168.50.98.46357 > 87.248.119.251.80: Flags [P.], seq 1:314, ack 1, win 229, options [nop,nop,TS val 3718624 ecr 3476982097], length 313: HTTP: GET / HTTP/1.1
+13:03:07.990543 wlan0 Out IP 87.248.119.251.80 > 192.168.50.98.46357: Flags [.], ack 314, win 507, options [nop,nop,TS val 3476982103 ecr 3718624], length 0
+13:03:09.292161 wlan0 M   IP 192.168.50.98.53339 > 239.255.255.250.15600: UDP, length 35
+13:03:09.693678 wlan0 In  IP 192.168.50.98.55680 > 23.50.131.197.80: Flags [F.], seq 98, ack 1, win 229, options [nop,nop,TS val 3719050 ecr 3476967913], length 0
+13:03:09.694339 wlan0 Out IP 23.50.131.197.80 > 192.168.50.98.55680: Flags [F.], seq 1, ack 99, win 509, options [nop,nop,TS val 3476983807 ecr 3719050], length 0
+13:03:09.696359 wlan0 In  IP 192.168.50.98.55680 > 23.50.131.197.80: Flags [.], ack 2, win 229, options [nop,nop,TS val 3719050 ecr 3476983807], length 0
+13:03:09.763360 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:10.053781 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 48764+ A? ichnaea.netflix.com. (37)
+13:03:10.113299 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 48764 6/0/0 CNAME ichnaea.dradis.netflix.com., CNAME ichnaea.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-log-nlb-d0872ab45f5e09a4.elb.eu-west-1.amazonaws.com., A 54.220.250.181, A 52.210.175.228, A 54.76.168.36 (227)
+13:03:10.134876 wlan0 In  IP 192.168.50.98.58254 > 192.168.50.1.53: 25782+ A? cdn.samsungcloudsolution.com. (46)
+13:03:10.204035 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.58254: 25782 10/0/0 CNAME cdn.samsungcloudsolution.com.edgesuite.net., CNAME a1963.d.akamai.net., A 23.36.163.4, A 2.16.10.75, A 23.50.131.207, A 23.50.131.197, A 23.36.163.17, A 2.16.10.91, A 23.50.131.122, A 23.36.163.9 (259)
+13:03:10.207095 wlan0 In  IP 192.168.50.98.45301 > 23.36.163.4.80: Flags [S], seq 307615610, win 29200, options [mss 1460,sackOK,TS val 3719178 ecr 0,nop,wscale 7], length 0
+13:03:10.207283 wlan0 Out IP 23.36.163.4.80 > 192.168.50.98.45301: Flags [S.], seq 561043013, ack 307615611, win 65160, options [mss 1460,sackOK,TS val 3476984319 ecr 3719178,nop,wscale 7], length 0
+13:03:10.208810 wlan0 In  IP 192.168.50.98.45301 > 23.36.163.4.80: Flags [.], ack 1, win 229, options [nop,nop,TS val 3719179 ecr 3476984319], length 0
+13:03:10.210037 wlan0 In  IP 192.168.50.98.45301 > 23.36.163.4.80: Flags [P.], seq 1:98, ack 1, win 229, options [nop,nop,TS val 3719179 ecr 3476984319], length 97: HTTP: GET /Public/network/files/check.xml HTTP/1.1
+13:03:10.210114 wlan0 Out IP 23.36.163.4.80 > 192.168.50.98.45301: Flags [.], ack 98, win 509, options [nop,nop,TS val 3476984322 ecr 3719179], length 0
+13:03:10.469644 wlan0 In  IP 192.168.50.98.40934 > 192.168.50.1.53: 17302+ A? tvx.adgrx.com. (31)
+13:03:10.469790 wlan0 In  IP 192.168.50.98.40934 > 192.168.50.1.53: 49571+ AAAA? tvx.adgrx.com. (31)
+13:03:10.470490 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.40934: 17302 3/0/0 CNAME rtb-catalyst.adgrx.com., CNAME rtb-catalyst.adgrx.com.tech.akadns.net., A 54.229.145.163 (135)
+13:03:10.471124 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.40934: 49571 2/0/0 CNAME rtb-catalyst.adgrx.com., CNAME rtb-catalyst.adgrx.com.tech.akadns.net. (119)
+13:03:10.472829 wlan0 In  IP 192.168.50.98.51368 > 54.229.145.163.443: Flags [S], seq 3063525500, win 29200, options [mss 1460,sackOK,TS val 3719244 ecr 0,nop,wscale 7], length 0
+13:03:10.473017 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51368: Flags [S.], seq 1294305506, ack 3063525501, win 65160, options [mss 1460,sackOK,TS val 3476984585 ecr 3719244,nop,wscale 7], length 0
+13:03:10.474492 wlan0 In  IP 192.168.50.98.51368 > 54.229.145.163.443: Flags [.], ack 1, win 229, options [nop,nop,TS val 3719245 ecr 3476984585], length 0
+13:03:10.536430 wlan0 In  IP 192.168.50.98.51368 > 54.229.145.163.443: Flags [P.], seq 1:518, ack 1, win 229, options [nop,nop,TS val 3719260 ecr 3476984585], length 517
+13:03:10.536559 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51368: Flags [.], ack 518, win 506, options [nop,nop,TS val 3476984649 ecr 3719260], length 0
+13:03:10.729773 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51368: Flags [P.], seq 1:1441, ack 518, win 506, options [nop,nop,TS val 3476984842 ecr 3719260], length 1440
+13:03:10.729942 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51368: Flags [.], seq 1441:2889, ack 518, win 506, options [nop,nop,TS val 3476984842 ecr 3719260], length 1448
+13:03:10.730277 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51368: Flags [.], seq 2889:4337, ack 518, win 506, options [nop,nop,TS val 3476984842 ecr 3719260], length 1448
+13:03:10.730850 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51368: Flags [.], seq 4337:5785, ack 518, win 506, options [nop,nop,TS val 3476984843 ecr 3719260], length 1448
+13:03:10.730884 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51368: Flags [P.], seq 5785:7233, ack 518, win 506, options [nop,nop,TS val 3476984843 ecr 3719260], length 1448
+13:03:10.734516 wlan0 In  IP 192.168.50.98.51368 > 54.229.145.163.443: Flags [.], ack 1441, win 251, options [nop,nop,TS val 3719309 ecr 3476984842], length 0
+13:03:10.734608 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51368: Flags [P.], seq 7233:7337, ack 518, win 506, options [nop,nop,TS val 3476984847 ecr 3719309], length 104
+13:03:10.734656 wlan0 In  IP 192.168.50.98.51368 > 54.229.145.163.443: Flags [.], ack 2889, win 274, options [nop,nop,TS val 3719309 ecr 3476984842], length 0
+13:03:10.734701 wlan0 In  IP 192.168.50.98.51368 > 54.229.145.163.443: Flags [.], ack 4337, win 296, options [nop,nop,TS val 3719309 ecr 3476984842], length 0
+13:03:10.734735 wlan0 In  IP 192.168.50.98.51368 > 54.229.145.163.443: Flags [.], ack 5785, win 319, options [nop,nop,TS val 3719309 ecr 3476984843], length 0
+13:03:10.734770 wlan0 In  IP 192.168.50.98.51368 > 54.229.145.163.443: Flags [.], ack 7233, win 342, options [nop,nop,TS val 3719310 ecr 3476984843], length 0
+13:03:10.735966 wlan0 In  IP 192.168.50.98.51368 > 54.229.145.163.443: Flags [.], ack 7337, win 342, options [nop,nop,TS val 3719310 ecr 3476984847], length 0
+13:03:10.740576 wlan0 In  IP 192.168.50.98.51368 > 54.229.145.163.443: Flags [P.], seq 518:644, ack 7337, win 342, options [nop,nop,TS val 3719311 ecr 3476984847], length 126
+13:03:10.740631 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51368: Flags [.], ack 644, win 506, options [nop,nop,TS val 3476984853 ecr 3719311], length 0
+13:03:10.824020 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51368: Flags [P.], seq 7337:7457, ack 644, win 506, options [nop,nop,TS val 3476984936 ecr 3719311], length 120
+13:03:10.826670 wlan0 In  IP 192.168.50.98.51368 > 54.229.145.163.443: Flags [P.], seq 644:697, ack 7457, win 342, options [nop,nop,TS val 3719333 ecr 3476984936], length 53
+13:03:10.826754 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51368: Flags [.], ack 697, win 506, options [nop,nop,TS val 3476984939 ecr 3719333], length 0
+13:03:10.826868 wlan0 In  IP 192.168.50.98.51368 > 54.229.145.163.443: Flags [P.], seq 697:795, ack 7457, win 342, options [nop,nop,TS val 3719333 ecr 3476984936], length 98
+13:03:10.826921 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51368: Flags [.], ack 795, win 506, options [nop,nop,TS val 3476984939 ecr 3719333], length 0
+13:03:10.827158 wlan0 In  IP 192.168.50.98.51368 > 54.229.145.163.443: Flags [P.], seq 795:1411, ack 7457, win 342, options [nop,nop,TS val 3719333 ecr 3476984936], length 616
+13:03:10.827220 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51368: Flags [.], ack 1411, win 502, options [nop,nop,TS val 3476984939 ecr 3719333], length 0
+13:03:10.827697 wlan0 In  IP 192.168.50.98.51368 > 54.229.145.163.443: Flags [P.], seq 1411:1449, ack 7457, win 342, options [nop,nop,TS val 3719333 ecr 3476984936], length 38
+13:03:10.827754 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51368: Flags [.], ack 1449, win 502, options [nop,nop,TS val 3476984940 ecr 3719333], length 0
+13:03:10.910088 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51368: Flags [P.], seq 7457:7495, ack 1449, win 502, options [nop,nop,TS val 3476985022 ecr 3719333], length 38
+13:03:10.949190 wlan0 In  IP 192.168.50.98.51368 > 54.229.145.163.443: Flags [.], ack 7495, win 342, options [nop,nop,TS val 3719364 ecr 3476985022], length 0
+13:03:10.949292 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51368: Flags [P.], seq 7495:7784, ack 1449, win 502, options [nop,nop,TS val 3476985061 ecr 3719364], length 289
+13:03:10.950767 wlan0 In  IP 192.168.50.98.51368 > 54.229.145.163.443: Flags [.], ack 7784, win 364, options [nop,nop,TS val 3719364 ecr 3476985061], length 0
+13:03:10.999445 wlan0 In  IP 192.168.50.98.51368 > 54.229.145.163.443: Flags [P.], seq 1449:1480, ack 7784, win 364, options [nop,nop,TS val 3719376 ecr 3476985061], length 31
+13:03:10.999504 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51368: Flags [.], ack 1480, win 502, options [nop,nop,TS val 3476985112 ecr 3719376], length 0
+13:03:11.006720 wlan0 In  IP 192.168.50.98.51368 > 54.229.145.163.443: Flags [F.], seq 1480, ack 7784, win 364, options [nop,nop,TS val 3719378 ecr 3476985112], length 0
+13:03:11.007159 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51368: Flags [F.], seq 7784, ack 1481, win 502, options [nop,nop,TS val 3476985119 ecr 3719378], length 0
+13:03:11.009143 wlan0 In  IP 192.168.50.98.51368 > 54.229.145.163.443: Flags [.], ack 7785, win 364, options [nop,nop,TS val 3719378 ecr 3476985119], length 0
+13:03:11.094441 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 22848+ AAAA? nrdp70-appboot.netflix.com. (44)
+13:03:11.095264 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 22848 5/0/0 CNAME appboot.dradis.netflix.com., CNAME appboot.eu-west-1.origin.prodaa.netflix.com., AAAA 2a05:d018:76c:b684::b49e, AAAA 2a05:d018:76c:b685::3a45, AAAA 2a05:d018:76c:b683::c559 (225)
+13:03:11.765732 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:11.989597 wlan0 In  IP 192.168.50.98.46357 > 87.248.119.251.80: Flags [F.], seq 314, ack 1, win 229, options [nop,nop,TS val 3719624 ecr 3476982103], length 0
+13:03:11.990198 wlan0 Out IP 87.248.119.251.80 > 192.168.50.98.46357: Flags [F.], seq 1, ack 315, win 507, options [nop,nop,TS val 3476986102 ecr 3719624], length 0
+13:03:11.992626 wlan0 In  IP 192.168.50.98.46357 > 87.248.119.251.80: Flags [.], ack 2, win 229, options [nop,nop,TS val 3719624 ecr 3476986102], length 0
+13:03:12.211048 wlan0 In  IP 192.168.50.98.34445 > 192.168.50.1.53: 8352+ A? www.youtube.com. (33)
+13:03:12.211173 wlan0 In  IP 192.168.50.98.34445 > 192.168.50.1.53: 60319+ AAAA? www.youtube.com. (33)
+13:03:12.212143 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.34445: 8352 8/0/0 A 142.251.154.4, A 142.251.157.4, A 142.251.156.4, A 142.251.155.4, A 142.251.150.4, A 142.251.152.4, A 142.251.151.4, A 142.251.153.4 (161)
+13:03:12.270633 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.34445: 60319 8/0/0 AAAA 2001:4860:4826:400::, AAAA 2001:4860:482c:400::, AAAA 2001:4860:4827:400::, AAAA 2001:4860:4829:400::, AAAA 2001:4860:482a:400::, AAAA 2001:4860:4828:400::, AAAA 2001:4860:482d:400::, AAAA 2001:4860:482b:400:: (257)
+13:03:12.275006 wlan0 In  IP 192.168.50.98.47713 > 142.251.154.4.443: UDP, length 1350
+13:03:12.275112 eth0  Out IP 192.168.50.98.47713 > 142.251.154.4.443: UDP, length 1350
+13:03:12.275382 wlan0 In  IP 192.168.50.98.33053 > 142.251.154.4.443: Flags [S], seq 3485821614, win 29200, options [mss 1460,sackOK,TS val 3719695 ecr 0,nop,wscale 7], length 0
+13:03:12.275555 wlan0 Out IP 142.251.154.4.443 > 192.168.50.98.33053: Flags [S.], seq 2130199876, ack 3485821615, win 65160, options [mss 1460,sackOK,TS val 3476986388 ecr 3719695,nop,wscale 7], length 0
+13:03:12.276723 wlan0 In  IP 192.168.50.98.33053 > 142.251.154.4.443: Flags [.], ack 1, win 229, options [nop,nop,TS val 3719696 ecr 3476986388], length 0
+13:03:12.277773 wlan0 In  IP 192.168.50.98.33053 > 142.251.154.4.443: Flags [P.], seq 1:207, ack 1, win 229, options [nop,nop,TS val 3719696 ecr 3476986388], length 206
+13:03:12.277865 wlan0 Out IP 142.251.154.4.443 > 192.168.50.98.33053: Flags [.], ack 207, win 508, options [nop,nop,TS val 3476986390 ecr 3719696], length 0
+13:03:12.292801 wlan0 B   IP 192.168.50.98.54555 > 192.168.50.255.15600: UDP, length 35
+13:03:12.426325 wlan0 In  IP 192.168.50.98.47713 > 142.251.154.4.443: UDP, length 1350
+13:03:12.426378 eth0  Out IP 192.168.50.98.47713 > 142.251.154.4.443: UDP, length 1350
+13:03:12.727608 wlan0 In  IP 192.168.50.98.47713 > 142.251.154.4.443: UDP, length 1350
+13:03:12.727668 eth0  Out IP 192.168.50.98.47713 > 142.251.154.4.443: UDP, length 1350
+13:03:13.330253 wlan0 In  IP 192.168.50.98.47713 > 142.251.154.4.443: UDP, length 1350
+13:03:13.330309 eth0  Out IP 192.168.50.98.47713 > 142.251.154.4.443: UDP, length 1350
+13:03:13.708030 wlan0 In  IP 192.168.50.98.57341 > 192.168.50.1.53: 18510+ A? lcprd1.samsungcloudsolution.net. (49)
+13:03:13.708173 wlan0 In  IP 192.168.50.98.57341 > 192.168.50.1.53: 53941+ AAAA? lcprd1.samsungcloudsolution.net. (49)
+13:03:13.767240 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:13.770612 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.57341: 53941 0/1/0 (136)
+13:03:13.771793 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.57341: 18510 1/0/0 A 34.160.212.185 (65)
+13:03:13.774318 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [S], seq 4237374445, win 29200, options [mss 1460,sackOK,TS val 3720070 ecr 0,nop,wscale 7], length 0
+13:03:13.774537 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [S.], seq 2984078682, ack 4237374446, win 65160, options [mss 1460,sackOK,TS val 3476987887 ecr 3720070,nop,wscale 7], length 0
+13:03:13.776021 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [.], ack 1, win 229, options [nop,nop,TS val 3720070 ecr 3476987887], length 0
+13:03:13.836401 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 1:518, ack 1, win 229, options [nop,nop,TS val 3720085 ecr 3476987887], length 517
+13:03:13.836518 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 518, win 506, options [nop,nop,TS val 3476987949 ecr 3720085], length 0
+13:03:13.949166 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], seq 1:1449, ack 518, win 506, options [nop,nop,TS val 3476988061 ecr 3720085], length 1448
+13:03:13.949230 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 1449:2801, ack 518, win 506, options [nop,nop,TS val 3476988061 ecr 3720085], length 1352
+13:03:13.949685 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], seq 2801:4249, ack 518, win 506, options [nop,nop,TS val 3476988062 ecr 3720085], length 1448
+13:03:13.951175 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [.], ack 1449, win 251, options [nop,nop,TS val 3720114 ecr 3476988061], length 0
+13:03:13.951232 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [.], ack 2801, win 274, options [nop,nop,TS val 3720114 ecr 3476988061], length 0
+13:03:13.951328 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 4249:5500, ack 518, win 506, options [nop,nop,TS val 3476988063 ecr 3720114], length 1251
+13:03:13.952005 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [.], ack 4249, win 296, options [nop,nop,TS val 3720114 ecr 3476988062], length 0
+13:03:13.952666 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [.], ack 5500, win 319, options [nop,nop,TS val 3720115 ecr 3476988063], length 0
+13:03:13.958153 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 518:598, ack 5500, win 319, options [nop,nop,TS val 3720116 ecr 3476988063], length 80
+13:03:13.958209 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 598, win 506, options [nop,nop,TS val 3476988070 ecr 3720116], length 0
+13:03:13.958763 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 598:644, ack 5500, win 319, options [nop,nop,TS val 3720116 ecr 3476988063], length 46
+13:03:13.958828 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 644, win 506, options [nop,nop,TS val 3476988071 ecr 3720116], length 0
+13:03:13.958945 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 644:728, ack 5500, win 319, options [nop,nop,TS val 3720116 ecr 3476988063], length 84
+13:03:13.958999 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 728, win 506, options [nop,nop,TS val 3476988071 ecr 3720116], length 0
+13:03:13.960488 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 728:1133, ack 5500, win 319, options [nop,nop,TS val 3720116 ecr 3476988063], length 405
+13:03:13.960547 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 1133, win 503, options [nop,nop,TS val 3476988073 ecr 3720116], length 0
+13:03:14.011528 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 5500:6152, ack 1133, win 503, options [nop,nop,TS val 3476988124 ecr 3720116], length 652
+13:03:14.013878 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 1133:1164, ack 6152, win 342, options [nop,nop,TS val 3720130 ecr 3476988124], length 31
+13:03:14.013959 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 6152:6183, ack 1164, win 503, options [nop,nop,TS val 3476988126 ecr 3720130], length 31
+13:03:14.053386 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [.], ack 6183, win 342, options [nop,nop,TS val 3720140 ecr 3476988126], length 0
+13:03:14.288069 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 6183:6302, ack 1164, win 503, options [nop,nop,TS val 3476988400 ecr 3720140], length 119
+13:03:14.289505 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [.], ack 6302, win 342, options [nop,nop,TS val 3720199 ecr 3476988400], length 0
+13:03:14.289819 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 1164:1203, ack 6302, win 342, options [nop,nop,TS val 3720199 ecr 3476988400], length 39
+13:03:14.289875 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 1203, win 503, options [nop,nop,TS val 3476988402 ecr 3720199], length 0
+13:03:14.293604 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 1203:1268, ack 6302, win 342, options [nop,nop,TS val 3720200 ecr 3476988402], length 65
+13:03:14.293663 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 1268, win 503, options [nop,nop,TS val 3476988406 ecr 3720200], length 0
+13:03:14.293959 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 1268:1712, ack 6302, win 342, options [nop,nop,TS val 3720200 ecr 3476988402], length 444
+13:03:14.294018 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 1712, win 501, options [nop,nop,TS val 3476988406 ecr 3720200], length 0
+13:03:14.530828 wlan0 In  IP 192.168.50.98.47713 > 142.251.154.4.443: UDP, length 1350
+13:03:14.530897 eth0  Out IP 192.168.50.98.47713 > 142.251.154.4.443: UDP, length 1350
+13:03:14.628605 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 6302:6380, ack 1712, win 501, options [nop,nop,TS val 3476988741 ecr 3720200], length 78
+13:03:14.630615 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 1712:1751, ack 6380, win 342, options [nop,nop,TS val 3720284 ecr 3476988741], length 39
+13:03:14.630700 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 1751, win 501, options [nop,nop,TS val 3476988743 ecr 3720284], length 0
+13:03:14.634570 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 1751:1811, ack 6380, win 342, options [nop,nop,TS val 3720285 ecr 3476988743], length 60
+13:03:14.634630 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 1811, win 501, options [nop,nop,TS val 3476988747 ecr 3720285], length 0
+13:03:14.634780 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 1811:2133, ack 6380, win 342, options [nop,nop,TS val 3720285 ecr 3476988743], length 322
+13:03:14.634841 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 2133, win 501, options [nop,nop,TS val 3476988747 ecr 3720285], length 0
+13:03:14.966074 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 6380:6458, ack 2133, win 501, options [nop,nop,TS val 3476989078 ecr 3720285], length 78
+13:03:14.968164 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 2133:2172, ack 6458, win 342, options [nop,nop,TS val 3720368 ecr 3476989078], length 39
+13:03:14.968244 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 2172, win 501, options [nop,nop,TS val 3476989080 ecr 3720368], length 0
+13:03:14.971344 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 2172:2233, ack 6458, win 342, options [nop,nop,TS val 3720369 ecr 3476989078], length 61
+13:03:14.971400 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 2233, win 501, options [nop,nop,TS val 3476989084 ecr 3720369], length 0
+13:03:14.973101 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 2233:3259, ack 6458, win 342, options [nop,nop,TS val 3720369 ecr 3476989080], length 1026
+13:03:14.973179 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 3259, win 501, options [nop,nop,TS val 3476989085 ecr 3720369], length 0
+13:03:15.077205 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 55527+ A? api-global.netflix.com. (40)
+13:03:15.149726 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 55527 6/0/0 CNAME api-global.dradis.netflix.com., CNAME api-global.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-prod-nlb-s1-8de05bbdc1a4b0b7.elb.eu-west-1.amazonaws.com., A 176.34.94.213, A 52.215.78.165, A 54.76.212.68 (240)
+13:03:15.293381 wlan0 M   IP 192.168.50.98.42833 > 239.255.255.250.15600: UDP, length 35
+13:03:15.305059 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 6458:6536, ack 3259, win 501, options [nop,nop,TS val 3476989417 ecr 3720369], length 78
+13:03:15.306793 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 3259:3298, ack 6536, win 342, options [nop,nop,TS val 3720453 ecr 3476989417], length 39
+13:03:15.306881 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 3298, win 501, options [nop,nop,TS val 3476989419 ecr 3720453], length 0
+13:03:15.310365 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 3298:3359, ack 6536, win 342, options [nop,nop,TS val 3720454 ecr 3476989419], length 61
+13:03:15.310426 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 3359, win 501, options [nop,nop,TS val 3476989423 ecr 3720454], length 0
+13:03:15.310770 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 3359:3759, ack 6536, win 342, options [nop,nop,TS val 3720454 ecr 3476989419], length 400
+13:03:15.310824 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 3759, win 501, options [nop,nop,TS val 3476989423 ecr 3720454], length 0
+13:03:15.639263 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 6536:6614, ack 3759, win 501, options [nop,nop,TS val 3476989751 ecr 3720454], length 78
+13:03:15.641176 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 3759:3798, ack 6614, win 342, options [nop,nop,TS val 3720537 ecr 3476989751], length 39
+13:03:15.641261 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 3798, win 501, options [nop,nop,TS val 3476989753 ecr 3720537], length 0
+13:03:15.645091 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 3798:3859, ack 6614, win 342, options [nop,nop,TS val 3720538 ecr 3476989753], length 61
+13:03:15.645145 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 3859, win 501, options [nop,nop,TS val 3476989757 ecr 3720538], length 0
+13:03:15.645612 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 3859:5058, ack 6614, win 342, options [nop,nop,TS val 3720538 ecr 3476989753], length 1199
+13:03:15.645665 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 5058, win 501, options [nop,nop,TS val 3476989758 ecr 3720538], length 0
+13:03:15.769901 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:15.978492 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 6614:6692, ack 5058, win 501, options [nop,nop,TS val 3476990091 ecr 3720538], length 78
+13:03:15.980228 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 5058:5097, ack 6692, win 342, options [nop,nop,TS val 3720621 ecr 3476990091], length 39
+13:03:15.980308 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 5097, win 501, options [nop,nop,TS val 3476990092 ecr 3720621], length 0
+13:03:15.984114 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 5097:5160, ack 6692, win 342, options [nop,nop,TS val 3720622 ecr 3476990092], length 63
+13:03:15.984168 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 5160, win 501, options [nop,nop,TS val 3476990096 ecr 3720622], length 0
+13:03:15.984587 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 5160:5658, ack 6692, win 342, options [nop,nop,TS val 3720622 ecr 3476990092], length 498
+13:03:15.984639 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 5658, win 501, options [nop,nop,TS val 3476990097 ecr 3720622], length 0
+13:03:16.275654 wlan0 In  IP 192.168.50.98.47713 > 142.251.154.4.443: UDP, length 64
+13:03:16.275714 eth0  Out IP 192.168.50.98.47713 > 142.251.154.4.443: UDP, length 64
+13:03:16.314580 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 6692:6770, ack 5658, win 501, options [nop,nop,TS val 3476990427 ecr 3720622], length 78
+13:03:16.316217 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 5658:5697, ack 6770, win 342, options [nop,nop,TS val 3720705 ecr 3476990427], length 39
+13:03:16.316292 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 5697, win 501, options [nop,nop,TS val 3476990428 ecr 3720705], length 0
+13:03:16.320475 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 5697:5758, ack 6770, win 342, options [nop,nop,TS val 3720706 ecr 3476990428], length 61
+13:03:16.320526 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 5758, win 501, options [nop,nop,TS val 3476990433 ecr 3720706], length 0
+13:03:16.321441 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 5758:6107, ack 6770, win 342, options [nop,nop,TS val 3720706 ecr 3476990428], length 349
+13:03:16.321494 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 6107, win 501, options [nop,nop,TS val 3476990434 ecr 3720706], length 0
+13:03:16.650254 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 6770:6848, ack 6107, win 501, options [nop,nop,TS val 3476990762 ecr 3720706], length 78
+13:03:16.652879 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 6107:6146, ack 6848, win 342, options [nop,nop,TS val 3720790 ecr 3476990762], length 39
+13:03:16.652953 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 6146, win 501, options [nop,nop,TS val 3476990765 ecr 3720790], length 0
+13:03:16.656104 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 6146:6204, ack 6848, win 342, options [nop,nop,TS val 3720790 ecr 3476990765], length 58
+13:03:16.656158 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 6204, win 501, options [nop,nop,TS val 3476990768 ecr 3720790], length 0
+13:03:16.656435 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 6204:6661, ack 6848, win 342, options [nop,nop,TS val 3720790 ecr 3476990765], length 457
+13:03:16.656489 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 6661, win 501, options [nop,nop,TS val 3476990769 ecr 3720790], length 0
+13:03:16.985661 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 6848:6926, ack 6661, win 501, options [nop,nop,TS val 3476991098 ecr 3720790], length 78
+13:03:16.987404 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 6661:6700, ack 6926, win 342, options [nop,nop,TS val 3720873 ecr 3476991098], length 39
+13:03:16.987487 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 6700, win 501, options [nop,nop,TS val 3476991100 ecr 3720873], length 0
+13:03:17.772750 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:18.293986 wlan0 B   IP 192.168.50.98.55319 > 192.168.50.255.15600: UDP, length 35
+13:03:19.066915 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 62546+ A? nrdp.prod.ftl.netflix.com. (43)
+13:03:19.130538 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 62546 3/0/0 CNAME nrdp-ixanycast-def.ftl.netflix.com., A 45.57.40.1, A 45.57.41.1 (108)
+13:03:19.773662 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:21.294730 wlan0 M   IP 192.168.50.98.57911 > 239.255.255.250.15600: UDP, length 35
+13:03:21.776120 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:22.519164 wlan0 In  IP 192.168.50.98.34313 > 54.78.32.143.5223: Flags [P.], seq 748:798, ack 2029, win 274, options [nop,nop,TS val 3722256 ecr 3476956238], length 50
+13:03:22.519346 wlan0 Out IP 54.78.32.143.5223 > 192.168.50.98.34313: Flags [.], ack 798, win 506, options [nop,nop,TS val 3476996631 ecr 3722256], length 0
+13:03:22.605041 wlan0 Out IP 54.78.32.143.5223 > 192.168.50.98.34313: Flags [P.], seq 2029:2075, ack 798, win 506, options [nop,nop,TS val 3476996717 ecr 3722256], length 46
+13:03:22.607671 wlan0 In  IP 192.168.50.98.34313 > 54.78.32.143.5223: Flags [.], ack 2075, win 274, options [nop,nop,TS val 3722278 ecr 3476996717], length 0
+13:03:22.749484 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 36343+ A? nrdp.nccp.netflix.com. (39)
+13:03:22.812418 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 22994+ A? cdn-0.nflximg.com. (35)
+13:03:22.815234 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 36343 0/1/0 (116)
+13:03:22.885296 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 22994 4/0/0 CNAME dscg.netflix.com.edgesuite.net., CNAME a743.dscg.akamai.net., A 2.21.20.135, A 2.21.20.142 (142)
+13:03:23.041975 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 50223+ A? customerevents.netflix.com. (44)
+13:03:23.047383 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 41622+ AAAA? customerevents.netflix.com. (44)
+13:03:23.080229 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 27822+ AAAA? api-global.netflix.com. (40)
+13:03:23.100231 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 50223 6/0/0 CNAME customerevents.dradis.netflix.com., CNAME customerevents.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-log-nlb-d0872ab45f5e09a4.elb.eu-west-1.amazonaws.com., A 54.76.168.36, A 52.210.175.228, A 54.220.250.181 (248)
+13:03:23.110815 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 41622 6/0/0 CNAME customerevents.dradis.netflix.com., CNAME customerevents.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-log-nlb-d0872ab45f5e09a4.elb.eu-west-1.amazonaws.com., AAAA 2a05:d018:76c:b684::a504, AAAA 2a05:d018:76c:b683::f7af, AAAA 2a05:d018:76c:b682::265e (284)
+13:03:23.142115 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 27822 6/0/0 CNAME api-global.dradis.netflix.com., CNAME api-global.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-prod-nlb-s1-8de05bbdc1a4b0b7.elb.eu-west-1.amazonaws.com., AAAA 2a05:d018:76c:b684::248, AAAA 2a05:d018:76c:b683::e867, AAAA 2a05:d018:76c:b682::998a (276)
+13:03:23.507395 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 32487+ AAAA? cdn-0.nflximg.com. (35)
+13:03:23.507545 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 14925+ A? nrdp70-appboot.netflix.com. (44)
+13:03:23.571288 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 14925 5/0/0 CNAME appboot.dradis.netflix.com., CNAME appboot.eu-west-1.origin.prodaa.netflix.com., A 99.80.13.184, A 52.211.238.216, A 54.217.127.99 (167)
+13:03:23.575739 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 32487 7/0/0 CNAME dscg.netflix.com.edgesuite.net., CNAME a743.dscg.akamai.net., AAAA 2a02:26f0:7100::1720:ee18, AAAA 2a02:26f0:7100::1720:ee13, AAAA 2a02:26f0:7100::1720:ee2a, AAAA 2a02:26f0:7100::1720:ee29, AAAA 2a02:26f0:7100::1720:ee38 (250)
+13:03:23.776856 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:24.295370 wlan0 B   IP 192.168.50.98.39207 > 192.168.50.255.15600: UDP, length 35
+13:03:24.815410 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 15930+ A? www.google.com. (32)
+13:03:24.890319 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 15930 8/0/0 A 142.251.152.119, A 142.251.156.119, A 142.251.151.119, A 142.251.155.119, A 142.251.154.119, A 142.251.153.119, A 142.251.150.119, A 142.251.157.119 (160)
+13:03:25.095669 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 61751+ AAAA? nrdp.nccp.netflix.com. (39)
+13:03:25.096147 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 61751 0/0/0 (39)
+13:03:25.779253 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:26.134465 wlan0 In  IP 192.168.50.98.45301 > 23.36.163.4.80: Flags [F.], seq 98, ack 1, win 229, options [nop,nop,TS val 3723160 ecr 3476984322], length 0
+13:03:26.135069 wlan0 Out IP 23.36.163.4.80 > 192.168.50.98.45301: Flags [F.], seq 1, ack 99, win 509, options [nop,nop,TS val 3477000247 ecr 3723160], length 0
+13:03:26.136433 wlan0 In  IP 192.168.50.98.45301 > 23.36.163.4.80: Flags [.], ack 2, win 229, options [nop,nop,TS val 3723160 ecr 3477000247], length 0
+13:03:26.542195 wlan0 In  IP 192.168.50.98.35600 > 192.168.50.1.53: 33523+ A? cdn.samsungcloudsolution.com. (46)
+13:03:26.543449 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.35600: 33523 10/0/0 CNAME cdn.samsungcloudsolution.com.edgesuite.net., CNAME a1963.d.akamai.net., A 23.36.163.9, A 23.50.131.122, A 2.16.10.91, A 23.36.163.17, A 23.50.131.197, A 23.50.131.207, A 2.16.10.75, A 23.36.163.4 (262)
+13:03:26.545067 wlan0 In  IP 192.168.50.98.44893 > 23.36.163.9.80: Flags [S], seq 2493981705, win 29200, options [mss 1460,sackOK,TS val 3723263 ecr 0,nop,wscale 7], length 0
+13:03:26.545239 wlan0 Out IP 23.36.163.9.80 > 192.168.50.98.44893: Flags [S.], seq 707196675, ack 2493981706, win 65160, options [mss 1460,sackOK,TS val 3477000657 ecr 3723263,nop,wscale 7], length 0
+13:03:26.546477 wlan0 In  IP 192.168.50.98.44893 > 23.36.163.9.80: Flags [.], ack 1, win 229, options [nop,nop,TS val 3723263 ecr 3477000657], length 0
+13:03:26.546834 wlan0 In  IP 192.168.50.98.44893 > 23.36.163.9.80: Flags [P.], seq 1:98, ack 1, win 229, options [nop,nop,TS val 3723263 ecr 3477000657], length 97: HTTP: GET /Public/network/files/check.xml HTTP/1.1
+13:03:26.546920 wlan0 Out IP 23.36.163.9.80 > 192.168.50.98.44893: Flags [.], ack 98, win 509, options [nop,nop,TS val 3477000659 ecr 3723263], length 0
+13:03:27.311546 wlan0 M   IP 192.168.50.98.33659 > 239.255.255.250.15600: UDP, length 35
+13:03:27.781753 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:29.784145 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:30.296494 wlan0 B   IP 192.168.50.98.45704 > 192.168.50.255.15600: UDP, length 35
+13:03:31.785777 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:32.133499 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 46693+ AAAA? nrdp70-appboot.netflix.com. (44)
+13:03:32.203985 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 46693 5/0/0 CNAME appboot.dradis.netflix.com., CNAME appboot.eu-west-1.origin.prodaa.netflix.com., AAAA 2a05:d018:76c:b685::3a45, AAAA 2a05:d018:76c:b684::b49e, AAAA 2a05:d018:76c:b683::c559 (203)
+13:03:33.297040 wlan0 M   IP 192.168.50.98.42803 > 239.255.255.250.15600: UDP, length 35
+13:03:33.786965 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:34.146788 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 6700:6760, ack 6926, win 342, options [nop,nop,TS val 3725163 ecr 3476991100], length 60
+13:03:34.146946 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 6760, win 501, options [nop,nop,TS val 3477008259 ecr 3725163], length 0
+13:03:34.147639 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 6760:7903, ack 6926, win 342, options [nop,nop,TS val 3725163 ecr 3476991100], length 1143
+13:03:34.147719 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 7903, win 501, options [nop,nop,TS val 3477008260 ecr 3725163], length 0
+13:03:34.481475 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 6926:7004, ack 7903, win 501, options [nop,nop,TS val 3477008594 ecr 3725163], length 78
+13:03:34.483367 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 7903:7942, ack 7004, win 342, options [nop,nop,TS val 3725247 ecr 3477008594], length 39
+13:03:34.483447 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 7942, win 501, options [nop,nop,TS val 3477008596 ecr 3725247], length 0
+13:03:35.789084 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:36.169368 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 53609+ A? api-global.netflix.com. (40)
+13:03:36.170397 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 53609 6/0/0 CNAME api-global.dradis.netflix.com., CNAME api-global.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-prod-nlb-s1-8de05bbdc1a4b0b7.elb.eu-west-1.amazonaws.com., A 54.76.212.68, A 52.215.78.165, A 176.34.94.213 (272)
+13:03:36.297625 wlan0 B   IP 192.168.50.98.52660 > 192.168.50.255.15600: UDP, length 35
+13:03:37.791589 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:39.298234 wlan0 M   IP 192.168.50.98.48252 > 239.255.255.250.15600: UDP, length 35
+13:03:39.793248 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:40.524896 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 24564+ AAAA? uiboot.netflix.com. (36)
+13:03:40.589348 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 24564 6/0/0 CNAME uiboot.dradis.netflix.com., CNAME uiboot.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-appboot-nlb-50692193f724556a.elb.eu-west-1.amazonaws.com., AAAA 2a05:d018:76c:b684::b49e, AAAA 2a05:d018:76c:b683::c559, AAAA 2a05:d018:76c:b685::3a45 (264)
+13:03:41.553505 wlan0 In  IP 192.168.50.98.35237 > 192.168.50.1.53: 25525+ A? tools.google.com. (34)
+13:03:41.553923 wlan0 In  IP 192.168.50.98.35237 > 192.168.50.1.53: 16772+ AAAA? tools.google.com. (34)
+13:03:41.619653 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.35237: 25525 6/0/0 A 142.250.154.102, A 142.250.154.100, A 142.250.154.138, A 142.250.154.101, A 142.250.154.139, A 142.250.154.113 (130)
+13:03:41.620937 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.35237: 16772 4/0/0 AAAA 2a00:1450:4001:c13::64, AAAA 2a00:1450:4001:c13::8a, AAAA 2a00:1450:4001:c13::71, AAAA 2a00:1450:4001:c13::66 (146)
+13:03:41.635659 wlan0 In  IP 192.168.50.98.33991 > 142.250.154.102.443: UDP, length 1350
+13:03:41.635747 eth0  Out IP 192.168.50.98.33991 > 142.250.154.102.443: UDP, length 1350
+13:03:41.635796 wlan0 In  IP 192.168.50.98.38796 > 142.250.154.102.443: Flags [S], seq 1397340157, win 29200, options [mss 1460,sackOK,TS val 3727032 ecr 0,nop,wscale 7], length 0
+13:03:41.635948 wlan0 Out IP 142.250.154.102.443 > 192.168.50.98.38796: Flags [S.], seq 934558305, ack 1397340158, win 65160, options [mss 1460,sackOK,TS val 3477015748 ecr 3727032,nop,wscale 7], length 0
+13:03:41.673671 wlan0 In  IP 192.168.50.98.38796 > 142.250.154.102.443: Flags [.], ack 1, win 229, options [nop,nop,TS val 3727036 ecr 3477015748], length 0
+13:03:41.673804 wlan0 In  IP 192.168.50.98.38796 > 142.250.154.102.443: Flags [P.], seq 1:208, ack 1, win 229, options [nop,nop,TS val 3727036 ecr 3477015748], length 207
+13:03:41.673877 wlan0 Out IP 142.250.154.102.443 > 192.168.50.98.38796: Flags [.], ack 208, win 508, options [nop,nop,TS val 3477015786 ecr 3727036], length 0
+13:03:41.797772 wlan0 In  IP 192.168.50.98.33991 > 142.250.154.102.443: UDP, length 1350
+13:03:41.797838 eth0  Out IP 192.168.50.98.33991 > 142.250.154.102.443: UDP, length 1350
+13:03:41.802366 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:42.000632 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 13959+ A? www.yahoo.com. (31)
+13:03:42.063792 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 13959 3/0/0 CNAME me-ycpi-cf-www.g06.yahoodns.net., A 87.248.119.252, A 87.248.119.251 (108)
+13:03:42.094513 wlan0 In  IP 192.168.50.98.33991 > 142.250.154.102.443: UDP, length 1350
+13:03:42.094579 eth0  Out IP 192.168.50.98.33991 > 142.250.154.102.443: UDP, length 1350
+13:03:42.183435 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 11222+ A? uiboot.netflix.com. (36)
+13:03:42.244140 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 11222 6/0/0 CNAME uiboot.dradis.netflix.com., CNAME uiboot.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-appboot-nlb-50692193f724556a.elb.eu-west-1.amazonaws.com., A 52.211.238.216, A 54.217.127.99, A 99.80.13.184 (228)
+13:03:42.295936 wlan0 In  IP 192.168.50.98.33053 > 142.251.154.4.443: Flags [F.], seq 207, ack 1, win 229, options [nop,nop,TS val 3727196 ecr 3476986390], length 0
+13:03:42.300528 wlan0 Out IP 142.251.154.4.443 > 192.168.50.98.33053: Flags [F.], seq 1, ack 208, win 508, options [nop,nop,TS val 3477016409 ecr 3727196], length 0
+13:03:42.300562 wlan0 B   IP 192.168.50.98.53795 > 192.168.50.255.15600: UDP, length 35
+13:03:42.312662 wlan0 In  IP 192.168.50.98.33053 > 142.251.154.4.443: Flags [.], ack 2, win 229, options [nop,nop,TS val 3727202 ecr 3477016409], length 0
+13:03:42.564261 wlan0 In  IP 192.168.50.98.44893 > 23.36.163.9.80: Flags [F.], seq 98, ack 1, win 229, options [nop,nop,TS val 3727263 ecr 3477000659], length 0
+13:03:42.564869 wlan0 Out IP 23.36.163.9.80 > 192.168.50.98.44893: Flags [F.], seq 1, ack 99, win 509, options [nop,nop,TS val 3477016677 ecr 3727263], length 0
+13:03:42.589189 wlan0 In  IP 192.168.50.98.44893 > 23.36.163.9.80: Flags [.], ack 2, win 229, options [nop,nop,TS val 3727268 ecr 3477016677], length 0
+13:03:42.589297 wlan0 In  IP 192.168.50.98.33991 > 142.250.154.102.443: UDP, length 46
+13:03:42.589342 eth0  Out IP 192.168.50.98.33991 > 142.250.154.102.443: UDP, length 46
+13:03:42.602895 wlan0 In  IP 192.168.50.98.38796 > 142.250.154.102.443: Flags [F.], seq 208, ack 1, win 229, options [nop,nop,TS val 3727273 ecr 3477015786], length 0
+13:03:42.603426 wlan0 Out IP 142.250.154.102.443 > 192.168.50.98.38796: Flags [F.], seq 1, ack 209, win 508, options [nop,nop,TS val 3477016716 ecr 3727273], length 0
+13:03:42.608188 wlan0 In  IP 192.168.50.98.38796 > 142.250.154.102.443: Flags [.], ack 2, win 229, options [nop,nop,TS val 3727278 ecr 3477016716], length 0
+13:03:43.004803 wlan0 In  IP 192.168.50.98.43647 > 192.168.50.1.53: 45444+ A? cdn.samsungcloudsolution.com. (46)
+13:03:43.065243 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.43647: 45444 5/0/0 CNAME cdn.samsungcloudsolution.com.edgesuite.net., CNAME a1963.d.akamai.net., A 23.36.163.4, A 23.50.131.207, A 2.16.10.91 (179)
+13:03:43.077290 wlan0 In  IP 192.168.50.98.45307 > 23.36.163.4.80: Flags [S], seq 2781309408, win 29200, options [mss 1460,sackOK,TS val 3727393 ecr 0,nop,wscale 7], length 0
+13:03:43.077464 wlan0 Out IP 23.36.163.4.80 > 192.168.50.98.45307: Flags [S.], seq 2254237627, ack 2781309409, win 65160, options [mss 1460,sackOK,TS val 3477017190 ecr 3727393,nop,wscale 7], length 0
+13:03:43.130925 wlan0 In  IP 192.168.50.98.45307 > 23.36.163.4.80: Flags [.], ack 1, win 229, options [nop,nop,TS val 3727396 ecr 3477017190], length 0
+13:03:43.133905 wlan0 In  IP 192.168.50.98.45307 > 23.36.163.4.80: Flags [P.], seq 1:98, ack 1, win 229, options [nop,nop,TS val 3727397 ecr 3477017190], length 97: HTTP: GET /Public/network/files/check.xml HTTP/1.1
+13:03:43.134002 wlan0 Out IP 23.36.163.4.80 > 192.168.50.98.45307: Flags [.], ack 98, win 509, options [nop,nop,TS val 3477017246 ecr 3727397], length 0
+13:03:43.281970 wlan0 In  IP 192.168.50.98.45430 > 192.168.50.1.53: 11511+ A? tvx.adgrx.com. (31)
+13:03:43.282084 wlan0 In  IP 192.168.50.98.45430 > 192.168.50.1.53: 28585+ AAAA? tvx.adgrx.com. (31)
+13:03:43.346077 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.45430: 11511 3/0/0 CNAME rtb-catalyst.adgrx.com., CNAME rtb-catalyst.adgrx.com.tech.akadns.net., A 54.229.145.163 (126)
+13:03:43.347968 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.45430: 28585 2/1/0 CNAME rtb-catalyst.adgrx.com., CNAME rtb-catalyst.adgrx.com.tech.akadns.net. (173)
+13:03:43.353318 wlan0 In  IP 192.168.50.98.51374 > 54.229.145.163.443: Flags [S], seq 999811105, win 29200, options [mss 1460,sackOK,TS val 3727464 ecr 0,nop,wscale 7], length 0
+13:03:43.353504 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51374: Flags [S.], seq 3946223794, ack 999811106, win 65160, options [mss 1460,sackOK,TS val 3477017466 ecr 3727464,nop,wscale 7], length 0
+13:03:43.370879 wlan0 In  IP 192.168.50.98.51374 > 54.229.145.163.443: Flags [.], ack 1, win 229, options [nop,nop,TS val 3727465 ecr 3477017466], length 0
+13:03:43.501942 wlan0 In  IP 192.168.50.98.51374 > 54.229.145.163.443: Flags [P.], seq 1:518, ack 1, win 229, options [nop,nop,TS val 3727498 ecr 3477017466], length 517
+13:03:43.502077 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51374: Flags [.], ack 518, win 506, options [nop,nop,TS val 3477017614 ecr 3727498], length 0
+13:03:43.670513 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51374: Flags [P.], seq 1:1441, ack 518, win 506, options [nop,nop,TS val 3477017783 ecr 3727498], length 1440
+13:03:43.670702 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51374: Flags [.], seq 1441:2889, ack 518, win 506, options [nop,nop,TS val 3477017783 ecr 3727498], length 1448
+13:03:43.670737 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51374: Flags [P.], seq 2889:4337, ack 518, win 506, options [nop,nop,TS val 3477017783 ecr 3727498], length 1448
+13:03:43.671484 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51374: Flags [.], seq 4337:5785, ack 518, win 506, options [nop,nop,TS val 3477017784 ecr 3727498], length 1448
+13:03:43.671515 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51374: Flags [P.], seq 5785:7233, ack 518, win 506, options [nop,nop,TS val 3477017784 ecr 3727498], length 1448
+13:03:43.675687 wlan0 In  IP 192.168.50.98.51374 > 54.229.145.163.443: Flags [.], ack 1441, win 251, options [nop,nop,TS val 3727544 ecr 3477017783], length 0
+13:03:43.675812 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51374: Flags [P.], seq 7233:7337, ack 518, win 506, options [nop,nop,TS val 3477017788 ecr 3727544], length 104
+13:03:43.675869 wlan0 In  IP 192.168.50.98.51374 > 54.229.145.163.443: Flags [.], ack 2889, win 274, options [nop,nop,TS val 3727545 ecr 3477017783], length 0
+13:03:43.675914 wlan0 In  IP 192.168.50.98.51374 > 54.229.145.163.443: Flags [.], ack 4337, win 296, options [nop,nop,TS val 3727545 ecr 3477017783], length 0
+13:03:43.675952 wlan0 In  IP 192.168.50.98.51374 > 54.229.145.163.443: Flags [.], ack 5785, win 319, options [nop,nop,TS val 3727545 ecr 3477017784], length 0
+13:03:43.675988 wlan0 In  IP 192.168.50.98.51374 > 54.229.145.163.443: Flags [.], ack 7233, win 342, options [nop,nop,TS val 3727545 ecr 3477017784], length 0
+13:03:43.685538 wlan0 In  IP 192.168.50.98.51374 > 54.229.145.163.443: Flags [.], ack 7337, win 342, options [nop,nop,TS val 3727546 ecr 3477017788], length 0
+13:03:43.709347 wlan0 In  IP 192.168.50.98.51374 > 54.229.145.163.443: Flags [P.], seq 518:644, ack 7337, win 342, options [nop,nop,TS val 3727549 ecr 3477017788], length 126
+13:03:43.709411 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51374: Flags [.], ack 644, win 506, options [nop,nop,TS val 3477017822 ecr 3727549], length 0
+13:03:43.791254 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51374: Flags [P.], seq 7337:7457, ack 644, win 506, options [nop,nop,TS val 3477017903 ecr 3727549], length 120
+13:03:43.800048 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:43.800122 wlan0 In  IP 192.168.50.98.51374 > 54.229.145.163.443: Flags [P.], seq 644:697, ack 7457, win 342, options [nop,nop,TS val 3727575 ecr 3477017903], length 53
+13:03:43.800209 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51374: Flags [.], ack 697, win 506, options [nop,nop,TS val 3477017912 ecr 3727575], length 0
+13:03:43.800253 wlan0 In  IP 192.168.50.98.51374 > 54.229.145.163.443: Flags [P.], seq 697:753, ack 7457, win 342, options [nop,nop,TS val 3727575 ecr 3477017903], length 56
+13:03:43.800306 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51374: Flags [.], ack 753, win 506, options [nop,nop,TS val 3477017912 ecr 3727575], length 0
+13:03:43.800345 wlan0 In  IP 192.168.50.98.51374 > 54.229.145.163.443: Flags [P.], seq 753:795, ack 7457, win 342, options [nop,nop,TS val 3727575 ecr 3477017903], length 42
+13:03:43.800392 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51374: Flags [.], ack 795, win 506, options [nop,nop,TS val 3477017913 ecr 3727575], length 0
+13:03:43.800420 wlan0 In  IP 192.168.50.98.51374 > 54.229.145.163.443: Flags [P.], seq 795:1411, ack 7457, win 342, options [nop,nop,TS val 3727575 ecr 3477017903], length 616
+13:03:43.800472 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51374: Flags [.], ack 1411, win 502, options [nop,nop,TS val 3477017913 ecr 3727575], length 0
+13:03:43.800498 wlan0 In  IP 192.168.50.98.51374 > 54.229.145.163.443: Flags [P.], seq 1411:1449, ack 7457, win 342, options [nop,nop,TS val 3727575 ecr 3477017903], length 38
+13:03:43.800544 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51374: Flags [.], ack 1449, win 502, options [nop,nop,TS val 3477017913 ecr 3727575], length 0
+13:03:43.825415 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 43663+ A? nrdp.nccp.netflix.com. (39)
+13:03:43.826030 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 43663 0/0/0 (39)
+13:03:43.881949 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51374: Flags [P.], seq 7457:7495, ack 1449, win 502, options [nop,nop,TS val 3477017994 ecr 3727575], length 38
+13:03:43.887405 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 53842+ A? cdn-0.nflximg.com. (35)
+13:03:43.921319 wlan0 In  IP 192.168.50.98.51374 > 54.229.145.163.443: Flags [.], ack 7495, win 342, options [nop,nop,TS val 3727607 ecr 3477017994], length 0
+13:03:43.921435 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51374: Flags [P.], seq 7495:7784, ack 1449, win 502, options [nop,nop,TS val 3477018034 ecr 3727607], length 289
+13:03:43.924824 wlan0 In  IP 192.168.50.98.51374 > 54.229.145.163.443: Flags [.], ack 7784, win 364, options [nop,nop,TS val 3727607 ecr 3477018034], length 0
+13:03:43.926336 wlan0 In  IP 192.168.50.98.51374 > 54.229.145.163.443: Flags [P.], seq 1449:1480, ack 7784, win 364, options [nop,nop,TS val 3727608 ecr 3477018034], length 31
+13:03:43.926498 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51374: Flags [.], ack 1480, win 502, options [nop,nop,TS val 3477018039 ecr 3727608], length 0
+13:03:43.939290 wlan0 In  IP 192.168.50.98.51374 > 54.229.145.163.443: Flags [F.], seq 1480, ack 7784, win 364, options [nop,nop,TS val 3727610 ecr 3477018039], length 0
+13:03:43.939778 wlan0 Out IP 54.229.145.163.443 > 192.168.50.98.51374: Flags [F.], seq 7784, ack 1481, win 502, options [nop,nop,TS val 3477018052 ecr 3727610], length 0
+13:03:43.943857 wlan0 In  IP 192.168.50.98.51374 > 54.229.145.163.443: Flags [.], ack 7785, win 364, options [nop,nop,TS val 3727612 ecr 3477018052], length 0
+13:03:43.954133 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 53842 4/0/0 CNAME dscg.netflix.com.edgesuite.net., CNAME a743.dscg.akamai.net., A 2.21.20.135, A 2.21.20.142 (142)
+13:03:44.574186 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 65311+ A? nrdp70-appboot.netflix.com. (44)
+13:03:44.578841 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 43111+ AAAA? cdn-0.nflximg.com. (35)
+13:03:44.639182 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 65311 5/0/0 CNAME appboot.dradis.netflix.com., CNAME appboot.eu-west-1.origin.prodaa.netflix.com., A 52.211.238.216, A 99.80.13.184, A 54.217.127.99 (167)
+13:03:44.644153 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 43111 7/0/0 CNAME dscg.netflix.com.edgesuite.net., CNAME a743.dscg.akamai.net., AAAA 2a02:26f0:7100::1720:ee18, AAAA 2a02:26f0:7100::1720:ee19, AAAA 2a02:26f0:7100::1720:ee21, AAAA 2a02:26f0:7100::1720:ee29, AAAA 2a02:26f0:7100::1720:ee2a (250)
+13:03:45.302744 wlan0 M   IP 192.168.50.98.41910 > 239.255.255.250.15600: UDP, length 35
+13:03:45.802482 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:46.107662 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 52436+ AAAA? nrdp.nccp.netflix.com. (39)
+13:03:46.166815 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 52436 0/1/0 (116)
+13:03:47.803591 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:48.303059 wlan0 B   IP 192.168.50.98.53686 > 192.168.50.255.15600: UDP, length 35
+13:03:49.802694 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:51.125373 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 11732+ A? customerevents.netflix.com. (44)
+13:03:51.125454 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 27284+ A? ichnaea.netflix.com. (37)
+13:03:51.181937 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 11732 6/0/0 CNAME customerevents.dradis.netflix.com., CNAME customerevents.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-log-nlb-d0872ab45f5e09a4.elb.eu-west-1.amazonaws.com., A 52.210.175.228, A 54.76.168.36, A 54.220.250.181 (248)
+13:03:51.187067 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 27284 6/0/0 CNAME ichnaea.dradis.netflix.com., CNAME ichnaea.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-log-nlb-d0872ab45f5e09a4.elb.eu-west-1.amazonaws.com., A 54.220.250.181, A 54.76.168.36, A 52.210.175.228 (227)
+13:03:51.301700 wlan0 M   IP 192.168.50.98.39808 > 239.255.255.250.15600: UDP, length 35
+13:03:51.803629 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:53.214284 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 51238+ AAAA? nrdp70-appboot.netflix.com. (44)
+13:03:53.278094 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 51238 5/0/0 CNAME appboot.dradis.netflix.com., CNAME appboot.eu-west-1.origin.prodaa.netflix.com., AAAA 2a05:d018:76c:b684::b49e, AAAA 2a05:d018:76c:b685::3a45, AAAA 2a05:d018:76c:b683::c559 (203)
+13:03:53.673108 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 7942:8002, ack 7004, win 342, options [nop,nop,TS val 3730044 ecr 3477008596], length 60
+13:03:53.673239 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 8002, win 501, options [nop,nop,TS val 3477027785 ecr 3730044], length 0
+13:03:53.673301 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 8002:8366, ack 7004, win 342, options [nop,nop,TS val 3730044 ecr 3477008596], length 364
+13:03:53.673355 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 8366, win 501, options [nop,nop,TS val 3477027786 ecr 3730044], length 0
+13:03:53.805013 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:54.000671 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 7004:7082, ack 8366, win 501, options [nop,nop,TS val 3477028113 ecr 3730044], length 78
+13:03:54.004890 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 8366:8405, ack 7082, win 342, options [nop,nop,TS val 3730127 ecr 3477028113], length 39
+13:03:54.004977 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 8405, win 501, options [nop,nop,TS val 3477028117 ecr 3730127], length 0
+13:03:54.007355 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 8405:8462, ack 7082, win 342, options [nop,nop,TS val 3730128 ecr 3477028117], length 57
+13:03:54.007414 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 8462, win 501, options [nop,nop,TS val 3477028120 ecr 3730128], length 0
+13:03:54.007452 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 8462:8775, ack 7082, win 342, options [nop,nop,TS val 3730128 ecr 3477028117], length 313
+13:03:54.007504 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 8775, win 501, options [nop,nop,TS val 3477028120 ecr 3730128], length 0
+13:03:54.302228 wlan0 B   IP 192.168.50.98.58739 > 192.168.50.255.15600: UDP, length 35
+13:03:54.337131 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 7082:7160, ack 8775, win 501, options [nop,nop,TS val 3477028449 ecr 3730128], length 78
+13:03:54.340198 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 8775:8814, ack 7160, win 342, options [nop,nop,TS val 3730211 ecr 3477028449], length 39
+13:03:54.340280 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 8814, win 501, options [nop,nop,TS val 3477028452 ecr 3730211], length 0
+13:03:54.343604 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 8814:8871, ack 7160, win 342, options [nop,nop,TS val 3730212 ecr 3477028452], length 57
+13:03:54.343663 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 8871, win 501, options [nop,nop,TS val 3477028456 ecr 3730212], length 0
+13:03:54.343831 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 8871:9513, ack 7160, win 342, options [nop,nop,TS val 3730212 ecr 3477028452], length 642
+13:03:54.343885 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 9513, win 501, options [nop,nop,TS val 3477028456 ecr 3730212], length 0
+13:03:54.672725 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 7160:7238, ack 9513, win 501, options [nop,nop,TS val 3477028785 ecr 3730212], length 78
+13:03:54.676802 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 9513:9552, ack 7238, win 342, options [nop,nop,TS val 3730295 ecr 3477028785], length 39
+13:03:54.676888 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 9552, win 501, options [nop,nop,TS val 3477028789 ecr 3730295], length 0
+13:03:54.679977 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 9552:9610, ack 7238, win 342, options [nop,nop,TS val 3730296 ecr 3477028789], length 58
+13:03:54.680033 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 9610, win 501, options [nop,nop,TS val 3477028792 ecr 3730296], length 0
+13:03:54.680202 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 9610:10786, ack 7238, win 342, options [nop,nop,TS val 3730296 ecr 3477028789], length 1176
+13:03:54.680254 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 10786, win 501, options [nop,nop,TS val 3477028792 ecr 3730296], length 0
+13:03:55.041302 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 7238:7316, ack 10786, win 501, options [nop,nop,TS val 3477029153 ecr 3730296], length 78
+13:03:55.043697 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 10786:10825, ack 7316, win 342, options [nop,nop,TS val 3730387 ecr 3477029153], length 39
+13:03:55.043776 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 10825, win 501, options [nop,nop,TS val 3477029156 ecr 3730387], length 0
+13:03:55.048646 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 10825:10890, ack 7316, win 342, options [nop,nop,TS val 3730388 ecr 3477029156], length 65
+13:03:55.048699 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 10890, win 501, options [nop,nop,TS val 3477029161 ecr 3730388], length 0
+13:03:55.048838 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 10890:11997, ack 7316, win 342, options [nop,nop,TS val 3730388 ecr 3477029156], length 1107
+13:03:55.048891 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 11997, win 501, options [nop,nop,TS val 3477029161 ecr 3730388], length 0
+13:03:55.120966 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 412+ AAAA? customerevents.netflix.com. (44)
+13:03:55.144545 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 35772+ AAAA? api-global.netflix.com. (40)
+13:03:55.187986 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 412 6/0/0 CNAME customerevents.dradis.netflix.com., CNAME customerevents.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-log-nlb-d0872ab45f5e09a4.elb.eu-west-1.amazonaws.com., AAAA 2a05:d018:76c:b682::265e, AAAA 2a05:d018:76c:b683::f7af, AAAA 2a05:d018:76c:b684::a504 (284)
+13:03:55.217066 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 35772 6/0/0 CNAME api-global.dradis.netflix.com., CNAME api-global.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-prod-nlb-s1-8de05bbdc1a4b0b7.elb.eu-west-1.amazonaws.com., AAAA 2a05:d018:76c:b682::998a, AAAA 2a05:d018:76c:b684::248, AAAA 2a05:d018:76c:b683::e867 (276)
+13:03:55.381261 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 7316:7394, ack 11997, win 501, options [nop,nop,TS val 3477029493 ecr 3730388], length 78
+13:03:55.383587 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 11997:12036, ack 7394, win 342, options [nop,nop,TS val 3730472 ecr 3477029493], length 39
+13:03:55.383664 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 12036, win 501, options [nop,nop,TS val 3477029496 ecr 3730472], length 0
+13:03:55.387140 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 12036:12099, ack 7394, win 342, options [nop,nop,TS val 3730473 ecr 3477029496], length 63
+13:03:55.387196 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 12099, win 501, options [nop,nop,TS val 3477029499 ecr 3730473], length 0
+13:03:55.387233 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 12099:12465, ack 7394, win 342, options [nop,nop,TS val 3730473 ecr 3477029496], length 366
+13:03:55.387285 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 12465, win 501, options [nop,nop,TS val 3477029499 ecr 3730473], length 0
+13:03:55.714373 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 7394:7472, ack 12465, win 501, options [nop,nop,TS val 3477029827 ecr 3730473], length 78
+13:03:55.716101 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 12465:12504, ack 7472, win 342, options [nop,nop,TS val 3730555 ecr 3477029827], length 39
+13:03:55.716177 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 12504, win 501, options [nop,nop,TS val 3477029828 ecr 3730555], length 0
+13:03:55.719346 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 12504:12565, ack 7472, win 342, options [nop,nop,TS val 3730556 ecr 3477029828], length 61
+13:03:55.719400 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 12565, win 501, options [nop,nop,TS val 3477029832 ecr 3730556], length 0
+13:03:55.719771 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 12565:12933, ack 7472, win 342, options [nop,nop,TS val 3730556 ecr 3477029828], length 368
+13:03:55.719823 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 12933, win 501, options [nop,nop,TS val 3477029832 ecr 3730556], length 0
+13:03:55.806527 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:56.046057 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 7472:7550, ack 12933, win 501, options [nop,nop,TS val 3477030158 ecr 3730556], length 78
+13:03:56.047754 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 12933:12972, ack 7550, win 342, options [nop,nop,TS val 3730638 ecr 3477030158], length 39
+13:03:56.047836 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 12972, win 501, options [nop,nop,TS val 3477030160 ecr 3730638], length 0
+13:03:56.053741 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 12972:13033, ack 7550, win 342, options [nop,nop,TS val 3730640 ecr 3477030160], length 61
+13:03:56.053836 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 13033, win 501, options [nop,nop,TS val 3477030166 ecr 3730640], length 0
+13:03:56.053947 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 13033:14059, ack 7550, win 342, options [nop,nop,TS val 3730640 ecr 3477030160], length 1026
+13:03:56.054009 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 14059, win 501, options [nop,nop,TS val 3477030166 ecr 3730640], length 0
+13:03:56.389546 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 7550:7628, ack 14059, win 501, options [nop,nop,TS val 3477030502 ecr 3730640], length 78
+13:03:56.391394 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 14059:14098, ack 7628, win 342, options [nop,nop,TS val 3730724 ecr 3477030502], length 39
+13:03:56.391478 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 14098, win 501, options [nop,nop,TS val 3477030504 ecr 3730724], length 0
+13:03:56.394751 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 14098:14159, ack 7628, win 342, options [nop,nop,TS val 3730725 ecr 3477030504], length 61
+13:03:56.394808 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 14159, win 501, options [nop,nop,TS val 3477030507 ecr 3730725], length 0
+13:03:56.395399 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [.], seq 14159:15607, ack 7628, win 342, options [nop,nop,TS val 3730725 ecr 3477030504], length 1448
+13:03:56.395456 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 15607, win 501, options [nop,nop,TS val 3477030508 ecr 3730725], length 0
+13:03:56.396085 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [.], seq 15607:17055, ack 7628, win 342, options [nop,nop,TS val 3730725 ecr 3477030504], length 1448
+13:03:56.396145 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 17055, win 501, options [nop,nop,TS val 3477030508 ecr 3730725], length 0
+13:03:56.396480 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [.], seq 17055:18503, ack 7628, win 342, options [nop,nop,TS val 3730725 ecr 3477030504], length 1448
+13:03:56.396542 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 18503, win 501, options [nop,nop,TS val 3477030509 ecr 3730725], length 0
+13:03:56.396895 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [.], seq 18503:19951, ack 7628, win 342, options [nop,nop,TS val 3730725 ecr 3477030504], length 1448
+13:03:56.396954 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 19951, win 501, options [nop,nop,TS val 3477030509 ecr 3730725], length 0
+13:03:56.397020 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [.], seq 19951:21399, ack 7628, win 342, options [nop,nop,TS val 3730725 ecr 3477030504], length 1448
+13:03:56.397073 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 21399, win 501, options [nop,nop,TS val 3477030509 ecr 3730725], length 0
+13:03:56.397845 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 21399:21741, ack 7628, win 342, options [nop,nop,TS val 3730725 ecr 3477030504], length 342
+13:03:56.397909 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 21741, win 501, options [nop,nop,TS val 3477030510 ecr 3730725], length 0
+13:03:56.782979 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 7628:7706, ack 21741, win 501, options [nop,nop,TS val 3477030895 ecr 3730725], length 78
+13:03:56.784713 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 21741:21780, ack 7706, win 342, options [nop,nop,TS val 3730822 ecr 3477030895], length 39
+13:03:56.784795 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 21780, win 501, options [nop,nop,TS val 3477030897 ecr 3730822], length 0
+13:03:56.788258 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 21780:21839, ack 7706, win 342, options [nop,nop,TS val 3730823 ecr 3477030897], length 59
+13:03:56.788311 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 21839, win 501, options [nop,nop,TS val 3477030900 ecr 3730823], length 0
+13:03:56.788481 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 21839:22135, ack 7706, win 342, options [nop,nop,TS val 3730823 ecr 3477030897], length 296
+13:03:56.788533 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 22135, win 501, options [nop,nop,TS val 3477030901 ecr 3730823], length 0
+13:03:57.114962 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 7706:7784, ack 22135, win 501, options [nop,nop,TS val 3477031227 ecr 3730823], length 78
+13:03:57.117237 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 22135:22174, ack 7784, win 342, options [nop,nop,TS val 3730906 ecr 3477031227], length 39
+13:03:57.117318 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 22174, win 501, options [nop,nop,TS val 3477031229 ecr 3730906], length 0
+13:03:57.120681 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 22174:22233, ack 7784, win 342, options [nop,nop,TS val 3730906 ecr 3477031229], length 59
+13:03:57.120734 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 22233, win 501, options [nop,nop,TS val 3477031233 ecr 3730906], length 0
+13:03:57.121105 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 22233:22548, ack 7784, win 342, options [nop,nop,TS val 3730907 ecr 3477031229], length 315
+13:03:57.121157 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 22548, win 501, options [nop,nop,TS val 3477031233 ecr 3730907], length 0
+13:03:57.180913 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 64861+ A? api-global.netflix.com. (40)
+13:03:57.253898 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 64861 6/0/0 CNAME api-global.dradis.netflix.com., CNAME api-global.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-prod-nlb-s1-8de05bbdc1a4b0b7.elb.eu-west-1.amazonaws.com., A 52.215.78.165, A 54.76.212.68, A 176.34.94.213 (240)
+13:03:57.301991 wlan0 M   IP 192.168.50.98.41811 > 239.255.255.250.15600: UDP, length 35
+13:03:57.450242 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 7784:7862, ack 22548, win 501, options [nop,nop,TS val 3477031562 ecr 3730907], length 78
+13:03:57.452002 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 22548:22587, ack 7862, win 342, options [nop,nop,TS val 3730989 ecr 3477031562], length 39
+13:03:57.452091 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 22587, win 501, options [nop,nop,TS val 3477031564 ecr 3730989], length 0
+13:03:57.456425 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 22587:22646, ack 7862, win 342, options [nop,nop,TS val 3730990 ecr 3477031564], length 59
+13:03:57.456482 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 22646, win 501, options [nop,nop,TS val 3477031569 ecr 3730990], length 0
+13:03:57.456664 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 22646:22945, ack 7862, win 342, options [nop,nop,TS val 3730990 ecr 3477031564], length 299
+13:03:57.456723 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 22945, win 501, options [nop,nop,TS val 3477031569 ecr 3730990], length 0
+13:03:57.785868 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 7862:7940, ack 22945, win 501, options [nop,nop,TS val 3477031898 ecr 3730990], length 78
+13:03:57.787705 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 22945:22984, ack 7940, win 342, options [nop,nop,TS val 3731073 ecr 3477031898], length 39
+13:03:57.787787 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 22984, win 501, options [nop,nop,TS val 3477031900 ecr 3731073], length 0
+13:03:57.791674 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 22984:23043, ack 7940, win 342, options [nop,nop,TS val 3731074 ecr 3477031900], length 59
+13:03:57.791732 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 23043, win 501, options [nop,nop,TS val 3477031904 ecr 3731074], length 0
+13:03:57.792076 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 23043:23412, ack 7940, win 342, options [nop,nop,TS val 3731074 ecr 3477031900], length 369
+13:03:57.792129 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 23412, win 501, options [nop,nop,TS val 3477031904 ecr 3731074], length 0
+13:03:57.808077 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:03:58.123045 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [P.], seq 7940:8018, ack 23412, win 501, options [nop,nop,TS val 3477032235 ecr 3731074], length 78
+13:03:58.124837 wlan0 In  IP 192.168.50.98.40946 > 34.160.212.185.443: Flags [P.], seq 23412:23451, ack 8018, win 342, options [nop,nop,TS val 3731158 ecr 3477032235], length 39
+13:03:58.124924 wlan0 Out IP 34.160.212.185.443 > 192.168.50.98.40946: Flags [.], ack 23451, win 501, options [nop,nop,TS val 3477032237 ecr 3731158], length 0
+13:03:58.985038 wlan0 In  IP 192.168.50.98.45307 > 23.36.163.4.80: Flags [F.], seq 98, ack 1, win 229, options [nop,nop,TS val 3731373 ecr 3477017246], length 0
+13:03:58.985676 wlan0 Out IP 23.36.163.4.80 > 192.168.50.98.45307: Flags [F.], seq 1, ack 99, win 509, options [nop,nop,TS val 3477033098 ecr 3731373], length 0
+13:03:58.988477 wlan0 In  IP 192.168.50.98.45307 > 23.36.163.4.80: Flags [.], ack 2, win 229, options [nop,nop,TS val 3731373 ecr 3477033098], length 0
+13:03:59.153906 wlan0 In  IP 192.168.50.98.46049 > 192.168.50.1.53: 25730+ AAAA? ichnaea.netflix.com. (37)
+13:03:59.154800 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.46049: 25730 6/0/0 CNAME ichnaea.dradis.netflix.com., CNAME ichnaea.eu-west-1.internal.dradis.netflix.com., CNAME apiproxy-log-nlb-d0872ab45f5e09a4.elb.eu-west-1.amazonaws.com., AAAA 2a05:d018:76c:b684::a504, AAAA 2a05:d018:76c:b683::f7af, AAAA 2a05:d018:76c:b682::265e (295)
+13:03:59.404539 wlan0 In  IP 192.168.50.98.54490 > 192.168.50.1.53: 24719+ A? cdn.samsungcloudsolution.com. (46)
+13:03:59.467186 wlan0 Out IP 192.168.50.1.53 > 192.168.50.98.54490: 24719 4/0/0 CNAME cdn.samsungcloudsolution.com.edgesuite.net., CNAME a1963.d.akamai.net., A 23.36.163.4, A 2.16.10.91 (163)
+13:03:59.469399 wlan0 In  IP 192.168.50.98.45309 > 23.36.163.4.80: Flags [S], seq 2883680548, win 29200, options [mss 1460,sackOK,TS val 3731494 ecr 0,nop,wscale 7], length 0
+13:03:59.469575 wlan0 Out IP 23.36.163.4.80 > 192.168.50.98.45309: Flags [S.], seq 702213425, ack 2883680549, win 65160, options [mss 1460,sackOK,TS val 3477033582 ecr 3731494,nop,wscale 7], length 0
+13:03:59.470740 wlan0 In  IP 192.168.50.98.45309 > 23.36.163.4.80: Flags [.], ack 1, win 229, options [nop,nop,TS val 3731494 ecr 3477033582], length 0
+13:03:59.471095 wlan0 In  IP 192.168.50.98.45309 > 23.36.163.4.80: Flags [P.], seq 1:98, ack 1, win 229, options [nop,nop,TS val 3731494 ecr 3477033582], length 97: HTTP: GET /Public/network/files/check.xml HTTP/1.1
+13:03:59.471178 wlan0 Out IP 23.36.163.4.80 > 192.168.50.98.45309: Flags [.], ack 98, win 509, options [nop,nop,TS val 3477033583 ecr 3731494], length 0
+13:03:59.810325 wlan0 M   IP 192.168.50.98.8001 > 224.0.0.7.8001: UDP, length 200
+13:04:00.302498 wlan0 B   IP 192.168.50.98.33849 > 192.168.50.255.15600: UDP, length 35
+^C
+1014 packets captured
+1015 packets received by filter
+0 packets dropped by kernel
